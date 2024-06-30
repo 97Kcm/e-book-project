@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>메인 페이지</title>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <script defer src="main-carousel.js"></script>
+    <link rel="stylesheet" href="mainPage.css">
+</head>
+
+<!--헤더 부분-->
+<header>
+    <div id="e-book-header-div">
+        <button>로고</button>
+        <button>웹툰</button>
+        <button>소설</button>
+    </div>
+    <div id="country-div">
+        <button>국내</button>
+        <button>해외</button>
+    </div>
+
+    <div id="header-user-div">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button><i class="fa-solid fa-user"></i></button>
+    </div>
+</header>
+
+<!-- 메인 부분-->
+<body>
+<main>
+    <section class="embla" id="main-slide-section">
+        <ul class="embla__container">
+            <li class="embla__slide">
+                <img alt="#" src="test1.png">
+            </li>
+            <li class="embla__slide">
+                <img alt="#" src="test3.png">
+            </li>
+        </ul>
+    </section>
+
+    <section id="ebook-main-section">
+        <div class="book-category-div">
+            <div id="category-action-div">
+                <span>액션</span>
+                <div class="category">
+                    <div class="action"></div>
+                    <div class="action"></div>
+                    <div class="action"></div>
+                    <div class="action"></div>
+                    <div class="action"></div>
+                    <div class="action"></div>
+                </div>
+            </div>
+
+            <span>로맨스</span>
+            <div class="category">
+                <div class="romance"></div>
+                <div class="romance"></div>
+                <div class="romance"></div>
+                <div class="romance"></div>
+                <div class="romance"></div>
+                <div class="romance"></div>
+            </div>
+            <span>무협</span>
+            <div class="category">
+                <div class="oriental"></div>
+                <div class="oriental"></div>
+                <div class="oriental"></div>
+                <div class="oriental"></div>
+                <div class="oriental"></div>
+                <div class="oriental"></div>
+            </div>
+            <span>판타지</span>
+            <div class="category">
+                <div class="fantasy"></div>
+                <div class="fantasy"></div>
+                <div class="fantasy"></div>
+                <div class="fantasy"></div>
+                <div class="fantasy"></div>
+                <div class="fantasy"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
