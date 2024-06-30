@@ -1,0 +1,76 @@
+
+header{
+    display: flex;
+}
+
+#header-user-div{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* 버튼 간 간격 조절 */
+    position: absolute; /* 또는 fixed */
+    right: 30px;
+    top: 20px;
+}
+
+#header-user-div > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.country-div > button{
+    align-items: center;
+}
+
+/*여기까지가 헤더 부분 */
+
+
+/* 엠블라 캐러셀 적용 */
+#main-top-section > img{
+    width: 50%;
+    height: 100px;
+    display: block;
+    object-fit: fill;
+    align-items: center;
+}
+
+.embla {
+    overflow: hidden;
+    border: 1px;
+}
+.embla__container {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.embla__slide {
+    flex: 0 0 50%;
+    list-style-type: none;
+}
+
+
+
+/*************************************************/
+
+/* e-book main 부분 */
+
+.category{
+    display: flex;
+    align-items: flex-start;
+}
+
+.category > span {
+    margin-bottom: 10px;
+}
+
+.category > div {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
