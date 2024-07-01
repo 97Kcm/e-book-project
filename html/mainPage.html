@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
+<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+<script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+<script src="../js/main-carousel.js" defer></script>
+<link href="../css/mainPage.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <title>메인 페이지</title>
-    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-    <script defer src="main-carousel.js"></script>
-    <link rel="stylesheet" href="mainPage.css">
 </head>
 
 <!--헤더 부분-->
 <header>
-    <div id="e-book-header-div">
-        <button>로고</button>
-        <button>웹툰</button>
-        <button>소설</button>
+    <div id="e-book-category-div">
+<!--        <button>로고(임시)</button>-->
+        <button type="submit">웹툰</button>
+        <button type="submit">소설</button>
     </div>
     <div id="country-div">
         <button>국내</button>
@@ -32,7 +31,7 @@
 <!-- 메인 부분-->
 <body>
 <main>
-    <section class="embla" id="main-slide-section">
+    <section class="main-slide" id="main-slide-section">
         <ul class="embla__container">
             <li class="embla__slide">
                 <img alt="#" src="test1.png">

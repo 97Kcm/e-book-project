@@ -1,29 +1,54 @@
-header{
+/* 헤더 부분 */
+
+header {
     display: flex;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* 헤더 내부 여백 */
 }
 
-#header-user-div{
+#e-book-category-div {
     display: flex;
-    justify-content: flex-end;
-    gap: 20px; /* 버튼 간 간격 조절 */
-    position: absolute; /* 또는 fixed */
-    right: 30px;
-    top: 20px;
+    justify-content: flex-start;
 }
 
-#header-user-div > button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-
+#e-book-category-div > button {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+    width: 100px;
 }
 
-.country-div > button{
+#country-div {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-/* 헤더 부분 */
+#country-div > button{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border: none;
+}
+
+#header-user-div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#header-user-div > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+/* 바디 부분*/
 
 #book-detail-section {
     display: flex;
@@ -72,6 +97,11 @@ header{
     margin-top: 20px;
 }
 
+#detail-content > i{
+    cursor: pointer;
+    margin-left: 450px;
+}
+
 /*파트 선택 부분 */
 
 #part-section {
@@ -88,22 +118,37 @@ header{
 }
 
 .part{
+    background-color: white;
+    width: 80%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 30px;
+    padding: 40px;
+    font-size: 20px;
 }
 
-#comment{
-    width: 50%;
-    height: 30%;
-    background-color: white;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
+.part p, .part button {
+    margin-left: 10px;
 }
+
+.part > button{
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* 댓글 부분 */
+
+/*#comment-section > #comment-div {*/
+/*    width: 70%;*/
+/*    height: 30%;*/
+/*    background-color: white;*/
+/*    position: absolute;*/
+/*    bottom: 10px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    margin-top: 20px;*/
+/*}*/
 
 
 

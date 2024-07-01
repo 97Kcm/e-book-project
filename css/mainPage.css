@@ -1,41 +1,64 @@
-
-header{
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* 헤더 내부 여백 */
 }
 
-#header-user-div{
+#e-book-category-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#e-book-category-div > button {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+    width: 100px;
+}
+
+#country-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#country-div > button{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border: none;
+}
+
+#header-user-div {
     display: flex;
     justify-content: flex-end;
-    gap: 20px; /* 버튼 간 간격 조절 */
-    position: absolute; /* 또는 fixed */
-    right: 30px;
-    top: 20px;
+    gap: 20px;
 }
 
-#header-user-div > button{
+#header-user-div > button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-
+    font-size: 25px;
 }
 
-.country-div > button{
-    align-items: center;
-}
 
 /*여기까지가 헤더 부분 */
 
 
 /* 엠블라 캐러셀 적용 */
-#main-top-section > img{
+#main-slide-section > img{
     width: 50%;
-    height: 100px;
+    height: 300px;
     display: block;
-    object-fit: fill;
+    /*object-fit: fill;*/
     align-items: center;
 }
 
-.embla {
+.main-slide {
     overflow: hidden;
     border: 1px;
 }
@@ -46,30 +69,39 @@ header{
     margin: 0;
     align-items: center;
 }
-.embla__slide {
-    flex: 0 0 50%;
-    list-style-type: none;
-}
 
+.embla__slide {
+    border: black;
+    border-radius: 2px;
+    flex: 0 0 30%;
+    list-style-type: none;
+    height: 300px; /* 원하는 높이로 설정 */
+}
 
 
 /*************************************************/
 
 /* e-book main 부분 */
 
+.ebook-main-section{
+    top: 30px;
+}
+
 .category{
     display: flex;
     align-items: flex-start;
 }
 
-.category > span {
+.category-action-div > span {
     margin-bottom: 10px;
+    font-size: 30px;
 }
+
 
 .category > div {
     border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: row;
     margin-right: 10px;
