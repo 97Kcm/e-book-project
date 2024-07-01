@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Ownglyph_eunbyul21-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_eunbyul21-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Thin';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SemiBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Regular;
+
+    --color-strong: #F5CF49;
+    --color-yellow: #E8F549;
+    --color-weak: #F5E449;
+    --color-orange: #F5BA49;
+    --color-green: #A1F549;
+    --color-main: #F9F5D1;
+    --color-weak-gray: rgba(0, 0, 0, 0.2);
+    --color-medium-gray: rgba(0, 0, 0, 0.5);
+
+    --font-size-xx-small: 10px;
+    --font-size-x-small: 13px;
+    --font-size-small: 15px;
+    --font-size-medium: 18px;
+    --font-size-large: 20px;
+    --font-size-x-large: 22px;
+    --font-size-xx-large: 25px;
+    --font-size-xxx-large: 30px;
+
+    --text-color: #004F4D;
+    --dark-color: #1F2024;
+    --main-color: #4B4952;
+    --strong-color: #79717A;
+    --weak-color: #A68F97;
+
+    --xx-small-font-size: 13px;
+    --x-small-font-size: 15px;
+    --small-font-size: 18px;
+    --medium-font-size: 21px;
+    --xlarge-font-size: 24px;
+    --xxlarge-font-size: 27px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    display: inline-block;
+    list-style: none;
+}

@@ -9,39 +9,43 @@
 
 <body>
 <main>
-    <section id="login-section">
-        <form>
-        <h1>환영합니다! 로그인을 해주세요</h1>
-            <div id="login-div">
+    <h1>KOREA MARKET</h1>
+    <form>
+        <section id="login-info-section">
             <label>
-            <input type="text">
+                <i class="fa-regular fa-user"></i>
+                <input type="text">
             </label>
-            <br>
             <label>
-            <input type="password"><i class="bi bi-eye-fill"></i>
+                <i class="fa-solid fa-lock"></i>
+                <input type="text">
+                <i class="fa-solid fa-eye"></i>
             </label>
-            </div>
-        </form>
+        </section>
+        <section id="login-id-remember-section">
+            <label>
+                <input type="checkbox">
+                <span>아이디 저장</span>
+            </label>
+        </section>
+        <button id="login-btn">로그인</button>
+    </form>
+    <section id="nav-section">
+        <a href="#">아이디 찾기</a>
+        <a href="#">비밀번호 재설정</a>
+        <a href="#">회원가입</a>
     </section>
-
-    <div id="saveLoginInfo">
-        <label>
-            <input type="checkbox">
-            아이디 저장
-        </label>
-    </div>
-
-    <section id="other-section">
-        <div>
-            <form>
-            <button id="login" type="button">로그인</button>
-            <br>
-            <button id="signup" type="button">회원가입</button>
-            </form>
-        </div>
-    <br><br>
-
-    <a href="/user/find.html">아이디/비밀번호 찾기</a>
+    <section id="simple-login-section">
+        <h4>간편 로그인</h4>
+        <a href="#">
+            <img src="../icon/naver-login.png" height="45" width="90"/>
+        </a>
+        <a href="#">
+            <img src="../icon/google-login.png" height="45" width="90"/>
+        </a>
+        <a href="#">
+            <img src="../icon/kakao-login.png" height="45" width="90"/>
+        </a>
     </section>
 </main>
 </body>
