@@ -1,0 +1,114 @@
+header{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#header-user-div{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* 버튼 간 간격 조절 */
+    position: absolute; /* 또는 fixed */
+    right: 30px;
+    top: 20px;
+}
+
+#header-user-div > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.country-div > button{
+    align-items: center;
+}
+
+/* 헤더 부분 */
+
+#book-detail-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#book-detail-div {
+    width: 75%;
+    height: 60%;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#book-detail-img-div {
+    flex-grow: 1;
+}
+
+#detail-img {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
+
+#book-detail-tc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#detail-title {
+    background-color: white;
+    width: 600px;
+    height: 100px;
+}
+
+#detail-content {
+    background-color: white;
+    width: 600px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+/*파트 선택 부분 */
+
+#part-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#part-section > #part-selection{
+    background-color: lightgrey;
+    width: 75%;
+    height: 80%;
+}
+
+.part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#comment{
+    width: 50%;
+    height: 30%;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
