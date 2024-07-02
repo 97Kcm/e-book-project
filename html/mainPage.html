@@ -13,18 +13,18 @@
 <!--헤더 부분-->
 <header>
     <div id="e-book-category-div">
-<!--        <button>로고(임시)</button>-->
+        <button>로고</button>
         <button type="submit">웹툰</button>
         <button type="submit">소설</button>
     </div>
     <div id="country-div">
-        <button>국내</button>
-        <button>해외</button>
+        <button id="korea">국내</button>
+        <button id="other-country">해외</button>
     </div>
 
     <div id="header-user-div">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button><i class="fa-solid fa-user"></i></button>
+        <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="user"><i class="fa-solid fa-user"></i></button>
     </div>
 </header>
 
@@ -34,10 +34,12 @@
     <section class="main-slide" id="main-slide-section">
         <ul class="embla__container">
             <li class="embla__slide">
-                <img alt="#" src="test1.png">
+                <video src="https://filacdn.styleship.com/filacontent2/data/ContentsFile/0325_FILA_SUMMER_01_SHORT.mp4"
+                       autoplay muted loop></video>
             </li>
             <li class="embla__slide">
-                <img alt="#" src="test3.png">
+                <img src="https://filacdn.styleship.com/filacontent2/data/banner/img_M_top_COLD%20WAVE_d_240516_93.jpg"
+                     alt="#">
             </li>
         </ul>
     </section>
@@ -45,7 +47,7 @@
     <section id="ebook-main-section">
         <div class="book-category-div">
             <div id="category-action-div">
-                <span>액션</span>
+                <span class="title">액션</span>
                 <div class="category">
                     <div class="action"></div>
                     <div class="action"></div>
@@ -56,32 +58,41 @@
                 </div>
             </div>
 
-            <span>로맨스</span>
-            <div class="category">
-                <div class="romance"></div>
-                <div class="romance"></div>
-                <div class="romance"></div>
-                <div class="romance"></div>
-                <div class="romance"></div>
-                <div class="romance"></div>
+            <div id="category-romance-div">
+                <span class="title">로맨스</span>
+                <div class="category">
+                    <div class="romance"></div>
+                    <div class="romance"></div>
+                    <div class="romance"></div>
+                    <div class="romance"></div>
+                    <div class="romance"></div>
+                    <div class="romance"></div>
+                </div>
             </div>
-            <span>무협</span>
-            <div class="category">
-                <div class="oriental"></div>
-                <div class="oriental"></div>
-                <div class="oriental"></div>
-                <div class="oriental"></div>
-                <div class="oriental"></div>
-                <div class="oriental"></div>
+
+
+            <div id="category-oriental-div">
+                <span class="title">무협</span>
+                <div class="category">
+                    <div class="oriental"></div>
+                    <div class="oriental"></div>
+                    <div class="oriental"></div>
+                    <div class="oriental"></div>
+                    <div class="oriental"></div>
+                    <div class="oriental"></div>
+                </div>
             </div>
-            <span>판타지</span>
-            <div class="category">
-                <div class="fantasy"></div>
-                <div class="fantasy"></div>
-                <div class="fantasy"></div>
-                <div class="fantasy"></div>
-                <div class="fantasy"></div>
-                <div class="fantasy"></div>
+
+            <div id="category-fantasy-div">
+                <span class="title">판타지</span>
+                <div class="category">
+                    <div class="fantasy"></div>
+                    <div class="fantasy"></div>
+                    <div class="fantasy"></div>
+                    <div class="fantasy"></div>
+                    <div class="fantasy"></div>
+                    <div class="fantasy"></div>
+                </div>
             </div>
         </div>
     </section>

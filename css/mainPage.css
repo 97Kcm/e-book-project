@@ -1,61 +1,14 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px; /* 헤더 내부 여백 */
-}
+@import url(pub/public.css);
 
-#e-book-category-div {
-    display: flex;
-    justify-content: flex-start;
-}
-
-#e-book-category-div > button {
-    display: flex;
-    justify-content: flex-start;
-    height: 50px;
-    width: 100px;
-}
-
-#country-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#country-div > button{
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100px;
-    text-align: center;
-    border: none;
-}
-
-#header-user-div {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-#header-user-div > button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 25px;
-}
-
-
-/*여기까지가 헤더 부분 */
 
 
 /* 엠블라 캐러셀 적용 */
 #main-slide-section > img{
     width: 50%;
-    height: 300px;
+    height: 50%;
     display: block;
-    /*object-fit: fill;*/
     align-items: center;
+    justify-content: center;
 }
 
 .main-slide {
@@ -75,30 +28,49 @@ header {
     border-radius: 2px;
     flex: 0 0 30%;
     list-style-type: none;
-    height: 300px; /* 원하는 높이로 설정 */
+    height: 50%; /* 원하는 높이로 설정 */
 }
-
 
 /*************************************************/
 
 /* e-book main 부분 */
 
-.ebook-main-section{
+#ebook-main-section{
     top: 30px;
+    padding: 20px;
 }
 
-.category{
+#ebook-main-section > .book-category-div{
+    margin-bottom: 40px;
+    /*display: flex;*/
+}
+
+#ebook-main-section > .book-category-div > .category {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.category-action-div > span {
-    margin-bottom: 10px;
-    font-size: 30px;
+#ebook-main-section > .book-category-div > .category > div {
+    width: 200px;
+    height: 300px;
+    flex: 0 0 calc(16.66% - 10px);
+    margin-bottom: 20px;
 }
-
 
 .category > div {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.category > div.action,
+.category > div.romance,
+.category > div.oriental,
+.category > div.fantasy {
     border: 1px solid black;
     width: 400px;
     height: 400px;
