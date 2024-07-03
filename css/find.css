@@ -19,7 +19,7 @@ section > span{
     border-bottom: 2px solid black;
     font-size: var(--medium-font-size);
     font-weight: bold;
-    background-color: aliceblue;
+    background-color: #bffcbf;
 }
 
 .find-div{
@@ -58,7 +58,7 @@ button{
     padding: 10px 20px;
     font-weight: bold;
     color: white;
-    background-color: cornflowerblue;
+    background-color: green;
     cursor: pointer;
 }
 button:hover{
