@@ -7,22 +7,24 @@
     <title>상세페이지</title>
 </head>
 <!--헤더 부분-->
+<!--헤더 부분-->
 <header>
     <div id="e-book-category-div">
-<!--        <button>로고</button>-->
-        <button>웹툰</button>
-        <button>소설</button>
+        <button>로고</button>
+        <button type="submit">웹툰</button>
+        <button type="submit">소설</button>
     </div>
     <div id="country-div">
-        <button>국내</button>
-        <button>해외</button>
+        <button id="korea">국내</button>
+        <button id="other-country">해외</button>
     </div>
 
     <div id="header-user-div">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button><i class="fa-solid fa-user"></i></button>
+        <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="user"><i class="fa-solid fa-user"></i></button>
     </div>
 </header>
+
 <body>
 <section id="book-detail-section">
     <div id="book-detail-div">
@@ -71,15 +73,28 @@
             <button class="cart">담기</button>
         </div>
     </div>
+
 </section>
 
-
-<!--<section id="comment-section">-->
-<!--    <div id="comment-div">-->
-
-<!--    </div>-->
-<!--</section>-->
-
+<section id="comment-section">
+    <div id="comment-div">
+        <div class="comment">
+            <div class="comment-author">@user-0275</div>
+            <div class="comment-text">역시 저자 가기 쉽네요는 이 책만한데요.</div>
+            <div class="comment-like"><i class="fas fa-heart"></i></div>
+        </div>
+        <div class="comment">
+            <div class="comment-author">@user-0275</div>
+            <div class="comment-text">역시 저자 가기 쉽네요는 이 책만한데요.</div>
+            <div class="comment-like"><i class="fas fa-heart"></i></div>
+        </div>
+        <div class="comment">
+            <div class="comment-author">@user-0275</div>
+            <div class="comment-text">역시 저자 가기 쉽네요는 이 책만한데요.</div>
+            <div class="comment-like"><i class="fas fa-heart"></i></div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

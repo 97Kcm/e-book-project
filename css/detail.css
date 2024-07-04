@@ -51,16 +51,18 @@
 
 #detail-content > i{
     cursor: pointer;
-    margin-left: 450px;
+    margin-left: 550px;
+    font-size: 30px;
 }
 
 /*파트 선택 부분 */
 
-#part-section {
+#part-section, #comment-section {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 
 #part-section > #part-selection{
@@ -69,11 +71,14 @@
     height: 80%;
 }
 
-.part{
+
+
+.part {
     background-color: white;
     width: 80%;
     display: flex;
     align-items: center;
+    text-align: center;
     margin: 30px;
     padding: 40px;
     font-size: 20px;
@@ -89,18 +94,49 @@
     font-size: 20px;
 }
 
+
+
 /* 댓글 부분 */
 
-/*#comment-section > #comment-div {*/
-/*    width: 70%;*/
-/*    height: 30%;*/
-/*    background-color: white;*/
-/*    position: absolute;*/
-/*    bottom: 10px;*/
-/*    left: 50%;*/
-/*    transform: translateX(-50%);*/
-/*    margin-top: 20px;*/
-/*}*/
+
+#comment-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#comment-div {
+    width: 75%;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.comment {
+    background-color: white;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-like {
+
+    cursor: pointer;
+}
+
+
+
 
 
 
