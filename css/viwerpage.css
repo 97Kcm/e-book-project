@@ -1,3 +1,24 @@
 @import "public.css";
 
+#arrow-container{
+    display: flex;
+}
+#top-container{
+    background-color: #ececec;
 
+}
+
+#form-section{
+    width: 50%;
+
+}
+
+#viewer-section{
+    display: inline-block;
+    height: 1000px;
+
+    background-color: #ececec;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
