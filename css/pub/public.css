@@ -7,76 +7,24 @@
 
 *{
     font-family: 'Katuri';
-}
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px; /* 헤더 내부 여백 */
-}
+    --font-size-XXsmall : 10px;
+    --font-size-Xsmall : 13px;
+    --font-size-small : 15px;
+    --font-size-midium : 17px;
+    --font-size-large : 19px;
+    --font-size-Xlarge : 21px;
+    --font-size-XXlarge : 23px;
+    --font-size-XXXlarge : 25px;
 
-#e-book-category-div {
-    display: flex;
-    justify-content: flex-start;
-}
-
-#e-book-category-div > button {
-    background-color: green;
-    color: white;
-    text-align: center;
-    border: 2px solid lightgreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100px;
-    font-size: 20px;
-}
-
-#e-book-category-div > button:hover{
-    opacity: 0.7;
+    --color1 : #402F2B;
+    --color2 : #73493F;
+    --color3 : #A6705D;
+    --color4 : #D9AE96;
+    --color5 : #F2E5D5;
 }
 
 
-#country-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#country-div > button {
-    background-color: green;
-    color: white;
-    text-align: center;
-    border: 2px solid lightgreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100px;
-    font-size: 20px;
-}
-
-#country-div > button:hover {
-    opacity: 0.7;
-}
-
-#header-user-div {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-#header-user-div > #search, #user {
-    display: flex;
-    justify-content: flex-start;
-    height: 50px;
-    width: 100px;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/*여기까지가 헤더 부분 */

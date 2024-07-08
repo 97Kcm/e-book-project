@@ -1,0 +1,71 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* 헤더 내부 여백 */
+}
+
+#e-book-category-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#e-book-category-div > button {
+    background-color: green;
+    color: white;
+    text-align: center;
+    border: 2px solid lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+}
+
+#e-book-category-div > button:hover{
+    opacity: 0.7;
+}
+
+
+#country-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#country-div > button {
+    background-color: green;
+    color: white;
+    text-align: center;
+    border: 2px solid lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+}
+
+#country-div > button:hover {
+    opacity: 0.7;
+}
+
+#header-user-div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#header-user-div > #search, #user {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*여기까지가 헤더 부분 */
