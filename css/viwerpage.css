@@ -1,37 +1,63 @@
 @import "pub/public.css";
+*{
+    font-size: var(--font-size-large);
+}
 
-/*********************************/
+/************ 메인 **************/
 #main-side-section{
     display: inline-block;
-    margin: 0 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    margin: auto;
     width: 50%;
 }
 
 
 
-/*********************************/
+/**************top 컨테이너**************/
 #top-container{
-    width: 100%;
+    position: relative;
+    margin-top: 20px;
     background-color: #ececec;
+    border: 2px solid black;
+    padding: 20px 10px;
+}
+/************홈버튼,회차이동 영역*************/
+.top-interaction-class > section{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.top-interaction-class > section:first-child{
+    position: absolute;
+    left: 0;
+}
+.top-interaction-class > section:last-child{
+    position: absolute;
+    right: 0;
+}
+.top-interaction-class > section:nth-child(2){
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50% );
+}
+.title-section i{
+    font-size: 15px;
+}
 
-}
-.next-chapter-class{
-    height: 30px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(5, auto);
-}
-.next-chapter-class-select{
-    margin-right: 10px;
+
+
+
+.title{
+    width: 100%;
 }
 
-.next-chapter-class > :last-child{
-    margin-left: auto;
-}
 
-.next-chapter-class > div,i{
-    text-align: center;
-}
+
 
 /******************뷰어 영역 *******************/
 #view-side-container{
@@ -43,6 +69,7 @@
 
 
 #viewer-section{
+    margin-top: 30px;
     display: inline-block;
     width: 100%;
     height: 1000px;

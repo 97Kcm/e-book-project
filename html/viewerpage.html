@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <title>뷰어</title>
     <link rel="stylesheet" href="../css/viwerpage.css">
+    <script src="https://kit.fontawesome.com/6cefa8d439.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <main id="main-section">
         <div id="main-side-section">
             <div id="top-container">
-                <form id="form-section">
-                    <div class="next-chapter-class">
+                <div class="top-interaction-class">
+                    <section>
                         <button>다음 화</button>
-                        <i>홈 아이콘</i>
-                        <div>제목</div>
-                        <i>댓글 아이콘</i>
+                    </section>
+
+                    <section class="title-section">
+                        <i class="fa-solid fa-house fa-2x"></i>
+                        <span class="title">제목</span>
+                        <i class="fa-solid fa-comment fa-2x"></i>
+                    </section>
+
+                    <section>
                         <label>
                             <select class="next-chapter-class-select">
                                 <option>회차 선택</option>
@@ -22,10 +30,10 @@
                                 <option>2</option>
                                 <option>3</option>
                             </select>
-                            <button>이전 화</button>
                         </label>
-                    </div>
-                </form>
+                        <button>이전 화</button>
+                    </section>
+                </div>
             </div>
 
             <div id="view-side-container">
