@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-<script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
-<link rel="stylesheet" href="../css/detail.css">
 <head>
     <meta charset="UTF-8">
     <title>상세페이지</title>
+    <link href="../css/detail.css" rel="stylesheet">
+    <link href="../css/pub/header.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
 </head>
-<!--헤더 부분-->
+<body>
 <!--헤더 부분-->
 <header>
     <div id="e-book-category-div">
@@ -18,72 +19,45 @@
         <button id="korea">국내</button>
         <button id="other-country">해외</button>
     </div>
-
     <div id="header-user-div">
-        <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         <button id="user"><i class="fa-solid fa-user"></i></button>
     </div>
 </header>
 
-<body>
+<!--상세 페이지 부분-->
 <section id="book-detail-section">
     <div id="book-detail-div">
         <div id="book-detail-img-div">
             <div id="detail-img">이미지</div>
         </div>
-        <div id="book-detail-tc">
+        <div id="book-detail-info-div">
             <div id="detail-title">제목</div>
             <div id="detail-content">책 상세 설명<i class="fa-regular fa-heart"></i></div>
-            <!--            <div id="book-part"></div>-->
         </div>
     </div>
-
 </section>
 
+<!--파트 선택 부분-->
 <section id="part-section">
     <div id="part-selection">
-        <div class="part">파트1
-            <p>200p</p>
-            <button class="purchase">구매</button>
-            <button class="cart">담기</button>
-        </div>
-        <div class="part">파트1
-            <p>200p</p>
-            <button class="purchase">구매</button>
-            <button class="cart">담기</button>
-        </div>
-        <div class="part">파트2
-            <p>200p</p>
-            <button class="purchase">구매</button>
-            <button class="cart">담기</button>
-        </div>
-        <div class="part">파트3
-            <p>200p</p>
-            <button class="purchase">구매</button>
-            <button class="cart">담기</button>
-        </div>
-        <div class="part">파트4
-            <p>200p</p>
-            <button class="purchase">구매</button>
-            <button class="cart">담기</button>
-        </div>
-        <div class="part">파트5
-            <p>200p</p>
-            <button class="purchase">구매</button>
-            <button class="cart">담기</button>
-        </div>
+        <div class="part">파트1 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
+        <div class="part">파트2 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
+        <div class="part">파트3 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
+        <div class="part">파트4 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
+        <div class="part">파트5 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
     </div>
-
 </section>
 
+<!--댓글 부분-->
 <section id="comment-section">
     <div id="comment-div">
         <div class="comment">
-            <div class="user-profile"><img src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj" alt="#"></div>
-            <div id="user-comment-div">
+            <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
+            <div class="user-comment-div">
                 <div class="comment-author">@user-0275</div>
-                <input type="text" class="comment-input" placeholder="댓글을 입력해주세요!">
                 <div class="comment-like"><i class="fa-regular fa-heart"></i></div>
+                <input class="comment-input" placeholder="댓글을 입력해주세요!" type="text">
             </div>
         </div>
     </div>

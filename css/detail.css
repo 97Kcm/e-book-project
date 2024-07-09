@@ -1,7 +1,6 @@
 @import url(pub/public.css);
 
-/* 바디 부분*/
-
+/* 바디 부분 */
 #book-detail-section {
     display: flex;
     flex-direction: column;
@@ -10,16 +9,15 @@
 
 #book-detail-div {
     width: 75%;
-    height: 60%;
-    background-color: lightgrey;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 20px;
+    position: relative;
+    background-color: var(--color5);
 }
 
 #book-detail-img-div {
-    /*flex-grow: 1;*/
     margin: 10px;
     padding: 20px;
 }
@@ -31,103 +29,77 @@
     margin: 20px;
 }
 
-#book-detail-tc {
-    width: 40%;
-    height: 40%;
-    margin: 20px;
-    padding: 10px;
+#book-detail-info-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+
 }
 
 #detail-title {
     background-color: white;
-    width: 50px;
-    height: 100px;
+    width: 400px;
+    height: 50px;
+    margin: 20px 20px 10px 20px;
+    padding: 20px;
 }
 
 #detail-content {
     background-color: white;
-    width: 600px;
-    height: 200px;
-    margin-top: 20px;
+    width: 400px;
+    height: 150px;
+    margin: 10px 20px 20px 20px;
+    padding: 20px;
 }
 
-#detail-content > i{
-    cursor: pointer;
-    margin-left: 550px;
-    font-size: 30px;
-}
-
-/*파트 선택 부분 */
-
-<<<<<<< Updated upstream
-#part-section, #comment-section {
-=======
-#part-section{
->>>>>>> Stashed changes
+/* 파트 선택 부분 */
+#part-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-
 }
 
-#part-section > #part-selection{
-    background-color: lightgrey;
+#part-selection {
+    background-color: var(--color5);
     width: 75%;
     height: 80%;
 }
-
-
 
 .part {
     background-color: white;
     width: 80%;
     display: flex;
     align-items: center;
-    text-align: center;
     margin: 30px;
     padding: 40px;
     font-size: 30px;
-
 }
 
 .part p, .part button {
     margin-left: 10px;
 }
 
-.part > button{
+.part > button {
     border: 1px solid black;
     border-radius: 5px;
-    font-size: 20px;
 }
 
-
-
 /* 댓글 부분 */
-
-
-<<<<<<< Updated upstream
 #comment-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-=======
-
-#comment-section {
-    display: flex;
     flex-direction: column;
-    align-items: center;
->>>>>>> Stashed changes
 }
 
 #comment-div {
     width: 75%;
-<<<<<<< Updated upstream
-    background-color: lightgrey;
+    background-color: var(--color5);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px;
 }
 
@@ -135,40 +107,29 @@
     background-color: white;
     width: 90%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin-bottom: 10px;
-=======
     height: 60%;
-    background-color: lightgrey;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     margin-bottom: 20px;
 }
 
-#user-commenet-div{
-
+#user-comment-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
-
-.comment {
-    background-color: white;
-    align-content: center;
-    margin: 30px;
->>>>>>> Stashed changes
+.user-comment-div > .comment-author, .comment-input, .comment-like {
+    margin-left: 20px;
 }
 
 .comment-author {
+    float: left;
     font-weight: bold;
+    display: flex;
+    font-size: var(--font-size-Xlarge);
 }
 
-<<<<<<< Updated upstream
-.comment-like {
-
-=======
 .user-profile img {
     width: 40px;
     height: 40px;
@@ -176,26 +137,15 @@
 }
 
 .comment-input {
-    flex: 1;
     border: 1px solid black;
+    border-radius: 5%;
     background-color: transparent;
-    font-size: 20px;
+    font-size: var(--font-size-Xlarge);
     padding: 0;
 }
 
 .comment-like {
+    display: flex;
     color: #ff6b6b;
->>>>>>> Stashed changes
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
