@@ -41,23 +41,31 @@
 <!--파트 선택 부분-->
 <section id="part-section">
     <div id="part-selection">
-        <div class="part">파트1 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
-        <div class="part">파트2 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
-        <div class="part">파트3 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
-        <div class="part">파트4 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
-        <div class="part">파트5 <p>200p</p> <button class="purchase">구매</button> <button class="cart">담기</button></div>
+        <div class="part">
+            <p class="part-chapter">PART01</p>
+            <p id="part-name">파트제목</p>
+            <p class="price">200p</p>
+            <div class="wishlist">
+                <button class="purchase">구매</button>
+                <button class="cart">담기</button>
+            </div>
+        </div>
     </div>
 </section>
 
 <!--댓글 부분-->
+<!--댓글 부분-->
 <section id="comment-section">
     <div id="comment-div">
         <div class="comment">
-            <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
+            <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj">
+            </div>
             <div class="user-comment-div">
                 <div class="comment-author">@user-0275</div>
-                <div class="comment-like"><i class="fa-regular fa-heart"></i></div>
-                <input class="comment-input" placeholder="댓글을 입력해주세요!" type="text">
+                <div class="comment-container">
+                    <input class="comment-input" placeholder="댓글을 입력해주세요!" type="text">
+                    <div class="comment-like"><i class="fa-regular fa-heart"></i></div>
+                </div>
             </div>
         </div>
     </div>
