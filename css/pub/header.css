@@ -17,11 +17,11 @@ header {
 }
 
 #e-book-category-div > button {
-    background-color: var(--color4);
+    background-color: white;
     color: black;
     text-align: center;
-    border: 2px solid black;
-    border-radius: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,4 +88,71 @@ button:hover {
     list-style-position: inside;
 }
 
-/*여기까지가 헤더 부분 */
+/*******************************************/
+#my-page-section-div{
+    height: 100%;
+}
+
+#my-page-section > div > button{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/*******************************************/
+#my-page-section-section{
+    padding-left:  10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 30px;
+    background-color: #eeeded;
+    width: 180px;
+    height: auto;
+}
+.my-page-div{
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color:white;
+}
+
+.my-page-point{
+    background-color: white;
+    padding: 5px;
+}
+.my-page-point > button{
+    padding: 3px 8px;
+}
+.my-page-point > h4{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.my-page-point{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.my-cash,.logout-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.logout-div >.logout-btn{
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    margin-top: unset;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+}

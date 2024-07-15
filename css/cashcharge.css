@@ -62,5 +62,5 @@ body {
     margin-top: 20px;
 }
 .charge-button:hover {
-    background-color: var(--color2);
+    background-color: #b2b2b2;
 }
