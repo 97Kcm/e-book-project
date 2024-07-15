@@ -8,7 +8,7 @@
 }
 
 #book-detail-div {
-    width: 75%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -22,39 +22,50 @@
     padding: 20px;
 }
 
-#detail-img {
-    background-color: white;
-    width: 400px;
-    height: 400px;
-    margin: 20px;
+#detail-img img {
+    width: 100%;
+    height: auto;
 }
 
 #book-detail-info-div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 30px;
-
-}
-
-#book-detail-info-div > i {
-
+    margin: 10px;
 }
 
 #detail-title {
     background-color: white;
-    width: 400px;
-    height: 50px;
-    margin: 20px 20px 10px 20px;
+    width: 100%;
+    height: auto;
     padding: 20px;
+    margin: 10px;
 }
 
 #detail-content {
+    float: left;
     background-color: white;
-    width: 400px;
-    height: 150px;
-    margin: 10px 20px 20px 20px;
+    width: 100%;
+    height: auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#detail-content p {
+    margin: 5px 0;
+}
+
+#save-btn-div{
+    display: flex;
+}
+
+#save-btn-div > #save{
+    background-color: transparent;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
 }
 
 /* 파트 선택 부분 */
@@ -66,13 +77,13 @@
 
 #part-selection {
     background-color: var(--color5);
-    width: 75%;
+    width: 60%;
     height: 80%;
 }
 
 .part {
     background-color: white;
-    width: calc(100% - 60px); /* 양옆의 margin을 고려하여 100%에서 60px을 뺌 */
+    width: calc(100% - 60px);
     display: flex;
     align-items: center;
     margin: 30px;
@@ -80,15 +91,33 @@
     font-size: 30px;
 }
 
-.part p, .part button {
-    margin-left: 10px;
+.part > .part-chapter , #part-name,.price{
+    font-size: var(--font-size-XXXlarge);
+    display: flex;
 }
 
-.part > button {
+.part > #part-name {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.part > .price{
+    flex: 1;
+    text-align: right;
+}
+
+.part > .wishlist{
+    flex: 1;
+    align-items: flex-end;
+}
+
+
+.part > .wishlist > .purchase, .cart {
+    gap: 10px;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: var(--font-size-Xlarge);
     width: 100px;
     height: 50px;
 
@@ -103,13 +132,19 @@
     flex-direction: column;
 }
 
+.comment-container {
+    position: relative;
+    width: 250%;
+}
+
+
 #comment-div {
-    width: 75%;
+    width: 60%;
     background-color: var(--color5);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .comment {
@@ -126,6 +161,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .user-comment-div > .comment-author, .comment-input, .comment-like {
@@ -146,15 +182,35 @@
 }
 
 .comment-input {
-    border: 1px solid black;
-    border-radius: 5%;
+    border: 2px solid black;
     background-color: transparent;
     font-size: var(--font-size-Xlarge);
-    padding: 0;
+    padding: 0 40px 0 10px; /* 하트 아이콘 공간 확보 */
+    width: 80%;
+    height: 200px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-right: 10px;
+    position: relative;
+}
+
+.comment-like-btn-div {
+    display: flex;
 }
 
 .comment-like {
-    display: flex;
+    background-color: transparent;
+    border: none;
     color: #ff6b6b;
     cursor: pointer;
+    font-size: var(--font-size-Xlarge);
 }
+
+.comment-regist-div > #comment-btn {
+    font-size: var(--font-size-Xlarge);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
