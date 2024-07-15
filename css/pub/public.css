@@ -1,3 +1,6 @@
+
+
+
 @font-face {
     font-family: 'Katuri';
     src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
@@ -20,11 +23,11 @@
     --font-size-XXlarge : 23px;
     --font-size-XXXlarge : 25px;
 
-    --color1 : #402F2B;
-    --color2 : #73493F;
-    --color3 : #A6705D;
-    --color4 : #D9AE96;
-    --color5 : #F2E5D5;
+    --color1 : #d3d3d3;
+    --color2 : #948f8f;
+    --color3 : #e3e3e3;
+    --color4 : #ffffff;
+    --color5 : #939393;
 
     --main-width : 1700px;
     --main-margin : 0 auto;

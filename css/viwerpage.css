@@ -11,8 +11,8 @@
     right: 0;
     top: 0;
     bottom:0;
-    margin: auto;
-    width: 50%;
+    margin: var(--main-margin);
+    width: 1000px;
 }
 
 
@@ -21,7 +21,6 @@
 #top-container{
     height: 80px;
     position: relative;
-    margin-top: 20px;
     background-color: #ececec;
     border: 1px solid #463632;
     border-radius: 5px;
@@ -48,7 +47,8 @@
     transform: translate(-50%, -50% );
 }
 .next-chapter-class-select,.page-button{
-    border: 2px solid black;
+    color: black;
+    border: 1px solid black;
     border-radius: 5px;
     height: 40px;
 }
@@ -74,9 +74,10 @@
 }
 
 .title{
-    background-color: #797979;
-    font-size: 30px;
-    text-align: center;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
     width: 400px;
 }
 
@@ -107,6 +108,7 @@
 
 }
 #left-arrow-section > i{
+    color: black;
     padding-top: 90px;
     border: 1px solid black;
     text-align: center;
@@ -115,10 +117,18 @@
     width: 60px;
 }
 #right-arrow-section > i{
+    color: black;
     padding-top: 90px;
     border: 1px solid black;
     text-align: center;
     height: 200px;
     width: 60px;
+}
+
+button:hover{
+    opacity: 50%;
+}
+i:hover{
+    opacity: 50%;
 }
 
