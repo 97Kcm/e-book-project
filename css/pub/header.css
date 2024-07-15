@@ -11,10 +11,10 @@ header {
 }
 
 #e-book-category-div > button {
-    background-color: green;
+    background-color: var(--color2);
     color: white;
     text-align: center;
-    border: 2px solid lightgreen;
+    border: 2px solid var(--color5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,10 +35,10 @@ header {
 }
 
 #country-div > button {
-    background-color: green;
+    background-color: var(--color2);
     color: white;
     text-align: center;
-    border: 2px solid lightgreen;
+    border: 2px solid var(--color5);
     display: flex;
     justify-content: center;
     align-items: center;
