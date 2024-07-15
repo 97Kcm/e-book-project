@@ -9,63 +9,206 @@
 </head>
 <body>
 
-<!--상세 페이지 부분-->
-<section id="book-detail-section">
-    <div id="book-detail-div">
-        <div id="book-detail-img-div">
-            <div id="detail-img">
-                <img src="" alt="이미지">
-                <!-- 책 이미지를 여기에 넣으시면 됩니다 -->
-            </div>
-        </div>
-        <div id="book-detail-info-div">
-            <div id="detail-title">이것이 자바다 (교육현장에서 가장 많이 쓰인 JAVA 프로그래밍 기본서)</div>
-            <div id="detail-content">
-                <p>저자 신용권, 임경균</p>
-                <div id="save-btn-div">
-                <button id="save"><i class="fa-regular fa-heart"></i></button>
-                </div>
-                <p>출판 한빛미디어 2024.04.01</p>
-                <p>최신 JAVA 21 버전 반영! 9년 동안 꾸준히 사랑받은 자바 베스트셀러, 『이것이 자바다』 3판!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--파트 선택 부분-->
-<section id="part-section">
-    <div id="part-selection">
-        <div class="part">
-            <p class="part-chapter">PART01</p>
-            <p id="part-name">파트제목</p>
-            <p class="price">200p</p>
-            <div class="wishlist">
-                <button class="purchase">구매</button>
-                <button class="cart">담기</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--댓글 부분-->
-<section id="comment-section">
-    <div id="comment-div">
-        <div class="comment">
-            <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
-            <div class="user-comment-div">
-                <div class="comment-author">@user-0275</div>
-                <div class="comment-like-btn-div">
-                    <button class="comment-like"><i class="fa-regular fa-heart"></i></button>
-                </div>
-                <div class="comment-container">
-                    <input class="comment-input" placeholder="댓글을 입력해주세요!" type="text">
-                </div>
-                <div class="comment-regist-div">
-                    <button id="comment-btn">댓글 달기</button>
+    <main>
+        <!--상세 페이지 부분-->
+        <section id="book-detail-section">
+            <div id="book-detail-div">
+                <div id="book-detail-img-div">
+                    <div id="detail-img" style="background-image: url('https://i.namu.wiki/i/l0x04r27DjSQmS-WgYk6I5x6IkKMyvZjRMyK5dI3EMoMikzCd2Kfl2SMRdvL3-y4zpxI_qLP-fs3QToSR7AU3g.webp')">
+                        <!-- 책 이미지를 여기에 넣으시면 됩니다 -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <div id="book-detail-info-div">
+                <div id="detail-title">이것이 자바다 (교육현장에서 가장 많이 쓰인 JAVA 프로그래밍 기본서)</div>
+                <div id="detail-content">
+                    <div id="save-btn-div">
+                        <p>저자 신용권, 임경균</p>
+                        <button id="save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <p>출판 한빛미디어 2024.04.01</p>
+                    <p>최신 JAVA 21 버전 반영! 9년 동안 꾸준히 사랑받은 자바 베스트셀러, 『이것이 자바다』 3판!</p>
+                </div>
+            </div>
+        </section>
+        <!--파트 선택 부분-->
+        <section id="part-section">
+            <ul id="part-selection">
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <button class="view">보기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+                <li class="part">
+                    <div class="part-chapter-container">
+                        <h6 class="part-chapter">PART01</h6>
+                        <span class="part-name">파트제목</span>
+                    </div>
+                    <div class="part-btn-container">
+                        <span class="price">200p</span>
+                        <button class="purchase">구매</button>
+                        <button class="cart">담기</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!--댓글 부분-->
+        <section id="comment-section">
+            <div id="comment-div">
+                <div class="comment">
+                    <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
+                    <div class="user-comment-div">
+                        <div class="comment-author">@user-0275</div>
+                        <div class="comment-like-btn-div">
+                            <button class="comment-like"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="comment-container">
+                            <textarea class="comment-text-area" placeholder="댓글을 입력해주세요!"></textarea>
+                        </div>
+                        <div class="comment-regist-div">
+                            <button class="comment-btn">댓글 달기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
+                    <div class="user-comment-div">
+                        <div class="comment-author">@user-0275</div>
+                        <div class="comment-like-btn-div">
+                            <button class="comment-like"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="comment-container">
+                            <textarea class="comment-text-area" placeholder="댓글을 입력해주세요!"></textarea>
+                        </div>
+                        <div class="comment-regist-div">
+                            <button class="comment-btn">댓글 달기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
+                    <div class="user-comment-div">
+                        <div class="comment-author">@user-0275</div>
+                        <div class="comment-like-btn-div">
+                            <button class="comment-like"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="comment-container">
+                            <textarea class="comment-text-area" placeholder="댓글을 입력해주세요!"></textarea>
+                        </div>
+                        <div class="comment-regist-div">
+                            <button class="comment-btn">댓글 달기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="user-profile"><img alt="#" src="https://yt3.ggpht.com/a/default-user=s48-c-k-c0x00ffffff-no-rj"></div>
+                    <div class="user-comment-div">
+                        <div class="comment-author">@user-0275</div>
+                        <div class="comment-like-btn-div">
+                            <button class="comment-like"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="comment-container">
+                            <textarea class="comment-text-area" placeholder="댓글을 입력해주세요!"></textarea>
+                        </div>
+                        <div class="comment-regist-div">
+                            <button class="comment-btn">댓글 달기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
