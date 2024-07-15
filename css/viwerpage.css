@@ -11,8 +11,8 @@
     right: 0;
     top: 0;
     bottom:0;
-    margin: auto;
-    width: 50%;
+    margin: var(--main-margin);
+    width: 1000px;
 }
 
 
@@ -21,7 +21,6 @@
 #top-container{
     height: 80px;
     position: relative;
-    margin-top: 20px;
     background-color: #ececec;
     border: 1px solid #463632;
     border-radius: 5px;

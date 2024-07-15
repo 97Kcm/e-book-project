@@ -14,7 +14,7 @@
     align-items: flex-start;
     margin-bottom: 20px;
     position: relative;
-    background-color: var(--color5);
+    background-color: var(--color4);
 }
 
 #book-detail-img-div {
@@ -76,7 +76,7 @@
 }
 
 #part-selection {
-    background-color: var(--color5);
+    background-color: var(--color4);
     width: 60%;
     height: 80%;
 }
@@ -140,7 +140,7 @@
 
 #comment-div {
     width: 60%;
-    background-color: var(--color5);
+    background-color: var(--color4);
     display: flex;
     flex-direction: column;
     align-items: center;

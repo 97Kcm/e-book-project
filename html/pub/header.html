@@ -6,23 +6,46 @@
 >
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>HEADER</title>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
     <link rel="stylesheet" href="../../css/pub/header.css">
+    <link rel="stylesheet" href="../../css/pub/public.css">
 </head>
 <body>
 <!--헤더 부분-->
 <header>
     <div id="e-book-category-div">
-        <button>로고</button>
+        <a href="#">
+            <img class="img" src="../../icon/bookimage.png"/>
+        </a>
         <button type="submit">웹툰</button>
         <button type="submit">소설</button>
     </div>
-    <div id="country-div">
-        <button id="korea">국내</button>
-        <button id="other-country">해외</button>
-    </div>
     <div id="header-user-div">
-        <button id="search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+        <form class="search-form">
+            <label class="search-label">
+                <input type="text">
+                <button id="search" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </label>
+            <section class="search-section">
+                <h4>인기 도서 목록</h4>
+                <ol class="search-view">
+                    <li>
+                        <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                    </li>
+                    <li>
+                        <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                    </li>
+                    <li>
+                        <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                    </li>
+                </ol>
+
+            </section>
+        </form>
         <button id="user"><i class="fa-solid fa-user"></i></button>
     </div>
 </header>
