@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>캐쉬충전</title>
+    <link rel="stylesheet" href="../css/cashcharge.css">
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    <script src="../static/js/cashcharge.js" th:src="@{/js/cashcharge.js}"  defer></script>
+</head>
+<body>
+<main>
+    <div class="charge-container">
+        <div class="header">캐쉬충전</div>
+        <div class="charge-options">
+            <div class="charge-units">
+                <label class="charge-unit"><input type="radio" name="amount" value="1000">1000원</label>
+                <label class="charge-unit"><input type="radio" name="amount" value="5000">5000원</label>
+                <label class="charge-unit"><input type="radio" name="amount" value="10000">10000원</label>
+                <label class="charge-unit"><input type="radio" name="amount" value="50000">30000원</label>
+                <label class="charge-unit"><input type="radio" name="amount" value="50000">50000원</label>
+            </div>
+            <div class="bonus-amounts">
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+            </div>
+        </div>
+        <button class="charge-button">충전하기</button>
+    </div>
+</main>
+
+</body>
+</html>

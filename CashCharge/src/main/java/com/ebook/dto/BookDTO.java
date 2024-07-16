@@ -1,0 +1,14 @@
+package com.ebook.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+public class BookDTO {
+    private Integer no;
+
+
+}
