@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}">
+    <title>FIND ID</title>
+    <link rel="stylesheet" href="../css/findId.css" th:href="@{/css/find.css}">
+    <link rel="stylesheet" href="../css/pub/public.css">
+</head>
+<body>
+<main>
+    <form>
+        <div>
+            <span>아이디 찾기</span>
+            <a href="">X</a>
+        </div>
+        <div class="find-div">
+            <label>
+                <input type="text" placeholder="이름입력">
+                <input type="text" id="find-id-email" placeholder="이메일작성">
+            </label>
+            <div>
+                <span>아이디는 000 입니다</span>
+            </div>
+            <button type="button" id="find-id-btn">아이디 찾기</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>
