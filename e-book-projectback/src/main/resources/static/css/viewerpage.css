@@ -5,14 +5,13 @@
 
 /************ 메인 **************/
 #main-side-section{
-    display: inline-block;
-    position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom:0;
     margin: var(--main-margin);
     width: 1000px;
+    position: relative;
 }
 
 
@@ -85,6 +84,7 @@
 
 /******************뷰어 영역 *******************/
 #view-side-container{
+    position: relative;
     border: 1px solid #463632;
     border-radius: 5px;
     display: flex;
@@ -136,12 +136,27 @@ i:hover{
 
 /*********************************************/
 .view-pagebar-section{
+    display: none;
+}
+
+.view-pagebar-section[active]{
+    position: absolute;
     display: flex;
+    background-color: #e0e0e0;
     justify-content: space-between;
     align-items: center;
+    bottom: 0;
+    height: 80px;
+    border-radius: 5px;
+    width: 100%;
 }
+
 .view-page-bar-btn > button{
+    border-radius: 10px;
     padding: 10px;
+}
+.curt-page{
+    border-radius: 5px;
 }
 
 .view-page-bar-number{
@@ -165,11 +180,13 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 .page-bar-container{
+    position: absolute;
     display: flex;
     align-items: center;
     width: 400px;
     height: 20px;
-    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .page-bar-parent{
     flex: 1;
@@ -179,11 +196,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .page-bar-child{
     position: absolute;
-    height: 100%;
+    height: 150%;
     transform: translate(-100%, -35%);
     width: 5px;
     /*height: 15px;*/
-    background-color: red;
+    background-color: #2d2626;
 }
 
 

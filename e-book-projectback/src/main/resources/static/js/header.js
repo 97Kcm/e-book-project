@@ -26,13 +26,14 @@ function showHideMyPage() {
 }
 // 캐시창 팝업 띄우기
 function openCashChargePage() {
-    const options = 'width=600, height=750, top=50, left=50, scrollbars=yes'
+    const options = 'width=600, height=700, top=50, left=50, scrollbars=yes'
     window.open('cashcharge','_blank',options);
     console.log("캐시충전페이지 열려라")
 }
 
 
-// 마우스 이벤트 리스너 등록
+
+// 마우스 이벤트 리스너
 searchLabel.addEventListener('mouseenter', showHideSearchSection);
 searchLabel.addEventListener('mouseleave', showHideSearchSection);
 myPageSection.addEventListener('mouseenter', showHideMyPage);

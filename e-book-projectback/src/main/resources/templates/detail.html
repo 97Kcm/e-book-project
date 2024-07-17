@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
 <head>
     <meta charset="UTF-8">
     <title>상세페이지</title>
-    <link href="../css/detail.css" rel="stylesheet">
-    <link href="../css/pub/header.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/detail.css" th:href="@{/css/detail.css}">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
+    <link rel="stylesheet" href="../static/css/pub/public.css" th:href="@{/css/pub/public.css}">
 </head>
 <body>
 
