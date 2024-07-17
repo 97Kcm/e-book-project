@@ -1,0 +1,134 @@
+@import "pub/public.css";
+*{
+    font-size: var(--font-size-large);
+}
+
+/************ 메인 **************/
+#main-side-section{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    margin: var(--main-margin);
+    width: 1000px;
+}
+
+
+
+/**************top 컨테이너**************/
+#top-container{
+    height: 80px;
+    position: relative;
+    background-color: #ececec;
+    border: 1px solid #463632;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+/************홈버튼,회차이동 영역*************/
+.top-interaction-class > section{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.top-interaction-class > section:first-child{
+    position: absolute;
+    left: 10px;
+}
+.top-interaction-class > section:last-child{
+    position: absolute;
+    right: 10px;
+}
+.top-interaction-class > section:nth-child(2){
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50% );
+}
+.next-chapter-class-select,.page-button{
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.title-section{
+    width: 500px;
+}
+.title-section > i:first-child{
+    margin-right: 20px;
+}
+.title-section > i:last-child{
+    margin-left: 20px;
+}
+
+.title-section:first-child{
+    margin: 0 10px;
+}
+
+
+/******************제목, 아이콘들***********************/
+.title-section i{
+    font-size: 30px;
+}
+
+.title{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+
+
+/******************뷰어 영역 *******************/
+#view-side-container{
+    border: 1px solid #463632;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+#viewer-section{
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    height: 1200px;
+    background-color: #d4d3d3;
+    align-items: center;
+    text-align: center;
+    /*margin-bottom: 30px;*/
+}
+#view-side-container > div{
+
+}
+#left-arrow-section > i{
+    color: black;
+    padding-top: 90px;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    height: 200px;
+    width: 60px;
+}
+#right-arrow-section > i{
+    color: black;
+    padding-top: 90px;
+    border: 1px solid black;
+    text-align: center;
+    height: 200px;
+    width: 60px;
+}
+
+button:hover{
+    opacity: 50%;
+}
+i:hover{
+    opacity: 50%;
+}
+
