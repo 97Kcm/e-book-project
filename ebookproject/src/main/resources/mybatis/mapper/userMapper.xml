@@ -5,25 +5,25 @@
 <mapper namespace="com.ebook.mapper.UserMapper">
 
     <select id="selectUserById" resultType="UserDTO">
-        SELECT * FROM `user` WHERE user_id = #{id}
+        SELECT * FROM `user` WHERE user_id = #{userId}
     </select>
     <select id="selectUserByCi" resultType="UserDTO">
-        SELECT * FROM `user` WHERE user_ci = #{ci}
+        SELECT * FROM `user` WHERE user_ci = #{userCi}
     </select>
     <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO">
         SELECT * FROM `custom_user` WHERE id = #{id}
     </select>
     <select id="selectUserByNameAndEmail" resultType="UserDTO">
-        SELECT * FROM `user` WHERE user_name = #{name} OR user_email = #{email}
+        SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userEmail}
     </select>
     <select id="selectUserByIdAndEmail" resultType="UserDTO">
-        SELECT * FROM `user` WHERE user_id = #{id} AND user_name = #{name} AND user_email = #{email}
+        SELECT * FROM `user` WHERE user_id = #{userId} AND user_name = #{userName} AND user_email = #{userEmail}
     </select>
 
     <insert id="insertUser">
         INSERT INTO `user`
         VALUES
-        (#{id}, #{ci}, #{password}, #{email}, #{name}, #{nickname}, #{profileImage.data}, #{cash})
+        (#{userId}, #{userCi}, #{userPassword}, #{userEmail}, #{userName}, #{userNickname}, #{userProfileImage.data}, #{userCash})
     </insert>
 
     <insert id="insertSocialUser">

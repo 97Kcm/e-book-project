@@ -51,7 +51,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "cm",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/ebookproject",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -91,6 +91,7 @@
       <workItem from="1721120572304" duration="39000" />
       <workItem from="1721120628546" duration="100000" />
       <workItem from="1721120738023" duration="19000" />
+      <workItem from="1721204459528" duration="4000" />
     </task>
     <servers />
   </component>
