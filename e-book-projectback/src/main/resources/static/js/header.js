@@ -2,7 +2,7 @@ const searchLabel = document.querySelector('.search-label');
 const searchSection = document.querySelector('.search-section');
 const myPageSection = document.getElementById('my-page-section')
 const myPageSectionSection = document.getElementById('my-page-section-section')
-
+const cashChargeButton = document.getElementById('cash-charge');
 // 검색창 토글 함수
 function showHideSearchSection() {
     if (this.classList.contains('show')) {
@@ -24,6 +24,12 @@ function showHideMyPage() {
         myPageSectionSection.style.display = 'block';
     }
 }
+// 캐시창 팝업 띄우기
+function openCashChargePage() {
+    const options = 'width=600, height=750, top=50, left=50, scrollbars=yes'
+    window.open('cashcharge','_blank',options);
+    console.log("캐시충전페이지 열려라")
+}
 
 
 // 마우스 이벤트 리스너 등록
@@ -31,3 +37,4 @@ searchLabel.addEventListener('mouseenter', showHideSearchSection);
 searchLabel.addEventListener('mouseleave', showHideSearchSection);
 myPageSection.addEventListener('mouseenter', showHideMyPage);
 myPageSection.addEventListener('mouseleave', showHideMyPage);
+

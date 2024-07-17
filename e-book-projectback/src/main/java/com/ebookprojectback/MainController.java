@@ -21,4 +21,14 @@ public class MainController {
         return "pub/header";
     }
 
+    @GetMapping("/cashcharge")
+    public String get_cashcharge() {
+        return "cashcharge";
+    }
+
+    @GetMapping("/viewerpage")
+    public String get_viewrpage() {
+        return "viewerpage";
+    }
+
 }

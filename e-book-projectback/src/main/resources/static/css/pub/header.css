@@ -81,7 +81,7 @@ button:hover {
 }
 
 .search-section{
-    /*display: none;*/
+    display: none;
     position: absolute;
     bottom: -100px;
     background-color: #dedede;

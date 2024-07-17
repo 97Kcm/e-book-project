@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
 <head>
     <meta charset="UTF-8">
     <title>캐쉬충전</title>
-    <link rel="stylesheet" href="../css/cashcharge.css">
+    <link rel="stylesheet" href="../static/css/cashcharge.css" th:href="@{/css/cashcharge.css}">
+
 
 </head>
 <body>
