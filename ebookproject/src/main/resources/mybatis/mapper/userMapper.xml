@@ -13,6 +13,12 @@
     <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO">
         SELECT * FROM `custom_user` WHERE id = #{id}
     </select>
+    <select id="selectUserByNameAndEmail" resultType="UserDTO">
+        SELECT * FROM `user` WHERE user_name = #{name} OR user_email = #{email}
+    </select>
+    <select id="selectUserByIdAndEmail" resultType="UserDTO">
+        SELECT * FROM `user` WHERE user_id = #{id} AND user_name = #{name} AND user_email = #{email}
+    </select>
 
     <insert id="insertUser">
         INSERT INTO `user`

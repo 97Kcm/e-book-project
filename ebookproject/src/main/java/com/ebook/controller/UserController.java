@@ -59,4 +59,33 @@ public class UserController {
         return "redirect:/user/register";
 
     }
+
+    @GetMapping("/findId")
+    public void get_findId(){}
+
+    @PostMapping("/findId")
+    public String post_findId(
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String email,
+            RedirectAttributes redirectAttributes
+    ){
+        String id = userService.findUserId(name, email);
+        redirectAttributes.addFlashAttribute("id", id);
+        return "redirect:/user/findId";
+    }
+
+    @GetMapping("/resetPassword")
+    public void get_resetPassword(){}
+
+
+    @PostMapping("/resetPassword")
+    public void post_resetPassword(){}
+
+
+
+
+
+
+
+
 }

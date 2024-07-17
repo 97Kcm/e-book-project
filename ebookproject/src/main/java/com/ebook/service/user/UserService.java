@@ -116,6 +116,38 @@ public class UserService {
     public boolean findUser(String id){
         UserDTO findUser = userMapper.selectUserById(id);// 해당 id를 가진 유저를 db에서 조회
         return Objects.isNull(findUser);
-
     }
+
+    public String findUserId(String name, String email){
+        UserDTO findUserId = userMapper.selectUserByNameAndEmail(name, email);
+        System.out.println(findUserId);
+        if(Objects.isNull(findUserId)){
+            return null;
+        }
+        return findUserId.getUserId();
+    }
+
+
+    public String resetPassword(String id, String name, String email){
+        UserDTO resetPassword = userMapper.selectUserByIdAndEmail(id, name, email);
+        if(Objects.isNull(resetPassword)){
+            return null;
+        }
+        return null;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
