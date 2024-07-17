@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ebook.mapper.UserMapper">
+
+    <select id="selectUserById" resultType="UserDTO">
+        SELECT * FROM `user` WHERE id = #{id}
+    </select>
+<<<<<<< HEAD
+=======
+    <select id="selectUserByCi" resultType="UserDTO">
+        SELECT * FROM `user` WHERE ci = #{ci}
+    </select>
+    <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO">
+        SELECT * FROM `custom_user` WHERE id = #{id}
+    </select>
+>>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
+
+    <insert id="insertUser">
+        INSERT INTO `user`
+        VALUES
+        (#{id}, #{ci}, #{password}, #{email}, #{name}, #{nickname}, #{profileImage.data})
+    </insert>
+
+<<<<<<< HEAD
+=======
+    <insert id="insertSocialUser">
+        INSERT INTO `custom_user` VALUES (#{id}, #{ci}, #{name}, #{email}, #{nickName}, #{profileImageUrl})
+    </insert>
+
+>>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
+</mapper>
