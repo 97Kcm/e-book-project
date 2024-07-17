@@ -5,10 +5,10 @@
 <mapper namespace="com.ebook.mapper.UserMapper">
 
     <select id="selectUserById" resultType="UserDTO">
-        SELECT * FROM `user` WHERE id = #{id}
+        SELECT * FROM `user` WHERE user_id = #{id}
     </select>
     <select id="selectUserByCi" resultType="UserDTO">
-        SELECT * FROM `user` WHERE ci = #{ci}
+        SELECT * FROM `user` WHERE user_ci = #{ci}
     </select>
     <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO">
         SELECT * FROM `custom_user` WHERE id = #{id}
@@ -17,7 +17,7 @@
     <insert id="insertUser">
         INSERT INTO `user`
         VALUES
-        (#{id}, #{ci}, #{password}, #{email}, #{name}, #{nickname}, #{profileImage.data})
+        (#{id}, #{ci}, #{password}, #{email}, #{name}, #{nickname}, #{profileImage.data}, #{cash})
     </insert>
 
     <insert id="insertSocialUser">

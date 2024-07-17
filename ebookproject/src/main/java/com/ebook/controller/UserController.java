@@ -37,19 +37,26 @@ public class UserController {
             RedirectAttributes redirectAttributes
     ){
         log.info("impUid : " + impUid);
-        log.info("userDTO" + userDTO);
+        log.info("userDTO : " + userDTO);
         if(bindingResult.hasErrors()){
+            log.info("바인딩 에러");
             return "redirect:/user/register";
         }
         Object idCheck = session.getAttribute("idCheck");
         if(Objects.nonNull(idCheck)) {
-            if((Boolean) idCheck) {
+            System.out.println("id 체크를 하고 옴");
+            System.out.println(idCheck);
+            System.out.println(idCheck.equals(true));
+            if(idCheck.equals(true)) {
+                System.out.println("id 체크 했는데 중복이 아니였음");
                 session.removeAttribute("idCheck");
                 userService.create_user(impUid, userDTO);
                 return "redirect:/user/login";
             }
+            System.out.println("id 체크 했는데 중복이였음");
         }
         redirectAttributes.addFlashAttribute("certErrorMsg", "본인인증이 완료되지 않았습니다");
         return "redirect:/user/register";
+
     }
 }

@@ -105,9 +105,9 @@ public class UserService {
         }
 
         // 유저를 회원가입 시킬 때, CI 값을 같이 넣어준다
-        userDTO.setCi(userCi);
+        userDTO.setUserCi(userCi);
         // 유저를 회원가입 시킬 때, 패스워드를 인코딩해서 넣는다
-        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        userDTO.setUserPassword(passwordEncoder.encode(userDTO.getPassword()));
         userMapper.insertUser(userDTO);
         return true;
 

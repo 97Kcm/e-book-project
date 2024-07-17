@@ -22,14 +22,15 @@ import java.util.Map;
 public class UserDTO implements UserDetails, OAuth2User {
     @NotBlank
     @Length(min = 4, max = 16)
-    private String id;
-    private String ci;
+    private String userId;
+    private String userCi;
     @NotBlank
-    private String password;
-    private String email;
-    private String name;
-    private String nickname;
-    private FileDTO profileImage;
+    private String userPassword;
+    private String userEmail;
+    private String userName;
+    private String userNickname;
+    private FileDTO userProfileImage;
+    private Integer userCash;
     private Map<String, Object> attributes;
 
     @Override
@@ -43,8 +44,13 @@ public class UserDTO implements UserDetails, OAuth2User {
     }
 
     @Override
+    public String getPassword() {
+        return this.userPassword;
+    }
+
+    @Override
     public String getUsername() {
-        return this.id;
+        return this.userId;
     }
 
     @Override
@@ -65,6 +71,11 @@ public class UserDTO implements UserDetails, OAuth2User {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String getName() {
+        return this.userName;
     }
 
 //    public void setProfileImage(byte[] profileImage) {
