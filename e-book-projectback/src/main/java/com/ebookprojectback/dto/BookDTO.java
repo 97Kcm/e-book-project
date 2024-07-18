@@ -3,6 +3,9 @@ package com.ebookprojectback.dto;
 
 import lombok.*;
 
+import java.util.Base64;
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -18,6 +21,15 @@ public class BookDTO {
     private String bookCategory;
     private String bookDescription;
     private byte[] bookImage;
+    private String bookImageUrl;
     private Integer bookLikeCount;
+    private List<BookChapterDTO> bookChapters;
 
+    public String getBookImageUrl() {
+        try {
+            return Base64.getEncoder().encodeToString(this.bookImage);
+        }catch (Exception e){
+            return null;
+        }
+    }
 }
