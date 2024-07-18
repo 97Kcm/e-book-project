@@ -18,6 +18,15 @@ main > section{
     padding: 40px 60px;
 }
 
+#password-change-btn{
+    display: flex;
+    justify-content: right;
+}
+
+#password-change-btn a{
+    color: black;
+}
+
 #my-info-detail-section{
     display: flex;
 }
