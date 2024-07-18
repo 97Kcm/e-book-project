@@ -137,14 +137,24 @@ main > section{
     align-items: center;
 }
 .like-list > div:first-child{
-    width: 100px;
+    width: 120px;
     height: 150px;
     margin-right: 20px;
     background-color: #A6705D;
 }
-
+.like-list > div:nth-child(2){
+    width: 100%;
+}
+.like-list > div:nth-child(2) i{
+    color: red;
+    cursor: pointer;
+}
 .like-list > div:nth-child(2) > div{
     margin: 25px 0;
+}
+.like-list > div:nth-child(2) > div:first-child{
+    display: flex;
+    justify-content: space-between;
 }
 
 /****************************************/

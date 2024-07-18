@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+>
 <head>
     <meta charset="UTF-8">
     <title>내 정보 페이지</title>
-    <link rel="stylesheet" href="../static/css/mypage.css">
-    <link rel="stylesheet" href="../static/css/public/public.css">
+    <link rel="stylesheet" href="../static/css/mypage.css" th:href="@{/css/mypage.css}">
+    <link rel="stylesheet" href="../static/css/public/public.css" th:href="@{/css/public/public.css}">
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
+    <script src="../static/js/mypage.js" th:src="@{/js/mypage.js}" defer></script>
 </head>
 <body>
-    <main>
+    <main layout:fragment="main">
         <section>
             <section id="my-info-section">
                 <h1>내 정보</h1>
                 <section id="my-info-detail-section">
                     <div id="my-info-image-section">
                         <div>
-                            <img src="https://cdn.inflearn.com/public/users/thumbnails/759418/09bcc1e5-b03d-46ed-8c6b-4aa283267e28" alt="">
+                            <img th:src="${#authentication.principal.userProfileImage}" src="https://cdn.inflearn.com/public/users/thumbnails/759418/09bcc1e5-b03d-46ed-8c6b-4aa283267e28" alt="">
                         </div>
                     </div>
                     <div id="my-info-span-section">
                         <div>
                             <span>이름 : </span>
-                            <span>홍길동</span>
+                            <span th:text="${#authentication.principal.name}">홍길동</span>
                         </div>
                         <div id="password-change-btn">
                             <a href="">
@@ -30,15 +36,15 @@
                         </div>
                         <div>
                             <span>아이디 : </span>
-                            <span>korea</span>
+                            <span th:text="${#authentication.principal.username}">korea</span>
                         </div>
                         <div>
                             <span>닉네임 : </span>
-                            <span>라이언</span>
+                            <span th:text="${#authentication.principal.userNickname}">라이언</span>
                         </div>
                         <div>
                             <span>이메일 : </span>
-                            <span>99999@naver.com</span>
+                            <span th:text="${#authentication.principal.userEmail}">99999@naver.com</span>
                         </div>
                     </div>
                 </section>
@@ -47,7 +53,8 @@
             <section id="cash-section">
                 <div>
                     <span>보유 캐시 : </span>
-                    <span>200원</span>
+                    <span th:if="${#authentication.principal.userCash != 0}" th:text="${#authentication.principal.userCash}"></span>
+                    <span th:if="${#authentication.principal.userCash == 0}" th:text="0원">200원</span>
                 </div>
                 <div>
                     <button>충전</button>
@@ -76,8 +83,9 @@
                                 이미지<img src="" alt="">
                             </div>
                             <div>
-                                <div>
+                                <div class="like-btn">
                                     <span>1. 이것이 자바다</span>
+                                    <i class="fa-regular fa-heart"></i>
                                 </div>
                                 <div>
                                     <span>저자 : 신용권, 임경균</span>
@@ -90,8 +98,9 @@
                                 이미지<img src="" alt="">
                             </div>
                             <div>
-                                <div>
+                                <div class="like-btn">
                                     <span>1. 이것이 자바다</span>
+                                    <i class="fa-regular fa-heart"></i>
                                 </div>
                                 <div>
                                     <span>저자 : 신용권, 임경균</span>

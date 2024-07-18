@@ -34,5 +34,8 @@ public interface UserMapper {
             @Param("email") String email
     );
 
+    /******************* 마이 페이지 정보 조회 ********************/
+
+
 
 }
