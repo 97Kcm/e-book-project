@@ -28,10 +28,17 @@ public interface UserMapper {
 
     /******************* 비밀번호 재설정 *******************/
 
-    UserDTO selectUserByIdAndEmail(
+    UserDTO selectUserByIdAndNameAndEmail(
             @Param("id") String id,
             @Param("name") String name,
             @Param("email") String email
+    );
+
+    void resetUserPassword(
+            @Param("id") String id,
+            @Param("name") String name,
+            @Param("email") String email,
+            @Param("password") String EncodingPassword
     );
 
     /******************* 마이 페이지 정보 조회 ********************/

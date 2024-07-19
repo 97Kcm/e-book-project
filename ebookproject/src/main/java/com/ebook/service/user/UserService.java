@@ -128,12 +128,9 @@ public class UserService {
     }
 
 
-    public String resetPassword(String id, String name, String email){
-        UserDTO resetPassword = userMapper.selectUserByIdAndEmail(id, name, email);
-        if(Objects.isNull(resetPassword)){
-            return null;
-        }
-        return null;
+    public void resetPassword(String id, String name, String email, String EncodingPassword){
+        log.info("userservice : " + id + name + email + EncodingPassword);
+        userMapper.resetUserPassword(id, name, email, EncodingPassword);
     }
 
 

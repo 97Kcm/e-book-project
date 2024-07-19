@@ -16,8 +16,9 @@
     <select id="selectUserByNameAndEmail" resultType="UserDTO">
         SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userEmail}
     </select>
-    <select id="selectUserByIdAndEmail" resultType="UserDTO">
-        SELECT * FROM `user` WHERE user_id = #{userId} AND user_name = #{userName} AND user_email = #{userEmail}
+    <select id="selectUserByIdAndNameAndEmail" resultType="UserDTO">
+        SELECT `user`.user_password FROM `user`
+        WHERE user_id = #{userId} AND user_name = #{userName} AND user_email = #{userEmail}
     </select>
 
     <insert id="insertUser">
@@ -29,5 +30,9 @@
     <insert id="insertSocialUser">
         INSERT INTO `custom_user` VALUES (#{id}, #{ci}, #{name}, #{email}, #{nickName}, #{profileImageUrl})
     </insert>
+
+    <update id="resetUserPassword">
+        UPDATE `user` SET user_password=#{password} WHERE user_id = #{id} AND user_name = #{name} AND user_email = #{email}
+    </update>
 
 </mapper>

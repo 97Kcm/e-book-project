@@ -3,7 +3,6 @@ main{
     margin: var(--main-margin);
 }
 img{
-    object-fit: cover;
     cursor: pointer;
 }
 
