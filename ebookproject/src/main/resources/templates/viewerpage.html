@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>뷰어</title>
+    <script src="https://kit.fontawesome.com/6cefa8d439.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/viwerpage.css" th:src="@{/css/viewpage.css}">
+    <link rel="stylesheet" href="../static/css/pub/public.css" th:src="@{/css/pub/public.css}">
+
+</head>
+<body>
+    <main id="main-section">
+        <div id="main-side-section">
+            <div id="top-container">
+                <div class="top-interaction-class">
+                    <section>
+                        <button class="page-button">다음 화</button>
+                    </section>
+
+                    <section class="title-section">
+                        <i class="fa-solid fa-house fa-2x"></i>
+                        <span class="title">제목</span>
+                        <i class="fa-solid fa-comment fa-2x"></i>
+                    </section>
+
+                    <section>
+                        <label>
+                            <select class="next-chapter-class-select">
+                                <option>회차 선택</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </label>
+                        <button class="page-button">이전 화</button>
+                    </section>
+                </div>
+            </div>
+
+            <div id="view-side-container">
+                <button id="left-arrow-section">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <section id="viewer-section">뷰어 섹션</section>
+                <button id="right-arrow-section">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+        </div>
+
+
+
+    </main>
+</body>
+</html>
