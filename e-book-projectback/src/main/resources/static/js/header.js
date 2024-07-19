@@ -3,6 +3,9 @@ const searchSection = document.querySelector('.search-section');
 const myPageSection = document.getElementById('my-page-section')
 const myPageSectionSection = document.getElementById('my-page-section-section')
 const cashChargeButton = document.getElementById('cash-charge');
+
+
+
 // 검색창 토글 함수
 function showHideSearchSection() {
     if (this.classList.contains('show')) {
@@ -30,7 +33,6 @@ function openCashChargePage() {
     window.open('cashcharge','_blank',options);
     console.log("캐시충전페이지 열려라")
 }
-
 
 
 // 마우스 이벤트 리스너

@@ -1,7 +1,11 @@
 package com.ebook.mapper;
 
+import com.ebook.dto.BookChapterDTO;
 import com.ebook.dto.BookDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 @Mapper
 public interface BookMapper {
