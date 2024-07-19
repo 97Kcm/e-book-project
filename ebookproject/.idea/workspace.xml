@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebookprojectback/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/main-carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/public/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/public/public.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/findId.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/resetpassword.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/viwerpage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icons/google-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icons/kakao-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icons/naver-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/embla-carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/main-carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/mypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/public/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/user/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/user/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/layout/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/findId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/resetPassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebookprojectback/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebookprojectback/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/cashcharge.css" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/cashcharge.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/mainPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/mypage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/mypage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/cashcharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/cashcharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/mainPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/mypage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/viewerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/viewerpage.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2jRUWmAmFgrfo6tF4jwHAOVZf2J" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build ebookproject.executor": "Run",
+    "JavaScript Debug.detail.html.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.EbookprojectApplication.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "jh",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/e-book-projectback",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ebookproject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ebookproject" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EbookprojectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ebook.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ebook.EbookprojectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="" />
+      <created>1721349416793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721349416793</updated>
+      <workItem from="1721349418075" duration="1906000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

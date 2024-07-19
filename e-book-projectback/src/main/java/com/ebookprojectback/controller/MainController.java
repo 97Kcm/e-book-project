@@ -15,9 +15,9 @@ import java.util.List;
 public class MainController {
     @Autowired BookService bookService;
 
-    @GetMapping("/mainPage")
+    @GetMapping("/main")
     public String get_main() {
-        return "mainPage";
+        return "main";
     }
 
     @GetMapping("/mypage")

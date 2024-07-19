@@ -1,61 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+>
 <head>
     <meta charset="UTF-8">
     <title>내 정보 페이지</title>
+    <link rel="stylesheet" href="../static/css/mypage.css" th:href="@{/css/mypage.css}">
+    <link rel="stylesheet" href="../static/css/public/public.css" th:href="@{/css/public/public.css}">
+    <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
+    <script src="../static/js/mypage.js" th:src="@{/js/mypage.js}" defer></script>
 </head>
 <body>
-<main>
-    <section>
-        <div>내정보</div>
-        <div>
-                <span>
-                    프로필 사진
-                </span>
-            <span>
-                    <div>이름</div>
-                    <div>아이디</div>
-                    <div>생일</div>
-                    <div>닉네임</div>
-                    <div>이메일</div>
-            </span>
-        </div>
-    </section>
+    <main layout:fragment="main">
+        <section>
+            <section id="my-info-section">
+                <h1>내 정보</h1>
+                <section id="my-info-detail-section">
+                    <div id="my-info-image-section">
+                        <div>
+                            <img src="https://cdn.inflearn.com/public/users/thumbnails/759418/09bcc1e5-b03d-46ed-8c6b-4aa283267e28" alt="">
+                        </div>
+                    </div>
+                    <div id="my-info-span-section">
+                        <div>
+                            <span>이름 : </span>
+                            <span>홍길동</span>
+                        </div>
+                        <section id="password-change-btn">
+                            <a href="">
+                                비밀번호 변경
+                            </a>
+                        </section>
+                        <div>
+                            <span>아이디 : </span>
+                            <span>korea</span>
+                        </div>
+                        <div>
+                            <span>닉네임 : </span>
+                            <span>라이언</span>
+                        </div>
+                        <div>
+                            <span>이메일 : </span>
+                            <span>99999@naver.com</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
 
-    <section>
-        <span>보유 캐시</span>
-        <span>여기에 잔액이 표시됨</span>
-        <form>
-            <button>충전</button>
-        </form>
+            <section id="cash-section">
+                <div>
+                    <span>보유 캐시 : </span>
+<!--                    <span th:if="${#authentication.principal.userCash != 0}" th:text="${#authentication.principal.userCash}"></span>-->
+<!--                    <span th:if="${#authentication.principal.userCash == 0}" th:text="0원">200원</span>-->
+                </div>
+                <div>
+                    <button>충전</button>
+                </div>
+            </section>
 
-    </section>
-    <div>
-        <span>좋아요 목록</span>
-        <span>구매 목록</span>
-        <span>댓글 목록</span>
-        <span>댓글 좋아요 목록</span>
-    </div>
-    <section>
-        <div>
-            여기엔 책 정보들. css넣을 때 추가 해야함.
-        </div>
-    </section>
-    <section>
-        <div>
-            여기엔 구매 목록 정보들. css 넣을때 추가 해야함
-        </div>
-    </section>
-    <section>
-        <div>
-            댓글 정보들. css 넣을때 추가.
-        </div>
-    </section>
-    <section>
-        <div>
-            댓글 좋아요 목록.  4개 목록 다 createnode js
-        </div>
-    </section>
-</main>
+            <section id="my-info-like-list">
+                <div id="like-list-name-section">
+                    <div>
+                        <button>좋아요 목록</button>
+                    </div>
+                    <div>
+                        <button>구매 목록</button>
+                    </div>
+                </div>
+                <div>
+                    <section id="like-list-section">
+                        <a class="like-list">
+                            <div>
+                                <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
+                            </div>
+                            <div>
+                                <div class="like-btn">
+                                    <span>1. 이것이 자바다</span>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div>
+                                    <span>저자 : 신용권, 임경균</span>
+                                    <span>출판 미디어 2024.04.01</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="like-list">
+                            <div>
+                                <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
+                            </div>
+                            <div>
+                                <div class="like-btn">
+                                    <span>1. 이것이 자바다</span>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div>
+                                    <span>저자 : 신용권, 임경균</span>
+                                    <span>출판 미디어 2024.04.01</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="like-list">
+                            <div>
+                                <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
+                            </div>
+                            <div>
+                                <div class="like-btn">
+                                    <span>1. 이것이 자바다</span>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div>
+                                    <span>저자 : 신용권, 임경균</span>
+                                    <span>출판 미디어 2024.04.01</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </section>
+
+    </main>
 </body>
 </html>

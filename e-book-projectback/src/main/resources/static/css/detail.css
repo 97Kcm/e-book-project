@@ -28,7 +28,7 @@ main{
 #detail-img {
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -105,10 +105,6 @@ main{
 
 .part .part-name {
     font-size: var(--font-size-large);
-}
-.part-date{
-    font-size: var(--font-size-small);
-    margin-left: 10px;
 }
 
 .part > .part-btn-container{
