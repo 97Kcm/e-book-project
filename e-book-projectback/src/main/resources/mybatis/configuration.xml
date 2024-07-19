@@ -11,7 +11,7 @@
     
     
     <typeAliases>
-        <typeAlias type="com.ebookprojectback.dto.BookChapterDTO" alias="BookChapterDTO"/>
-        <typeAlias type="com.ebookprojectback.dto.BookDTO" alias="BookDTO" />
+        <typeAlias type="com.ebook.dto.BookChapterDTO" alias="BookChapterDTO"/>
+        <typeAlias type="com.ebook.dto.BookDTO" alias="BookDTO" />
     </typeAliases>
 </configuration>

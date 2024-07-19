@@ -1,11 +1,7 @@
-package com.ebookprojectback.mapper;
+package com.ebook.mapper;
 
-import com.ebookprojectback.dto.BookChapterDTO;
-import com.ebookprojectback.dto.BookDTO;
+import com.ebook.dto.BookDTO;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 @Mapper
 public interface BookMapper {

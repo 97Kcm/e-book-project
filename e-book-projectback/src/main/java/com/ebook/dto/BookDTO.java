@@ -1,4 +1,4 @@
-package com.ebookprojectback.dto;
+package com.ebook.dto;
 
 
 import lombok.*;

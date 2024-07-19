@@ -1,12 +1,9 @@
-package com.ebookprojectback.service;
+package com.ebook.service;
 
-import com.ebookprojectback.dto.BookChapterDTO;
-import com.ebookprojectback.dto.BookDTO;
-import com.ebookprojectback.mapper.BookMapper;
+import com.ebook.dto.BookDTO;
+import com.ebook.mapper.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class BookService {
