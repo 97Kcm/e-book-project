@@ -81,10 +81,11 @@ public class UserController {
     @PostMapping("/resetPassword")
     public void post_resetPassword(){}
 
-
-
-
-
+//    @GetMapping("/main")
+//    public String get_user(Model model){
+//
+//        return "/main";
+//    }
 
 
 

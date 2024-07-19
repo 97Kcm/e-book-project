@@ -137,21 +137,6 @@ public class UserService {
     }
 
 
-    // 헤더의 내 정보 가져오기
-
-    public UserDTO getHeaderUser(UserDTO userDTO){
-
-        return null;
-
-    }
-
-
-
-
-
-
-
-
 
 
 
