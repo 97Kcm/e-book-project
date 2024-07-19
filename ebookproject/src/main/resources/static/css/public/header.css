@@ -4,7 +4,9 @@ header{
     top: 0;
     z-index: 99;
 }
-
+header button{
+    cursor: pointer;
+}
 header > section {
     padding: 10px 30px; /* 헤더 내부 여백 */
     display: flex;
@@ -165,12 +167,15 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.my-cash,.logout-btn{
+.my-cash{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
-.logout-div >.logout-btn{
+#logout-btn{
+    display: none;
+}
+.logout-div button{
     background-color: white;
     border-radius: 5px;
     height: 100%;

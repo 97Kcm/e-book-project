@@ -20,8 +20,7 @@
     <section>
         <div id="e-book-category-div">
             <a th:href="@{/mainPage}">
-                <img src="../../static/icons/bookimage.png" height="565" width="660"/>
-                <img class="img" src="../../static/icon/bookimage.png" th:src="@{icon/bookimage.png}"/>
+                <img class="img" src="../../static/icons/bookimage.png" th:src="@{/icons/bookimage.png}"/>
             </a>
             <button type="submit">웹툰</button>
             <button type="submit">소설</button>
@@ -64,7 +63,8 @@
                         <button id="cash-charge" th:onclick="openCashChargePage()">충전</button>
                     </div>
                     <div class="logout-div">
-                        <button class="logout-btn">로그아웃</button>
+                        <button id="login-btn">로그인</button>
+                        <button id="logout-btn">로그아웃</button>
                     </div>
                 </section>
             </section>
