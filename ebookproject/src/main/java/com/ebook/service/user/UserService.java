@@ -1,10 +1,6 @@
 package com.ebook.service.user;
 
-<<<<<<< HEAD
-import com.ebook.dto.UserDTO;
-=======
 import com.ebook.dto.user.UserDTO;
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
 import com.ebook.mapper.UserMapper;
 import lombok.extern.log4j.Log4j2;
 import net.minidev.json.JSONObject;
@@ -20,10 +16,7 @@ import org.springframework.web.client.RestOperations;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
-<<<<<<< HEAD
-=======
 import java.util.Objects;
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
 
 @Log4j2
 @Service
@@ -38,8 +31,8 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     // 테스트시 본인의 url 사용하기
-    private final String PORT_ONE_IMP_KEY = "3706357072443643";
-    private final String PORT_ONE_IMP_SECRET = "MGMGBgVfkjogobPd9VxX9ZrsGP3mBQtMrTteUtFvTw922Ya8zp6pAULzGW9LkIMuAY7LGOSb9cvWQUxT";
+    private final String PORT_ONE_IMP_KEY = "5407205547762202";
+    private final String PORT_ONE_IMP_SECRET = "UQY03Qj6sOH0XW39xztdzKVI6RcGjSspww39xrNDY22L1CSApDrTnFGpeniE6yqSBVzkE2gKeYmWkAro";
     private final String PORT_ONE_ACCESS_TOKEN_URL = "https://api.iamport.kr/users/getToken";
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";
 
@@ -112,20 +105,44 @@ public class UserService {
         }
 
         // 유저를 회원가입 시킬 때, CI 값을 같이 넣어준다
-        userDTO.setCi(userCi);
+        userDTO.setUserCi(userCi);
         // 유저를 회원가입 시킬 때, 패스워드를 인코딩해서 넣는다
-        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        userDTO.setUserPassword(passwordEncoder.encode(userDTO.getPassword()));
         userMapper.insertUser(userDTO);
         return true;
 
     }
-<<<<<<< HEAD
-=======
 
     public boolean findUser(String id){
         UserDTO findUser = userMapper.selectUserById(id);// 해당 id를 가진 유저를 db에서 조회
         return Objects.isNull(findUser);
-
     }
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
+
+    public String findUserId(String name, String email){
+        UserDTO findUserId = userMapper.selectUserByNameAndEmail(name, email);
+        System.out.println(findUserId);
+        if(Objects.isNull(findUserId)){
+            return null;
+        }
+        return findUserId.getUserId();
+    }
+
+
+    public String resetPassword(String id, String name, String email){
+        UserDTO resetPassword = userMapper.selectUserByIdAndEmail(id, name, email);
+        if(Objects.isNull(resetPassword)){
+            return null;
+        }
+        return null;
+    }
+
+    public void updateUserCash(UserDTO user, int amount) {
+        userMapper.updateCashByUser(user, amount);
+    }
+
+//    public UserDTO findUserById(String userId) {
+//        UserDTO findUser = userMapper.selectUserById(userId);
+//
+//        return findUser;
+//    }
 }

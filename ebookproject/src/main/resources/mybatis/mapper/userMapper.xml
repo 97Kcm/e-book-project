@@ -3,31 +3,36 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ebook.mapper.UserMapper">
+    <update id="updateCashByUser">
+        UPDATE `user`
+        SET `user_cash` = `user_cash` + #{amount}
+        WHERE `user_id` = #{user.userId}
+    </update>
 
     <select id="selectUserById" resultType="UserDTO">
-        SELECT * FROM `user` WHERE id = #{id}
+        SELECT * FROM `user` WHERE user_id = #{userId}
     </select>
-<<<<<<< HEAD
-=======
     <select id="selectUserByCi" resultType="UserDTO">
-        SELECT * FROM `user` WHERE ci = #{ci}
+        SELECT * FROM `user` WHERE user_ci = #{userCi}
     </select>
     <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO">
         SELECT * FROM `custom_user` WHERE id = #{id}
     </select>
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
+    <select id="selectUserByNameAndEmail" resultType="UserDTO">
+        SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userEmail}
+    </select>
+    <select id="selectUserByIdAndEmail" resultType="UserDTO">
+        SELECT * FROM `user` WHERE user_id = #{userId} AND user_name = #{userName} AND user_email = #{userEmail}
+    </select>
 
     <insert id="insertUser">
         INSERT INTO `user`
         VALUES
-        (#{id}, #{ci}, #{password}, #{email}, #{name}, #{nickname}, #{profileImage.data})
+        (#{userId}, #{userCi}, #{userPassword}, #{userEmail}, #{userName}, #{userNickname}, #{userProfileImage.data}, #{userCash})
     </insert>
 
-<<<<<<< HEAD
-=======
     <insert id="insertSocialUser">
         INSERT INTO `custom_user` VALUES (#{id}, #{ci}, #{name}, #{email}, #{nickName}, #{profileImageUrl})
     </insert>
 
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
 </mapper>

@@ -21,8 +21,9 @@ public class UserRestController {
         boolean result = userService.findUser(id);
         if(result){
             session.setAttribute("idCheck", true);
+        }else {
+            session.setAttribute("idCheck", false);
         }
-        session.setAttribute("idCheck", false);
         return ResponseEntity.ok(result);
     }
 

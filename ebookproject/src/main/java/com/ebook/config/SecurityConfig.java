@@ -1,10 +1,7 @@
 package com.ebook.config;
 
-<<<<<<< HEAD
-=======
 import com.ebook.handler.CustomOAuth2SuccessHandler;
 import com.ebook.service.user.CustomOAuth2Service;
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,8 +19,6 @@ import org.springframework.web.client.RestTemplate;
 public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-<<<<<<< HEAD
-=======
 
         http.oauth2Login(config -> {
             config.loginPage("/user/login")
@@ -33,7 +28,6 @@ public class SecurityConfig {
         });
 
 
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
         http.formLogin(config -> {
             config.loginPage("/user/login").usernameParameter("id")
                     .defaultSuccessUrl("/main");

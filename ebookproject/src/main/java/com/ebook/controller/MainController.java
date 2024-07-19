@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-    @GetMapping("/main")
-    public void get_main(){}
+
+    @GetMapping("/cashcharge")
+    public void get_cashcharge(){}
+
+    @GetMapping("/detail")
+    public void get_detail(){}
+
 }

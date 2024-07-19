@@ -36,13 +36,11 @@ public class CustomOAuth2Service extends DefaultOAuth2UserService {
         log.info("oAuth2User : " + oAuth2User);
         Map<String, Object> attributes = oAuth2User.getAttributes();
         log.info("attributes : " + attributes);
-        Map<String, String> response = (Map<String, String>) attributes.get("response");
-        log.info("response : " + response);
         CustomUserDTO customUserDTO =
                 switch (clientName.toUpperCase()){
-                    case "NAVER" ->naver_login(response);
-                    case "KAKAO" ->kakao_login(response);
-                    case "GOOGLE" ->google_login(response);
+                    case "NAVER" ->naver_login(attributes);
+                    case "KAKAO" ->kakao_login(attributes);
+                    case "GOOGLE" ->google_login(attributes);
                     default ->throw new OAuth2AuthenticationException("허용되지 않은 로그인");
                 };
         log.info("customUserDTO : " + customUserDTO);
@@ -70,7 +68,8 @@ public class CustomOAuth2Service extends DefaultOAuth2UserService {
     }
 
 
-    private CustomUserDTO naver_login(Map<String, String> response){
+    private CustomUserDTO naver_login(Map<String, Object> userProperties){
+        Map<String, String> response = (Map<String, String>) userProperties.get("response");
         String id = response.get("id");
         String profileImageURL = response.get("profile_image");
         String email = response.get("email");
@@ -84,19 +83,23 @@ public class CustomOAuth2Service extends DefaultOAuth2UserService {
                 .build();
     }
 
-    private CustomUserDTO kakao_login(Map<String, String> response){
-        String id = response.get("id");
-        String nickName = response.get("nickname");
-        String name = response.get("name");
+
+    private CustomUserDTO kakao_login(Map<String, Object> attributes){
+        String id = attributes.get("id").toString();
+        Map<String, String> properties = (Map<String, String>) attributes.get("properties");
+        String nickName = properties.get("nickname");
+        String profileImageURL = properties.get("profile_image");
         return CustomUserDTO.builder()
                 .id(id)
                 .ci(CI)
-                .name(name)
+                .profileImageUrl(profileImageURL)
                 .nickName(nickName)
                 .build();
     }
 
-    private CustomUserDTO google_login(Map<String, String> response){
+    private CustomUserDTO google_login(Map<String, Object> attributes){
+        Map<String, String> response = (Map<String, String>) attributes.get("response");
+        log.info("response : " + response);
         String id = response.get("id");
         String profileImageURL = response.get("profile_image");
         String email = response.get("email");

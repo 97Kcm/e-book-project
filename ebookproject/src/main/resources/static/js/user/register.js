@@ -30,10 +30,7 @@ emailSelectSection.onchange = () => {
 /******************* 본인 인증하기 ***************************/
 const certBtn = document.getElementById('cert-btn');
 const impUidInput = document.getElementById('imp-uid');
-<<<<<<< HEAD
-=======
 const certValidCheck = document.querySelector('.valid-check.certification');
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
 IMP.init("imp26750511");
 
 certBtn.onclick = () => {
@@ -49,19 +46,12 @@ certBtn.onclick = () => {
                 certBtn.textContent = '본인인증완료';
                 certBtn.disabled = true;
             } else {
-<<<<<<< HEAD
-                alert('본인인증이 완료되지 못했습니다.');
-=======
                 certValidCheck.toggleAttribute('active', true);
                 certValidCheck.textContent = "본인인증 실패하였습니다.";
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
                 // 인증 실패 시 로직
             }
         }
     );
-<<<<<<< HEAD
-}
-=======
 }
 
 /************ 취소 버튼 *********************/
@@ -130,4 +120,3 @@ pwInput.item(1).addEventListener('focusout', () => {
 })
 
 
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb

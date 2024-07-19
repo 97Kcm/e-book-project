@@ -1,12 +1,10 @@
 package com.ebook.mapper;
 
-<<<<<<< HEAD
-import com.ebook.dto.UserDTO;
-=======
 import com.ebook.dto.user.CustomUserDTO;
 import com.ebook.dto.user.UserDTO;
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.security.core.userdetails.User;
 
 @Mapper
 public interface UserMapper {
@@ -15,13 +13,33 @@ public interface UserMapper {
 
     void insertUser(UserDTO userDTO);
 
-<<<<<<< HEAD
-=======
     UserDTO selectUserByCi(String ci);
 
     CustomUserDTO selectCustomUserById(String id);
 
     void insertSocialUser(CustomUserDTO socialUser);
 
->>>>>>> 4b32d3bf719638e375094087c5822a7d16ddd8eb
+    /******************* 아이디 찾기 *********************/
+
+    UserDTO selectUserByNameAndEmail(
+            @Param("name") String name,
+            @Param("email") String email
+    );
+
+    /******************* 비밀번호 재설정 *******************/
+
+    UserDTO selectUserByIdAndEmail(
+            @Param("id") String id,
+            @Param("name") String name,
+            @Param("email") String email
+    );
+
+    void updateCashByUser(
+            @Param("user") UserDTO user,
+            @Param("amount") int amount);
+
+    /******************* 마이 페이지 정보 조회 ********************/
+
+
+
 }
