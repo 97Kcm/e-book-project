@@ -39,7 +39,7 @@ public interface UserMapper {
             @Param("amount") int amount);
 
     /******************* 마이 페이지 정보 조회 ********************/
-
+    UserDTO SelectUserInfo();
 
 
 }

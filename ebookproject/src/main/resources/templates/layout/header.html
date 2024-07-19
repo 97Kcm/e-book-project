@@ -55,9 +55,9 @@
                 </div>
                 <section id="my-page-section-section">
                     <div class="my-page-div">
-                        <h4>내 정보</h4>
+                        <a th:href="@{#}"><h4 th:text="${user.userId}">내 정보</h4></a>
                     </div>
-                    <h4 class="my-cash">현재 보유 캐시</h4>
+                    <h4 class="my-cash" th:text="${user.userCash}">현재 보유 캐시</h4>
                     <div class="my-page-point">
                         <h4>100P</h4>
                         <button id="cash-charge" th:onclick="openCashChargePage()">충전</button>

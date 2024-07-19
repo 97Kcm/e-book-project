@@ -4,13 +4,35 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ebook.mapper.BookMapper">
     <resultMap id="findAllBooksWithImages" type="BookDTO" autoMapping="true">
-        <id property="no" column="no"/>
+        <id property="bookNo" column="no"/>
         <association property="bookImage" javaType="FileDTO">
             <id property="data" column="book_image" />
         </association>
     </resultMap>
 
+    <resultMap id="selectBookWithBookChaptersByBookNo" type="BookDTO" autoMapping="true">
+        <id property="bookNo" column="bookNo"/>
+        <collection property="bookChapters" ofType="BookChapterDTO" javaType="list" autoMapping="true">
+            <id property="no" column="bookChapterNo" />
+        </collection>
+    </resultMap>
+
     <select id="findAllBooks" resultMap="findAllBooksWithImages">
         SELECT * FROM books
     </select>
+
+    <!--  상세 페이지 -->
+    <select id="select_book_by_no" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
+        SELECT
+        B.no AS 'bookNo',
+        BC.no AS 'bookChapterNo',
+        B.*, BC.*
+        FROM `book_chapter` BC
+        INNER JOIN `books` B
+        on B.no = BC.book_no
+        WHERE B.no = #{bookNo}
+    </select>
+
+
+
 </mapper>

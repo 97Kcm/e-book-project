@@ -4,125 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/EBookProjectbackApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/controller/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/dto/BookChapterDTO$BookChapterDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/dto/BookChapterDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/dto/BookDTO$BookDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/dto/BookDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/mapper/BookMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/com/ebookprojectback/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/mybatis/configuration.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/mybatis/mapper/book-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/cashcharge.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/find.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/mainPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/mypage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/pub/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/pub/public.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/css/viewerpage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/icon/bookimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/icon/google-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/icon/kakao-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/icon/naver-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/js/detail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/js/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/static/js/viewerpage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/cashcharge.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/find.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/mainPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/mypage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/pub/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/production/e-book-projectback/templates/viewerpage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/out/test/e-book-projectback/com/ebookprojectback/EBookProjectbackApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/EBookProjectbackApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/controller/BookController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/controller/MypageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/controller/UserRestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/dto/BookChapterDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/dto/BookDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/dto/FileDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/dto/user/CustomUserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/dto/user/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/handler/CustomOAuth2SuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/mapper/BookMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/service/BookService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/service/user/CustomOAuth2Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/service/user/CustomUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/service/user/MypageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/java/com/ebook/service/user/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/mybatis/configuration.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/mybatis/mapper/book-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/cashcharge.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/find.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/main-carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/mypage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/pub/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/pub/public.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/public/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/public/public.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/findId.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/user/resetpassword.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/viewerpage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/css/viwerpage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icon/bookimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icon/google-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icon/kakao-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icon/naver-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icons/google-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icons/kakao-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/icons/naver-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/detail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/embla-carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/main-carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/mypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/public/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/user/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/user/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/static/js/viewerpage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/cashcharge.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/find.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/layout/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/layout/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/mypage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/pub/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/findId.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/user/resetPassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/main/resources/templates/viewerpage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-book-projectback/src/test/java/com/ebook/EBookProjectbackApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +105,7 @@
       <updated>1721349416793</updated>
       <workItem from="1721349418075" duration="1906000" />
       <workItem from="1721369624168" duration="11000" />
-      <workItem from="1721370429348" duration="7000" />
+      <workItem from="1721370429348" duration="302000" />
     </task>
     <servers />
   </component>

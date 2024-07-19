@@ -25,6 +25,7 @@
         SELECT * FROM `user` WHERE user_id = #{userId} AND user_name = #{userName} AND user_email = #{userEmail}
     </select>
 
+
     <insert id="insertUser">
         INSERT INTO `user`
         VALUES
@@ -35,4 +36,10 @@
         INSERT INTO `custom_user` VALUES (#{id}, #{ci}, #{name}, #{email}, #{nickName}, #{profileImageUrl})
     </insert>
 
+    <!-- 메인 페이지 유저 미니바 -->
+
+    <select id="SelectUserInfo" resultType="UserDTO">
+        SELECT userId, userCash
+        FROM `user`
+    </select>
 </mapper>
