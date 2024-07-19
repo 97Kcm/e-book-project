@@ -14,6 +14,7 @@
         <typeAlias type="com.ebook.dto.user.UserDTO" alias="UserDTO" />
         <typeAlias type="com.ebook.dto.BookDTO" alias="BookDTO" />
         <typeAlias type="com.ebook.dto.BookChapterDTO" alias="BookChapterDTO" />
+        <typeAlias type="com.ebook.dto.FileDTO" alias="FileDTO"/>
 
 
     </typeAliases>

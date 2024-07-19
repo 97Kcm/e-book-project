@@ -35,9 +35,7 @@ public class BookController {
             @PathVariable("bookNo") Integer bookNo,
             Model model
     ) {
-        System.out.println(bookNo);
         BookDTO book = bookService.get_book(bookNo);
-        System.out.println(book);
 //        List<BookChapterDTO> bookChapters = bookService.get_books_chapters(bookNo);
         model.addAttribute("book", book);
 //        model.addAttribute("chapter", bookChapters);

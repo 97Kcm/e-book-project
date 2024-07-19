@@ -5,20 +5,27 @@
 
     <resultMap id="selectBookWithBookChaptersByBookNo" type="BookDTO" autoMapping="true">
         <id property="bookNo" column="bookNo"/>
+        <association property="bookImage" javaType="FileDTO">
+            <id property="data" column="book_image" />
+        </association>
         <collection property="bookChapters" ofType="BookChapterDTO" javaType="list" autoMapping="true">
             <id property="no" column="bookChapterNo" />
         </collection>
     </resultMap>
 
+    <select id="findAllBooks" resultMap="selectBookWithBookChaptersByBookNo">
+        SELECT *, book_no AS 'bookNo' FROM books
+    </select>
+
 
     <select id="select_book_by_no" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
         SELECT
-            B.no AS 'bookNo',
+            B.book_no AS 'bookNo',
             BC.no AS 'bookChapterNo',
             B.*, BC.*
         FROM `book_chapter` BC
             INNER JOIN `books` B
-            on B.no = BC.book_no
-        WHERE B.no = #{bookNo}
+            on B.book_no = BC.book_no
+        WHERE B.book_no = #{bookNo}
     </select>
 </mapper>

@@ -12,5 +12,11 @@ public interface BookMapper {
 
     BookDTO select_book_by_no(Integer bookNo);
 
+    // 책의 카테고리를 가져온다.
+//    List<BookDTO> findAllBooksByCategory();
+
+
+    List<BookDTO> findAllBooks();
+
 //    List<BookChapterDTO> select_book_chapters_by_book_no(@Param("bookNo") Integer no);
 }

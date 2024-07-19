@@ -2,9 +2,6 @@ main{
     width: var(--main-width);
     margin: var(--main-margin);
 }
-img{
-    cursor: pointer;
-}
 
 .view-container{
     width: 100%;
@@ -36,28 +33,33 @@ img{
     position: relative;
 }
 
-.view .embla__viewport {
+.embla__viewport {
     height: 100%;
     overflow: hidden;
 }
-.view .embla__container {
+.embla__container {
     backface-visibility: hidden;
     display: flex;
     height: 100%;
 }
-.view .embla__slide {
+.embla__slide {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 0 100%;
     border-radius: 10px;
 }
-
-.view .embla__slide img{
+.embla__slide a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.embla__slide img{
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .embla__controls {

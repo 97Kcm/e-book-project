@@ -4,9 +4,7 @@ header{
     top: 0;
     z-index: 99;
 }
-header button{
-    cursor: pointer;
-}
+
 header > section {
     padding: 10px 30px; /* 헤더 내부 여백 */
     display: flex;
@@ -17,28 +15,29 @@ header > section {
 
 #e-book-category-div {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
 }
 
 .img{
     width: 80px;
     height: 50px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
-#e-book-category-div > button {
+#e-book-category-div > .genre {
     background-color: white;
     color: black;
     text-align: center;
     border: 1px solid black;
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
     width: 80px;
     font-size: 15px;
-    margin-top: 5px;
+    padding: 10px 0;
+    margin-right: 10px;
+    text-decoration: none;
+    &:hover{
+        background-color: #eeeded;
+    }
 }
 #e-book-category-div > button:nth-child(2){
     margin-right: 15px;
@@ -167,15 +166,12 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.my-cash{
+.my-cash,.logout-btn{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
-#logout-btn{
-    display: none;
-}
-.logout-div button{
+.logout-div >.logout-btn{
     background-color: white;
     border-radius: 5px;
     height: 100%;

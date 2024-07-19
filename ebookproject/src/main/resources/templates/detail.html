@@ -18,7 +18,7 @@
         <section id="book-detail-section">
             <div id="book-detail-div">
                 <div id="book-detail-img-div">
-                    <div id="detail-img" th:style="|background-image: url('data:image/*; base64, ${book.bookImageUrl}')|">
+                    <div id="detail-img" th:style="|background-image: url('${book.bookImage.fileUrl}')|">
                         <!-- 책 이미지를 여기에 넣으시면 됩니다 -->
                     </div>
                 </div>

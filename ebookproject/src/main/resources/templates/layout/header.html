@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="../../static/css/public/public.css" th:href="@{/css/public/public.css}">
     <script src="../../static/js/public/header.js" th:src="@{/js/public/header.js} " defer></script>
 
-
+ 
 </head>
 <body>
 <!--헤더 부분-->
 <header th:fragment="header">
     <section>
         <div id="e-book-category-div">
-            <a th:href="@{/mainPage}">
+            <a th:href="@{/main}">
                 <img class="img" src="../../static/icons/bookimage.png" th:src="@{/icons/bookimage.png}"/>
             </a>
-            <button type="submit">웹툰</button>
-            <button type="submit">소설</button>
+            <a class="genre" th:href="@{/main(genre=소설)}">소설</a>
+            <a class="genre" th:href="@{/main(genre=만화)}">만화</a>
         </div>
-        <div id="header-user-div">
 
+        <div id="header-user-div">
             <form class="search-form">
                 <label class="search-label">
                     <input type="text">
