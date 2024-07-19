@@ -5,12 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class MyPageController {
+public class MypageController {
     @GetMapping("/mypage")
     public void mypage() {}
 
     @PostMapping("/mypage")
     public void mypagePost() {}
+
+
 
 
 
