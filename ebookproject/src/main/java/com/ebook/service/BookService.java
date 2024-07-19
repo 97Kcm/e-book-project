@@ -12,6 +12,11 @@ import java.util.List;
 public class BookService {
     @Autowired private BookMapper bookMapper;
 
+    // 책의 모든 정보를 가져옵니다.
+    public List<BookDTO> findingAllBooks(){
+        return bookMapper.findAllBooks();
+    }
+
     public BookDTO get_book(Integer bookNo){
         return bookMapper.select_book_by_no(bookNo);
     }
