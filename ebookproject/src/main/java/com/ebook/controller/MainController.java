@@ -2,6 +2,9 @@ package com.ebook.controller;
 
 import com.ebook.dto.BookDTO;
 import com.ebook.service.BookService;
+import com.ebook.dto.user.UserDTO;
+import com.ebook.service.BookService;
+import com.ebook.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -22,6 +25,7 @@ public class MainController {
     @GetMapping("/main")
     public String mainPageImage(
             @RequestParam(value = "genre",required = false) String bookGenre,
+            @RequestParam(required = false) UserDTO userDTO,
             Model model
     ) {
         // 책 목록을 전체 가져오기
