@@ -9,10 +9,8 @@ import java.util.List;
 
 @Mapper
 public interface BookMapper {
-
     // 책의 카테고리를 가져온다.
-//    List<BookDTO> findAllBooksByCategory();
+    List<BookDTO> findAllBooksByCategory();
     BookDTO select_book_by_no(Integer bookNo);
     List<BookDTO> findAllBooks();
-
 }

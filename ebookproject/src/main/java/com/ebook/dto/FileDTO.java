@@ -7,7 +7,7 @@ import java.util.Base64;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"data","fileUrl"})
 public class FileDTO {
     private MultipartFile file;
     private byte[] data;

@@ -4,6 +4,7 @@ const myPageSection = document.getElementById('my-page-section')
 const myPageSectionSection = document.getElementById('my-page-section-section')
 const myPageBtn = document.getElementById('user');
 const logoutBtn = document.getElementById('logout-btn');
+const cashChargeButton = document.getElementById('cash-charge');
 
 
 // 실행하자마자 스위치는 off
@@ -21,9 +22,6 @@ function showHideSearchSection() {
         searchSection.style.display = 'block';
     }
 }
-// 마우스 이벤트 리스너
-
-
 
 // 내 정보창 토글 함수
 myPageBtn.addEventListener('click', showHideMyPage, false);
@@ -79,4 +77,11 @@ function openCashChargePage() {
     console.log("캐시충전페이지 열려라")
 }
 
+
+
+// 마우스 이벤트 리스너
+searchLabel.addEventListener('mouseenter', showHideSearchSection);
+searchLabel.addEventListener('mouseleave', showHideSearchSection);
+myPageSection.addEventListener('mouseenter', showHideMyPage);
+myPageSection.addEventListener('mouseleave', showHideMyPage);
 

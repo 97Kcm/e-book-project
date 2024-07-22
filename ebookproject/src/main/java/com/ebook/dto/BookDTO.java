@@ -1,9 +1,10 @@
 package com.ebook.dto;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import lombok.*;
-
-import java.util.Base64;
 import java.util.List;
 
 @Getter
@@ -13,8 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BookDTO {
-    private Integer bookNo;
-    private Integer no;
+    private Integer bookNo; // 책의 번호
     private String bookTitle; // 책의 제목
     private String bookGenre; // 책의 장르
     private String bookAuthor; // 책의 작가
