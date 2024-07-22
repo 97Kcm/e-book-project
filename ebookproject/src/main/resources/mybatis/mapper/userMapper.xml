@@ -39,7 +39,8 @@
     <!-- 메인 페이지 유저 미니바 -->
 
     <select id="SelectUserInfo" resultType="UserDTO">
-        SELECT userId, userCash
+        SELECT *
         FROM `user`
+        WHERE `user_id` = #{userId}
     </select>
 </mapper>

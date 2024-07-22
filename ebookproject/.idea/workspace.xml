@@ -32,6 +32,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -55,7 +62,7 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "jh",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/ebookproject",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/ebookproject/src/main/java/com/ebook/dto/user",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,6 +71,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\e-book-project\ebookproject\src\main\java\com\ebook\dto\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ebook.dto" />
+      <recent name="com.ebook.dto.user" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ebookproject" />
@@ -106,6 +122,7 @@
       <workItem from="1721349418075" duration="1906000" />
       <workItem from="1721369624168" duration="11000" />
       <workItem from="1721370429348" duration="302000" />
+      <workItem from="1721370761292" duration="9121000" />
     </task>
     <servers />
   </component>

@@ -5,8 +5,6 @@ import com.ebook.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class MyPageService {
     @Autowired UserMapper userMapper;
@@ -17,8 +15,8 @@ public class MyPageService {
 
     // 헤더의 내 정보 가져오기
 
-    public UserDTO getHeaderUser(){
-       return userMapper.SelectUserInfo();
+    public UserDTO getHeaderUser(UserDTO userDTO){
+       return userMapper.SelectUserInfo(userDTO);
     }
 
 

@@ -35,7 +35,7 @@ public class BookController {
         Map<String, List<BookDTO>> booksByCategory = allBooks.stream()
                 .filter(book  -> bookGenre == null || book.getBookGenre().equals(bookGenre))
                 .collect(Collectors.groupingBy(BookDTO::getBookCategory));
-        UserDTO user = myPageService.getHeaderUser();
+        UserDTO user = myPageService.getHeaderUser(userDTO);
         model.addAttribute("user", user);
         model.addAttribute("booksByCategory", booksByCategory);
         return "main";

@@ -3,6 +3,7 @@ const searchSection = document.querySelector('.search-section');
 const myPageSection = document.getElementById('my-page-section')
 const myPageSectionSection = document.getElementById('my-page-section-section')
 const myPageBtn = document.getElementById('user');
+const logoutBtn = document.getElementById('logout-btn');
 
 
 // 실행하자마자 스위치는 off
@@ -26,6 +27,20 @@ function showHideSearchSection() {
 
 // 내 정보창 토글 함수
 myPageBtn.addEventListener('click', showHideMyPage, false);
+
+// 로그아웃
+if(logoutBtn !== null) {
+    logoutBtn.onclick = (e) => {
+        e.preventDefault();
+        const form = document.forms.item(0);
+        form.action = "/user/logout";
+        form.method = 'POST';
+        form.submit();
+    };
+}
+
+
+
 
 
 function showHideMyPage(e) {
