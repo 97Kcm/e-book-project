@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="" />
+    <list default="true" id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../CashCharge/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/dto/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/BookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/dto/FileDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/FileDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/public/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/public/header.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.EbookprojectApplication.executor": "Run",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "jh",
+    "git-widget-placeholder": "main 병합 중",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/ebookproject/src/main/java/com/ebook/dto/user",
     "node.js.detected.package.eslint": "true",
@@ -123,6 +132,7 @@
       <workItem from="1721369624168" duration="11000" />
       <workItem from="1721370429348" duration="302000" />
       <workItem from="1721370761292" duration="9121000" />
+      <workItem from="1721617220707" duration="362000" />
     </task>
     <servers />
   </component>
