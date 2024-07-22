@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import EmblaCarousel from 'embla-carousel'
 import { addPrevNextBtnsClickHandlers } from './EmblaCarouselArrowButtons'
 import { addDotBtnsAndClickHandlers } from './EmblaCarouselDotButton'
 import Autoplay from 'embla-carousel-autoplay'
+=======
+// import EmblaCarousel from 'embla-carousel'
+// import { addPrevNextBtnsClickHandlers } from './EmblaCarouselArrowButtons'
+// import { addDotBtnsAndClickHandlers } from './EmblaCarouselDotButton'
+// import Autoplay from 'embla-carousel-autoplay'
+>>>>>>> jh
 
 const OPTIONS = { loop: true }
 
@@ -11,7 +18,11 @@ const prevBtnNode = emblaNode.querySelector('.embla__button--prev')
 const nextBtnNode = emblaNode.querySelector('.embla__button--next')
 const dotsNode = emblaNode.querySelector('.embla__dots')
 
+<<<<<<< HEAD
 const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [Autoplay()])
+=======
+const emblaApi = EmblaCarousel(viewportNode, OPTIONS)
+>>>>>>> jh
 
 const onNavButtonClick = (emblaApi) => {
     const autoplay = emblaApi?.plugins()?.autoplay
@@ -42,7 +53,12 @@ emblaApi.on('destroy', removeDotBtnsAndClickHandlers)
 
 /********************************************************/
 
+<<<<<<< HEAD
 export const addDotBtnsAndClickHandlers = (
+=======
+// export
+const addDotBtnsAndClickHandlers = (
+>>>>>>> jh
     emblaApi,
     dotsNode,
     onButtonClick
@@ -107,7 +123,12 @@ const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
     }
 }
 
+<<<<<<< HEAD
 export const addPrevNextBtnsClickHandlers = (
+=======
+// export
+const addPrevNextBtnsClickHandlers = (
+>>>>>>> jh
     emblaApi,
     prevBtn,
     nextBtn,

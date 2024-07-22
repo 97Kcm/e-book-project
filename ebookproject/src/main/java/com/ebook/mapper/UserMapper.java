@@ -1,11 +1,17 @@
 package com.ebook.mapper;
 
+<<<<<<< HEAD
 import com.ebook.dto.user.CashChargeDTO;
+=======
+>>>>>>> jh
 import com.ebook.dto.user.CustomUserDTO;
 import com.ebook.dto.user.UserDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+<<<<<<< HEAD
 import org.springframework.security.core.userdetails.User;
+=======
+>>>>>>> jh
 
 @Mapper
 public interface UserMapper {
@@ -29,12 +35,17 @@ public interface UserMapper {
 
     /******************* 비밀번호 재설정 *******************/
 
+<<<<<<< HEAD
     UserDTO selectUserByIdAndNameAndEmail(
+=======
+    UserDTO selectUserByIdAndEmail(
+>>>>>>> jh
             @Param("id") String id,
             @Param("name") String name,
             @Param("email") String email
     );
 
+<<<<<<< HEAD
     void resetUserPassword(
             @Param("id") String id,
             @Param("name") String name,
@@ -54,4 +65,14 @@ public interface UserMapper {
             @Param("userId") String userId,
             @Param("cashAmount") Integer cashAmount
     );
+=======
+    void updateCashByUser(
+            @Param("user") UserDTO user,
+            @Param("amount") int amount);
+
+    /******************* 마이 페이지 정보 조회 ********************/
+    UserDTO SelectUserInfo(UserDTO userDTO);
+
+
+>>>>>>> jh
 }
