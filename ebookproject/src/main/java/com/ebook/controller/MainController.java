@@ -24,13 +24,12 @@ public class MainController {
     @GetMapping("/main")
     public String mainPageImage(
             @RequestParam(value = "genre",required = false) String bookGenre,
-            @RequestParam(required = false) UserDTO userDTO,
             Model model
     ) {
         // 책 목록을 전체 가져오기
         List<BookDTO> allBooks = bookService.findingAllBooks();
         // 장르별로 필터링
-        allBooks = allBooks.parallelStream().filter(book  -> bookGenre == null || book.getBookGenre().equals(bookGenre)).toList();
+        allBooks = allBooks.parallelStream().filter(book -> bookGenre == null || book.getBookGenre().equals(bookGenre)).toList();
         // 카테고리 별 그룹화 진행
         Map<String, List<BookDTO>> booksByCategory = allBooks.stream()
                 .collect(Collectors.groupingBy(BookDTO::getBookCategory));
