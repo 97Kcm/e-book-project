@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 public class MyPageService {
     @Autowired UserMapper userMapper;
 
-
     /******************  마이페이지 사용자 정보  **************/
-
 
     // 헤더의 내 정보 가져오기
 

@@ -46,7 +46,6 @@
                             <!--                                </svg>-->
                             <!--                            </button>-->
                             <!--                        </div>-->
-
                             <div class="embla__dots"></div>
                         </div>
                     </div>
@@ -55,20 +54,18 @@
         </article>
 
         <section id="sub-section">
-
             <section class="embla sub-repeat-section" th:each="bookMap: ${booksByCategory}">
                 <h1 th:text="${bookMap.key}">액션</h1>
                 <div class="embla__viewport">
                     <div class="embla__container sub-img-section">
                         <div class="embla__slide sub-img-box" th:each="book: ${bookMap.value}">
                             <a th:href="@{|/detail/${book.no}|}">
-                                <img th:src="${book.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
+                                <img th:src="${book.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt=""/>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-
         </section>
 
 
