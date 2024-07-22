@@ -1,9 +1,5 @@
 package com.ebook.dto;
 
-<<<<<<< HEAD
-=======
-import lombok.Builder;
->>>>>>> jh
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

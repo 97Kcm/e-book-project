@@ -22,7 +22,6 @@
                 <section class="embla">
                     <div class="embla__viewport">
                         <div class="embla__container">
-<<<<<<< HEAD
                             <div class="embla__slide" th:each="randomBook: ${randomBookByGenre}">
                                 <a th:href="@{|/detail/${randomBook.bookNo}|}">
                                     <img th:src="${randomBook.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
@@ -35,17 +34,6 @@
                             <!--                                    </a>-->
                             <!--                                </div>-->
                             <!--                            </th:block>-->
-=======
-                            <div class="embla__slide">
-                                <a href=""><img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/></a>
-                            </div>
-                            <div class="embla__slide">
-                                <a href=""><img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg-store.theqoo.net%2FCnnaAh.png&type=sc960_832" alt=""/></a>
-                            </div>
-                            <div class="embla__slide">
-                                <a href=""><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MjBfMjQ1%2FMDAxNjg3MjE5NTMxMjg4.92I_FmsTHDQYxbm4aYeQZhaHfq6xCCyiF9m4jA-9D7og.ZUdWQ4-nzpa4bz9QYANLXhJxjGo__6txI7u3Xen_cpsg.JPEG.dbfla4232%2FIMG_5190.JPG&type=sc960_832"  alt=""/></a>
-                            </div>
->>>>>>> jh
                         </div>
 
                         <div class="embla__controls">
@@ -76,11 +64,7 @@
                 <div class="embla__viewport">
                     <div class="embla__container sub-img-section">
                         <div class="embla__slide sub-img-box" th:each="book: ${bookMap.value}">
-<<<<<<< HEAD
                             <a th:href="@{|/detail/${book.bookNo}|}">
-=======
-                            <a th:href="@{|/detail/${book.no}|}">
->>>>>>> jh
                                 <img th:src="${book.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
                             </a>
                         </div>

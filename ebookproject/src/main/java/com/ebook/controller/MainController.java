@@ -1,33 +1,23 @@
 package com.ebook.controller;
 
-<<<<<<< HEAD
 import com.ebook.dto.BookDTO;
 import com.ebook.mapper.BookMapper;
 import com.ebook.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-=======
-import com.ebook.dto.user.UserDTO;
-import com.ebook.service.user.MyPageService;
-import org.springframework.beans.factory.annotation.Autowired;
->>>>>>> jh
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
-<<<<<<< HEAD
 import java.util.Map;
 import java.util.Random;
 import java.util.stream.Collectors;
-=======
->>>>>>> jh
 
 @Controller
 public class MainController {
     @Autowired
-<<<<<<< HEAD
     private BookService bookService;
 
     @GetMapping("/main")
@@ -58,23 +48,4 @@ public class MainController {
                 .mapToObj(books::get)
                 .collect(Collectors.toList());
     }
-=======
-    MyPageService myPageService;
-
-    @GetMapping("/cashcharge")
-    public void get_cashcharge(){}
-
-    @GetMapping("/detail")
-    public void get_detail(){}
-
-//    @GetMapping("/main")
-//    public void get_header_user(
-//            @RequestParam(required = false) UserDTO userDTO,
-//            Model model
-//    ) {
-//        UserDTO user = myPageService.getHeaderUser(userDTO);
-//        model.addAttribute("user", user);
-//    }
-
->>>>>>> jh
 }

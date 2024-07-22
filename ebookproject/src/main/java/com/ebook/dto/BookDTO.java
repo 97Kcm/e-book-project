@@ -14,7 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 public class BookDTO {
     private Integer bookNo;
-<<<<<<< HEAD
     private Integer no;
     private String bookTitle; // 책의 제목
     private String bookGenre; // 책의 장르
@@ -25,16 +24,4 @@ public class BookDTO {
     private FileDTO bookImage; // 책 이미지 // longblob
     private int bookLikeCount; // 책 좋아요 수 // like_count
     private List<BookChapterDTO> bookChapters;
-=======
-    private String bookTitle;
-    private String bookGenre;
-    private String bookAuthor;
-    private String bookPublisher;
-    private String bookCategory;
-    private String bookDescription;
-    private FileDTO bookImage;
-    private Integer bookLikeCount;
-    private List<BookChapterDTO> bookChapters;
-
->>>>>>> jh
 }

@@ -78,19 +78,7 @@ public class UserDTO implements UserDetails, OAuth2User {
         return this.userName;
     }
 
-<<<<<<< HEAD
 //    public void setProfileImage(byte[] profileImage) {
-=======
-    public Integer getUserCash() {
-        return this.userCash;
-    }
-
-    public void setUserCash(Integer userCash) {
-        this.userCash = userCash;
-    }
-
-    //    public void setProfileImage(byte[] profileImage) {
->>>>>>> jh
 //        this.profileImage = profileImage;
 //        try{
 //            this.url = Base64.getEncoder().encodeToString(profileImage);
