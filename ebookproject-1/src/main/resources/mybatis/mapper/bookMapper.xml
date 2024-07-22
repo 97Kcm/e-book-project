@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ebook.mapper.BookMapper">
+
+    <resultMap id="selectBookWithBookChaptersByBookNo" type="BookDTO" autoMapping="true">
+        <id property="bookNo" column="book_no"/>
+        <association property="bookImage" javaType="FileDTO">
+            <id property="data" column="book_image" />
+        </association>
+        <collection property="bookChapters" ofType="BookChapterDTO" javaType="list" autoMapping="true">
+            <id property="no" column="bookChapterNo" />
+        </collection>
+    </resultMap>
+
+    <select id="findAllBooks" resultMap="selectBookWithBookChaptersByBookNo">
+        SELECT *, book_no AS 'bookNo' FROM books
+    </select>
+
+
+    <select id="select_book_by_no" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
+        SELECT
+            B.book_no AS 'bookNo',
+            BC.no AS 'bookChapterNo',
+            IF(BL.user_id IS NULL, FALSE, TRUE) AS 'isLiked',
+            B.*, BC.*
+        FROM `book_chapter` BC
+            INNER JOIN `books` B
+            on B.book_no = BC.book_no
+            LEFT OUTER JOIN `book_like` BL
+            on BL.book_no = B.book_no AND BL.user_id = #{userId}
+        WHERE B.book_no = #{bookNo}
+    </select>
+</mapper>
