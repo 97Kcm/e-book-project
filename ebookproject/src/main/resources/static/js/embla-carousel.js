@@ -24,11 +24,19 @@ function embla_init(emblaNode){
 
         emblaApi.on('destroy', removePrevNextBtnsClickHandlers)
     }
+<<<<<<< HEAD
         const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
             emblaApi,
             dotsNode
         )
         emblaApi.on('destroy', removeDotBtnsAndClickHandlers)
+=======
+    const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
+        emblaApi,
+        dotsNode
+    )
+    emblaApi.on('destroy', removeDotBtnsAndClickHandlers)
+>>>>>>> jh
 }
 
 
@@ -79,6 +87,7 @@ function addDotBtnsAndClickHandlers (emblaApi, dotsNode) {
     let dotNodes = []
 
     const addDotBtnsWithClickHandlers = () => {
+<<<<<<< HEAD
         dotsNode.innerHTML = emblaApi
             .scrollSnapList()
             .map(() => '<button class="embla__dot" type="button"></button>')
@@ -99,6 +108,34 @@ function addDotBtnsAndClickHandlers (emblaApi, dotsNode) {
         const selected = emblaApi.selectedScrollSnap()
         dotNodes[previous].classList.remove('embla__dot--selected')
         dotNodes[selected].classList.add('embla__dot--selected')
+=======
+        try{
+            dotsNode.innerHTML = emblaApi
+                .scrollSnapList()
+                .map(() => '<button class="embla__dot" type="button"></button>')
+                .join('')
+
+            const scrollTo = (index) => {
+                emblaApi.scrollTo(index)
+            }
+
+            dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'))
+            dotNodes.forEach((dotNode, index) => {
+                dotNode.addEventListener('click', () => scrollTo(index), false)
+            })
+        }catch (error){
+
+        }
+    }
+
+    const toggleDotBtnsActive = () => {
+        try{
+            const previous = emblaApi.previousScrollSnap()
+            const selected = emblaApi.selectedScrollSnap()
+            dotNodes[previous].classList.remove('embla__dot--selected')
+            dotNodes[selected].classList.add('embla__dot--selected')
+        }catch (error){}
+>>>>>>> jh
     }
 
     emblaApi
@@ -111,4 +148,9 @@ function addDotBtnsAndClickHandlers (emblaApi, dotsNode) {
     return () => {
         dotsNode.innerHTML = ''
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> jh
 }

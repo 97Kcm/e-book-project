@@ -1,6 +1,9 @@
 package com.ebook.service.user;
 
+<<<<<<< HEAD
 import com.ebook.dto.user.CashChargeDTO;
+=======
+>>>>>>> jh
 import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.UserMapper;
 import lombok.extern.log4j.Log4j2;
@@ -32,8 +35,13 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     // 테스트시 본인의 url 사용하기
+<<<<<<< HEAD
     private final String PORT_ONE_IMP_KEY = "3706357072443643";
     private final String PORT_ONE_IMP_SECRET = "MGMGBgVfkjogobPd9VxX9ZrsGP3mBQtMrTteUtFvTw922Ya8zp6pAULzGW9LkIMuAY7LGOSb9cvWQUxT";
+=======
+    private final String PORT_ONE_IMP_KEY = "5407205547762202";
+    private final String PORT_ONE_IMP_SECRET = "UQY03Qj6sOH0XW39xztdzKVI6RcGjSspww39xrNDY22L1CSApDrTnFGpeniE6yqSBVzkE2gKeYmWkAro";
+>>>>>>> jh
     private final String PORT_ONE_ACCESS_TOKEN_URL = "https://api.iamport.kr/users/getToken";
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";
 
@@ -129,6 +137,7 @@ public class UserService {
     }
 
 
+<<<<<<< HEAD
     public void resetPassword(String id, String name, String email, String EncodingPassword){
         log.info("userservice : " + id + name + email + EncodingPassword);
         userMapper.resetUserPassword(id, name, email, EncodingPassword);
@@ -152,4 +161,23 @@ public class UserService {
 
 
 
+=======
+    public String resetPassword(String id, String name, String email){
+        UserDTO resetPassword = userMapper.selectUserByIdAndEmail(id, name, email);
+        if(Objects.isNull(resetPassword)){
+            return null;
+        }
+        return null;
+    }
+
+    public void updateUserCash(UserDTO user, int amount) {
+        userMapper.updateCashByUser(user, amount);
+    }
+
+//    public UserDTO findUserById(String userId) {
+//        UserDTO findUser = userMapper.selectUserById(userId);
+//
+//        return findUser;
+//    }
+>>>>>>> jh
 }

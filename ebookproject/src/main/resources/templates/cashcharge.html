@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <title>캐쉬충전</title>
     <meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../static/css/cashcharge.css" th:href="@{/css/cashcharge.css}">
     <link rel="stylesheet" href="../static/css/public/public.css" th:href="@{/css/public/public.css}">
+=======
+    <link rel="stylesheet" href="../static/css/cashcharge.css" th:src="@{/css/cashcharge.css}">
+>>>>>>> jh
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
     <script src="../static/js/cashcharge.js" th:src="@{/js/cashcharge.js}"  defer></script>
 </head>
@@ -23,6 +27,16 @@
                 <label class="charge-unit"><input type="radio" name="amount" value="50000">30000원</label>
                 <label class="charge-unit"><input type="radio" name="amount" value="50000">50000원</label>
             </div>
+<<<<<<< HEAD
+=======
+            <div class="bonus-amounts">
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+                <div class="bonus-amount">+보너스 금액</div>
+            </div>
+>>>>>>> jh
         </div>
         <button class="charge-button">충전하기</button>
     </div>

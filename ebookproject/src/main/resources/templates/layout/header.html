@@ -49,6 +49,7 @@
                     </ol>
                 </section>
             </form>
+<<<<<<< HEAD
             <section id="my-page-section">
                 <div id="my-page-section-div">
                     <button id="user"><i class="fa-solid fa-user" th:href="@{/mypage}"></i></button>
@@ -65,6 +66,28 @@
                     <div class="logout-div">
                         <button id="login-btn">로그인</button>
                         <button id="logout-btn">로그아웃</button>
+=======
+            <section  id="my-page-section">
+                <div id="my-page-section-div">
+                    <button id="user"><i class="fa-solid fa-user"></i></button>
+                </div>
+                <section id="my-page-section-section">
+                    <div sec:authorize="isAuthenticated()" class="my-page-div">
+                        <a href="/mypage"><h4 th:text="${#authentication.principal.userId}">내 정보</h4></a>
+                    </div>
+                    <h4 sec:authorize="isAuthenticated()" class="my-cash">현재 보유 캐시</h4>
+                    <div sec:authorize="isAuthenticated()" class="my-page-point">
+                        <h4  th:text="${#authentication.principal.userCash}">100P</h4>
+                        <button sec:authorize="isAuthenticated()" id="cash-charge" th:onclick="openCashChargePage()">충전</button>
+                    </div>
+                    <div class="logout-div">
+                        <a href="/user/login">
+                            <div sec:authorize="!isAuthenticated()" id="login-btn">로그인</div>
+                        </a>
+                        <a sec:authorize="isAuthenticated()" id="logout-btn">
+                            <div>로그아웃</div>
+                        </a>
+>>>>>>> jh
                     </div>
                 </section>
             </section>

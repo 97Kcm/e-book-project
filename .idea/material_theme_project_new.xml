@@ -3,6 +3,7 @@
   <component name="MaterialThemeProjectNewConfig">
     <option name="metadata">
       <MTProjectMetadataState>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         <option name="userId" value="-a6d0c5a:190be860783:-7c06" />
 =======
@@ -10,6 +11,11 @@
         <option name="pristineConfig" value="false" />
         <option name="userId" value="-44cb60f9:1902f588f31:-7ffe" />
 >>>>>>> Stashed changes
+=======
+        <option name="migrated" value="true" />
+        <option name="pristineConfig" value="false" />
+        <option name="userId" value="33fade9c:1902f58ad35:-7ffe" />
+>>>>>>> jh
       </MTProjectMetadataState>
     </option>
   </component>
