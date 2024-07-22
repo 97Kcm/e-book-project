@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
 <head>
     <meta charset="UTF-8">
     <title>뷰어</title>
-    <link rel="stylesheet" href="../static/css/viwerpage.css" th:href="@{/css/viewrpage.css}">
+    <link rel="stylesheet" href="../static/css/viewerpage.css" th:href="@{/css/viewerpage.css}">
     <link rel="stylesheet" href="../static/css/public/public.css" th:href="@{/css/public/public.css}">
     <script src="https://kit.fontawesome.com/6cefa8d439.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/css/viwerpage.css" th:src="@{/css/viewpage.css}">
-    <link rel="stylesheet" href="../static/css/pub/public.css" th:src="@{/css/pub/public.css}">
+    <script src="../static/js/user/viewerpage.js" th:src="@{js/user/viewerpage.js}" defer></script>
+
 
 </head>
 <body>
