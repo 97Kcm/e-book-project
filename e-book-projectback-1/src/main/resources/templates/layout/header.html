@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>HEADER</title>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
+    <link rel="stylesheet" href="../../static/css/public/header.css" th:href="@{/css/public/header.css}">
+    <link rel="stylesheet" href="../../static/css/public/public.css" th:href="@{/css/public/public.css}">
+    <script src="../../static/js/public/header.js" th:src="@{/js/public/header.js} " defer></script>
+
+
+</head>
+<body>
+<!--헤더 부분-->
+<header th:fragment="header">
+    <section>
+        <div id="e-book-category-div">
+            <a th:href="@{/mainPage}">
+                <img class="img" src="../../static/icon/bookimage.png" th:src="@{icon/bookimage.png}"/>
+            </a>
+            <button type="submit">웹툰</button>
+            <button type="submit">소설</button>
+        </div>
+        <div id="header-user-div">
+
+            <form class="search-form">
+                <label class="search-label">
+                    <input type="text">
+                    <button id="search" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </label>
+                <section class="search-section">
+                    <h4>인기 도서 목록</h4>
+                    <ol class="search-view">
+                        <li>
+                            <span th:href="@{#}">ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                        </li>
+                        <li>
+                            <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                        </li>
+                        <li>
+                            <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                        </li>
+                    </ol>
+                </section>
+            </form>
+            <section id="my-page-section">
+                <div id="my-page-section-div">
+                    <button id="user"><i class="fa-solid fa-user" th:href="@{/mypage}"></i></button>
+                </div>
+                <section id="my-page-section-section">
+                    <div class="my-page-div">
+                        <h4>내 정보</h4>
+                    </div>
+                    <h4 class="my-cash">현재 보유 캐시</h4>
+                    <div class="my-page-point">
+                        <h4>100P</h4>
+                        <button id="cash-charge" th:onclick="openCashChargePage()">충전</button>
+                    </div>
+                    <div class="logout-div">
+                        <button class="logout-btn">로그아웃</button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+</header>
+</body>
+</html>

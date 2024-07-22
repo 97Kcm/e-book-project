@@ -43,6 +43,7 @@ public interface UserMapper {
     );
 
     /******************* 마이 페이지 정보 조회 ********************/
+    UserDTO SelectUserInfo(UserDTO userDTO);
 
 
     /******************** 캐시 충전 ******************************/

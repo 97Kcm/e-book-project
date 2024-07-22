@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
+<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+<script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+<script src="https://kit.fontawesome.com/d786e67464.js" crossorigin="anonymous"></script>
+<script src="../static/js/main-carousel.js" defer></script>
+<link href="../static/css/mainpage.css" rel="stylesheet" th:href="@{/css/mainpage.css}" >
+<head>
+    <meta charset="UTF-8">
+    <title>메인 페이지</title>
+
+</head>
+
+<!-- 메인 부분-->
+<body>
+<main>
+    <section class="embla main-slide" id="main-slide-section">
+        <ul class="embla__container">
+            <li class="embla__slide">
+                <video src="https://filacdn.styleship.com/filacontent2/data/ContentsFile/0325_FILA_SUMMER_01_SHORT.mp4"
+                       autoplay muted loop></video>
+            </li>
+            <li class="embla__slide">
+                <img src="https://filacdn.styleship.com/filacontent2/data/banner/img_M_top_COLD%20WAVE_d_240516_93.jpg"
+                     alt="#">
+            </li>
+            <li class="embla__slide">
+                <img src="https://i.namu.wiki/i/XhE0QXsWqCRUapeypiJXhz_CcYeZyxUkfJj19CH_hdMscshd5l5o-BJdu8HIyz7YKFV6lyGGaTExX3BpIleNGQ.webp"
+                     alt="#">
+            </li>
+            <li class="embla__slide">
+                <img src="https://i.namu.wiki/i/Yu5BDHQYknKmChLkS9bgOR0jqfE3ojWF_VgjMJ3nhbmztCFy_qp8pFs0eN4q7sM8FYnCU8Nv89wAPcBPMXo3Sg.webp"
+                     alt="#">
+            </li>
+            <div class="embla__controls">
+                <div class="embla__buttons">
+                    <button class="embla__button embla__button--prev" type="button">
+                    <span class="prev-btn-span">
+                    <i class="fa-solid fa-angle-left"></i>
+                    </span>
+                    </button>
+
+                    <button class="embla__button embla__button--next" type="button">
+                    <span class="next-btn-span">
+                    <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                    </button>
+                </div>
+            </div>
+        </ul>
+        <div class="embla__dots">
+            <button class="embla__dot" type="button">
+                <i class="fa-regular fa-circle"></i>
+            </button>
+            <button class="embla__dot" type="button">
+                <i class="fa-regular fa-circle"></i>
+            </button>
+            <button class="embla__dot" type="button">
+                <i class="fa-regular fa-circle"></i>
+            </button>
+            <button class="embla__dot" type="button">
+                <i class="fa-regular fa-circle"></i>
+            </button>
+        </div>
+    </section>
+
+    <section id="ebook-main-section">
+        <div class="book-category-div">
+            <section>
+                <h4 class="category">액션</h4>
+                <div class="category-container embla">
+                    <ul class="embla__container">
+                        <li class="book-container embla__slide">
+                            <a href="#" th:href="@{|/detail/${detail.no}|}" th:each="detail:${details}">
+                                <img th:style="|background-image: url('data:image/*; base64, ${detail.bookImageUrl}')|" alt="#">
+                                <div>
+                                    <h5 class="title" th:text="@{detail.bookTitle}">나를 위한 사회학</h5>
+                                    <p th:text="@{detail.bookDescription}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h4 class="category">로맨스</h4>
+                <div class="category-container embla">
+                    <ul class="embla__container">
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h4 class="category">무협</h4>
+                <div class="category-container embla">
+                    <ul class="embla__container">
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h4 class="category">판타지</h4>
+                <div class="category-container embla">
+                    <ul class="embla__container">
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="book-container embla__slide">
+                            <a href="#">
+                                <img src="https://vignette.wikia.nocookie.net/pokemon/images/5/52/%ED%94%BC%EC%B9%B4%EC%B8%84_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest?cb=20170405000019&path-prefix=ko" alt="#">
+                                <div>
+                                    <h5 class="title">나를 위한 사회학</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, blanditiis, consequuntur corporis dolore earum eius eveniet expedita fugiat ipsa neque, pariatur quaerat qui quibusdam reiciendis sequi tenetur velit voluptatibus!</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
