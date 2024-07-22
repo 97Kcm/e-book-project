@@ -27,7 +27,7 @@ function showHideMyPage() {
 // 캐시창 팝업 띄우기
 function openCashChargePage() {
     const options = 'width=600, height=700, top=50, left=50, scrollbars=yes'
-    window.open('cashcharge','_blank',options);
+    window.open('/user/chargeCash','_blank',options);
     console.log("캐시충전페이지 열려라")
 }
 

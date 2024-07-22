@@ -28,12 +28,7 @@ chargeBtn.onclick = () => {
         pay_method: "card",
         merchant_uid: `order_no_${new Date().getTime()}`,
         name: "캐쉬충전",
-        amount: selectedAmount,
-        buyer_email: "test@portone.io",
-        buyer_name: "구매자이름",
-        buyer_tel: "010-1234-5678",
-        buyer_addr: "서울특별시 강남구 삼성동",
-        buyer_postcode: "123-456",
+        amount: selectedAmount
     };
 
     // 아임포트 결제 요청
@@ -41,27 +36,21 @@ chargeBtn.onclick = () => {
         if (response.success) {
             const token = document.querySelector("meta[name=_csrf]").getAttribute("content");
             // 결제 성공 시 서버에 결제 금액 전송
-            fetch('/user/updateCash', {
+            fetch('/user/chargeCash', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     "X-CSRF-TOKEN": token
                 },
-                body: JSON.stringify({ amount: selectedAmount })
+                body: JSON.stringify({...response, "cash_amount": selectedAmount})
             })
-                .then(response => response.json())
-                .then(data => {
-                    // 결제 성공 시 이전 페이지로 리다이렉트
-                    if (data.success) {
-                        alert("결제가 성공하였습니다! 이전 페이지로 이동합니다.");
-                        history.back();
-                    } else {
-                        alert("DB 오류! (금액 저장 x)");
+                .then(response => {
+                    if(response.status === 201){
+                        alert("결제가 성공하였습니다!");
+                        window.close();
+                        // 결제 성공 시 이전 페이지로 리다이렉트
                     }
                 })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
         } else {
             // 결제 실패 시 에러 처리
             alert("결제가 실패하였습니다!");

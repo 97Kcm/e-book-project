@@ -1,5 +1,6 @@
 package com.ebook.mapper;
 
+import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.CustomUserDTO;
 import com.ebook.dto.user.UserDTO;
 import org.apache.ibatis.annotations.Mapper;
@@ -44,5 +45,13 @@ public interface UserMapper {
     /******************* 마이 페이지 정보 조회 ********************/
 
 
-
+    /******************** 캐시 충전 ******************************/
+    void insertCashCharge(
+            @Param("userId") String userId,
+            @Param("cashCharge") CashChargeDTO cashCharge
+    );
+    void updateUserCash(
+            @Param("userId") String userId,
+            @Param("cashAmount") Integer cashAmount
+    );
 }

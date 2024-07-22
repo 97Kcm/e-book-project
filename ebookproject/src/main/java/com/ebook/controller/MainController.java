@@ -4,6 +4,7 @@ import com.ebook.dto.BookDTO;
 import com.ebook.mapper.BookMapper;
 import com.ebook.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

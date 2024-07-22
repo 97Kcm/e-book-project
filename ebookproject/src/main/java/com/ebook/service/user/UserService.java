@@ -1,5 +1,6 @@
 package com.ebook.service.user;
 
+import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.UserMapper;
 import lombok.extern.log4j.Log4j2;
@@ -134,7 +135,11 @@ public class UserService {
     }
 
 
-
+    /*******************************************************************/
+    public void charge_cash(UserDTO user, CashChargeDTO cashCharge){
+        userMapper.insertCashCharge(user.getUserId(), cashCharge);
+        userMapper.updateUserCash(user.getUserId(), cashCharge.getCashAmount());
+    }
 
 
 

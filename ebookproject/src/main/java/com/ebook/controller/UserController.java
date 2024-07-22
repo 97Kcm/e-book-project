@@ -1,11 +1,15 @@
 package com.ebook.controller;
 
+import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.UserDTO;
 import com.ebook.service.user.UserMailService;
 import com.ebook.service.user.UserService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -112,7 +116,20 @@ public class UserController {
 
 
 
+    @GetMapping("/chargeCash")
+    public String get_cashcharge() {
+        return "cashcharge";
+    }
 
+    @ResponseBody
+    @PostMapping("/chargeCash")
+    public ResponseEntity<Void> get_cashcharge(
+            @AuthenticationPrincipal UserDTO user,
+            @RequestBody CashChargeDTO cashCharge
+    ) {
+        userService.charge_cash(user, cashCharge);
+        return ResponseEntity.status(HttpStatus.CREATED).body(null);
+    }
 
 
 }

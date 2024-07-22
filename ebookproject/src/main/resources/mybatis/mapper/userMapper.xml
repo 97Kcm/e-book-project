@@ -31,8 +31,38 @@
         INSERT INTO `custom_user` VALUES (#{id}, #{ci}, #{name}, #{email}, #{nickName}, #{profileImageUrl})
     </insert>
 
+
     <update id="resetUserPassword">
         UPDATE `user` SET user_password=#{password} WHERE user_id = #{id} AND user_name = #{name} AND user_email = #{email}
+    </update>
+
+
+    <insert id="insertCashCharge">
+        INSERT INTO `ebook_project`.`cash_charge`
+        (`merchant_uid`,
+        `imp_uid`,
+        `user_id`,
+        `name`,
+        `cash_amount`,
+        `paid_amount`,
+        `pg_provider`,
+        `paid_at`)
+        VALUES
+        (#{cashCharge.merchantUid},
+        #{cashCharge.impUid},
+        #{userId},
+        #{cashCharge.name},
+        #{cashCharge.cashAmount},
+        #{cashCharge.paidAmount},
+        #{cashCharge.pgProvider},
+        #{cashCharge.paidAt}
+        );
+
+    </insert>
+
+    <update id="updateUserCash">
+        UPDATE `user` SET user_cash = user_cash + #{cashAmount}
+        WHERE user_id = #{userId}
     </update>
 
 </mapper>
