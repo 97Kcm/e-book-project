@@ -34,6 +34,14 @@ public class SecurityConfig {
             config.loginPage("/user/login").usernameParameter("id")
                     .defaultSuccessUrl("/main");
         });
+        http.logout(conf -> {
+            conf.logoutUrl("/user/logout")
+                    .logoutSuccessUrl("/main")
+                    .clearAuthentication(true)
+                    .invalidateHttpSession(true)
+                    .deleteCookies("JSESSIONID")
+                    .permitAll();
+        });
 
 
         http.authorizeHttpRequests(registry -> {
