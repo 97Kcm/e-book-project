@@ -84,13 +84,13 @@ button:hover {
     cursor: pointer;
 }
 
-.search-label.show + .search-section {
-    display: block;
+.search-section{
+    display: none;
 }
 
 .search-section{
-    display: none;
     position: absolute;
+    border-radius: 5px;
     bottom: -100px;
     background-color: #dedede;
     padding: 10px;

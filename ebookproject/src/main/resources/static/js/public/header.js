@@ -1,6 +1,3 @@
-const searchLabel = document.querySelector('.search-label');
-const searchSection = document.querySelector('.search-section');
-const myPageSection = document.getElementById('my-page-section')
 const myPageSectionSection = document.getElementById('my-page-section-section')
 const myPageBtn = document.getElementById('user');
 const logoutBtn = document.getElementById('logout-btn');
@@ -9,20 +6,23 @@ const logoutBtn = document.getElementById('logout-btn');
 // 실행하자마자 스위치는 off
 let myPageBtnOnOFF = false;
 
-// 검색창 토글 함수
-searchLabel.addEventListener('mouseover', showHideSearchSection);
-searchLabel.addEventListener('mouseleave', showHideSearchSection);
-function showHideSearchSection() {
-    if (this.classList.contains('show')) {
-        this.classList.remove('show');
-        searchSection.style.display = 'none';
-    } else {
-        this.classList.add('show');
-        searchSection.style.display = 'block';
-    }
-}
-// 마우스 이벤트 리스너
+// 검색 폼, 검색 섹션, 검색 버튼 선택
+const searchForm = document.querySelector('.search-form');
+const searchSection = document.querySelector('.search-section');
+const searchInput = document.querySelector('.search-label input');
+const searchButton = document.querySelector('#search');
 
+// 검색 입력 클릭 시 검색 영역 활성화
+searchInput.addEventListener('click', () => {
+    searchSection.style.display = 'block';
+});
+
+// 검색 영역 제외 클릭 시 검색 영역 비활성화 (input, search-section 제외)
+document.addEventListener('click', (event) => {
+    if (!searchForm.contains(event.target) && event.target !== searchInput && event.target !== searchButton) {
+        searchSection.style.display = 'none';
+    }
+});
 
 
 // 내 정보창 토글 함수
