@@ -70,8 +70,6 @@ public class BookController {
     }
 
 
-
-
     // 책을 랜덤으로 뽑아오기 위한 함수 생성
     private List<BookDTO> getRandomBooks(List<BookDTO> books, int i) {
         Random random = new Random();
@@ -81,4 +79,17 @@ public class BookController {
                 .mapToObj(books::get)
                 .collect(Collectors.toList());
     }
+
+    // 책 검색
+    @GetMapping("/searchbook")
+    public String searchBooks(
+            @RequestParam("search") String search,
+            Model model
+    ){
+        List<BookDTO> allSearchBooks = bookService.searchBooksByTitle(search);
+        model.addAttribute("book", allSearchBooks);
+
+        return "searchbook";
+    }
+
 }

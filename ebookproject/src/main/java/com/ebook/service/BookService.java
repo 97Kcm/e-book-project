@@ -27,10 +27,15 @@ public class BookService {
         }
     }
 
+
 //    public List<BookChapterDTO> get_books_chapters(Integer bookNo){
 //
 //        return bookMapper.select_book_chapters_by_book_no(bookNo);
 //    }
+
+    public List<BookDTO> searchBooksByTitle(String search){
+        return bookMapper.findAllBooksByTitle(search);
+    }
 
 
 }

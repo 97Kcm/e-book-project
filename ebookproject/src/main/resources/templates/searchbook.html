@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+>
 <head>
     <meta charset="UTF-8">
     <title>search</title>
@@ -49,9 +54,9 @@
         </article>
         <section id="search-result">
             <h1>검색 결과</h1>
-            <ul id="search-info-section">
-                <li class="search-info-image">
-                    <a href="">
+            <ul th:each="books : ${book}" id="search-info-section">
+                <li th:text="${books.bookTitle}" class="search-info-image">
+                    <a th:src="${books.bookImage.fileUrl}" href="">
                         <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
                     </a>
                 </li>

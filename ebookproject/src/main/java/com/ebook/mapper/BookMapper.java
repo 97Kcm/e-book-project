@@ -16,4 +16,7 @@ public interface BookMapper {
             @Param("userId") String userId
     );
     List<BookDTO> findAllBooks();
+
+    List<BookDTO> findAllBooksByTitle(
+            @Param("search") String search);
 }

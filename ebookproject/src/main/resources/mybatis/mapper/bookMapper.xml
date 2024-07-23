@@ -32,4 +32,11 @@
             on BL.book_no = B.book_no AND BL.user_id = #{userId}
         WHERE B.book_no = #{bookNo}
     </select>
+
+    <select id="findAllBooksByTitle" resultType="BookDTO">
+        SELECT *
+        FROM books
+        WHERE book_title LIKE CONCAT('%', '#{search}' ,'%');
+    </select>
+
 </mapper>

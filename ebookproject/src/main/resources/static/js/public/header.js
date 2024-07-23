@@ -2,6 +2,9 @@ const myPageSectionSection = document.getElementById('my-page-section-section')
 const myPageBtn = document.getElementById('user');
 const logoutBtn = document.getElementById('logout-btn');
 
+const SearchTextForm = document.querySelector('.search-label');
+const searchInputValue = document.getElementById('search-text');
+
 
 // 실행하자마자 스위치는 off
 let myPageBtnOnOFF = false;
@@ -19,9 +22,26 @@ searchInput.addEventListener('click', () => {
 
 // 검색 영역 제외 클릭 시 검색 영역 비활성화 (input, search-section 제외)
 document.addEventListener('click', (event) => {
-    if (!searchForm.contains(event.target) && event.target !== searchInput && event.target !== searchButton) {
+    if (!searchForm.contains(event.target) && event.target !== searchInputValue && event.target !== searchButton) {
         searchSection.style.display = 'none';
     }
+});
+
+
+// 검색할 때 아무런 값도 집어넣지 않으면 에러 메세지 대신, 상태 그대로 값.
+SearchTextForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // 폼 제출 기본 동작 막기
+
+    // 필수 입력 필드 확인
+    if (searchInputValue.value.trim() === '') {
+        // 필수 입력 필드가 비어있는 경우
+        // 아무런 변화도 일어나지 않도록 함
+        console.log("입력 필드에 아무런 것 값도 집어넣지 않음. 에러 대신")
+        return;
+    }
+
+    // 폼 제출 진행
+    SearchTextForm.submit();
 });
 
 
@@ -41,6 +61,7 @@ if(logoutBtn !== null) {
 
 
 
+// 로그인 페이지 클릭시 토글
 function showHideMyPage(e) {
     e.preventDefault();
     e.stopPropagation();
