@@ -5,7 +5,7 @@ const myPageSectionSection = document.getElementById('my-page-section-section')
 const myPageBtn = document.getElementById('user');
 const logoutBtn = document.getElementById('logout-btn');
 const cashChargeButton = document.getElementById('cash-charge');
-
+const token = document.getElementById('token');
 
 // 실행하자마자 스위치는 off
 let myPageBtnOnOFF = false;

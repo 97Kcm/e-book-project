@@ -91,6 +91,9 @@
             ON BL.book_no = B.book_no
         WHERE U.user_id = #{userId}
     </select>
+    <select id="SelectUserInfo" resultType="UserDTO">
+        SELECT * FROM user
+    </select>
     <!-- ===========유저가 책 좋아요===========   -->
     <insert id="insertBookLike">
         INSERT INTO `book_like` VALUES (NULL, #{userId}, #{bookNo})

@@ -56,15 +56,14 @@ public class BookController {
 //        return "main";
 //    }
 
-    @GetMapping("/detail/{bookNo}")
+    @GetMapping("/detail/{bookNo}/{sort}")
     public String get_book(
             @AuthenticationPrincipal UserDTO user,
             @PathVariable("bookNo") Integer bookNo,
+            @PathVariable("sort") String sort,
             Model model
     ) {
-        System.out.println(bookNo);
-        BookDTO book = bookService.get_book(bookNo, user);
-        System.out.println(book);
+        BookDTO book = bookService.get_book(bookNo, user, sort);
         model.addAttribute("book", book);
         return "detail";
     }

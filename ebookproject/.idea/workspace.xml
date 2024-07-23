@@ -5,88 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77283f6f-c5cf-46f7-b014-0e6fd8a5763b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/UserRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/like.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ebookproject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/EbookprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/EbookprojectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/controller/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/MyPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/controller/UserRestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/BookChapterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/BookChapterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/CategoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/FileDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/FileDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/user/CashChargeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/user/CashChargeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/user/CustomUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/user/CustomUserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/dto/user/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/dto/user/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/handler/CustomOAuth2SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/handler/CustomOAuth2SuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/user/CustomOAuth2Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/user/CustomOAuth2Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/user/CustomUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/user/CustomUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/user/MyPageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/user/MyPageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/user/UserMailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/user/UserMailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/java/com/ebook/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/mybatis/configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/configuration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/mybatis/mapper/bookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/mybatis/mapper/categoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/categoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/mybatis/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/cashcharge.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cashcharge.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/main-carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main-carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/mypage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/mypage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/public/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/public/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/public/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/public/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/public/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/public/public.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/searchbook.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/searchbook.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/user/findId.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/findId.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/user/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/user/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/user/resetpassword.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/resetpassword.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/viewerpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/viwerpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/viwerpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/css/viwerpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/icons/bookimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons/bookimage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/icons/google-login.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons/google-login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/icons/kakao-login.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons/kakao-login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/icons/naver-login.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons/naver-login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/cashcharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cashcharge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/embla-carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/embla-carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/main-carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main-carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/public/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/public/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/user/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/user/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/static/js/user/viewerpage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/cashcharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cashcharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/layout/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/mypage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/searchbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/searchbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/user/findId.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/findId.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/user/resetPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/resetPassword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/main/resources/templates/viewerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/viewerpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ebookproject/src/test/java/com/ebook/EbookprojectApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ebook/EbookprojectApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/BookRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebook/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebook/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/public/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/public/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/user/mypage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/mypage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/public/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/public/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/mypage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,24 +56,31 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2jRUWmAmFgrfo6tF4jwHAOVZf2J" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build ebookproject.executor": "Run",
+    "Gradle.ebookproject 빌드.executor": "Run",
     "Gradle.ebookproject-1 빌드.executor": "Run",
     "JavaScript Debug.detail.html.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -145,9 +90,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.EbookprojectApplication.executor": "Run",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main 병합 중",
+    "git-widget-placeholder": "cm",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/ebookproject-1",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/e-book-project/ebookproject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -171,19 +116,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="ebookproject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="ebookproject" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EbookprojectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="ebook.main" />
@@ -217,6 +149,7 @@
       <workItem from="1721625672123" duration="21000" />
       <workItem from="1721625747657" duration="6989000" />
       <workItem from="1721637763378" duration="88000" />
+      <workItem from="1721696901113" duration="10612000" />
     </task>
     <servers />
   </component>

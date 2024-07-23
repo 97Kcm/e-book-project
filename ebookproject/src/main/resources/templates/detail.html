@@ -48,9 +48,9 @@
         <!--파트 선택 부분-->
         <section id="part-section">
             <section id="select-section">
-                <button>최신순</button>
+                <a th:href="@{|/detail/${book.bookNo}/ASC|}" id="latest-sort">최신순</a>
                 <span> | </span>
-                <button>첫화부터</button>
+                <a th:href="@{|/detail/${book.bookNo}/DESC|}" id="first-sort">첫화부터</a>
 
             </section>
             <ul id="part-selection">
@@ -68,18 +68,6 @@
                 </li>
             </ul>
         </section>
-        <nav class="pagination-nav">
-            <ul class="pagination">
-                <li><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
-
-            </ul>
-
-        </nav>
     </main>
 </body>
 </html>
