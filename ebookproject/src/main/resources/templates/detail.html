@@ -7,10 +7,13 @@
 >
 <head>
     <meta charset="UTF-8">
+    <meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}">
     <title>상세페이지</title>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
     <link rel="stylesheet" href="../static/css/pub/public.css" th:href="@{/css/pub/public.css}">
     <link rel="stylesheet" href="../static/css/detail.css" th:href="@{/css/detail.css}">
+    <script src="../static/js/detail.js" th:src="@{/js/detail.js}" defer></script>
+
 </head>
 <body>
     <main layout:fragment="main">
@@ -47,13 +50,14 @@
                 <li class="part" th:each="chapter, stat:${book.bookChapters}">
                     <div class="part-chapter-container">
                         <b th:text="${stat.count}" class="part-chapter">PART01</b>
-                        <span class="part-name" th:text="${chapter.bookChapter}">파트제목</span>
-                        <span class="part-date" th:text="${chapter.bookUploadDate}">작성 날짜</span>
+                        <span class="part-name" th:text="${chapter.chapterName}">파트제목</span>
+                        <span class="part-date" th:text="${chapter.chapterUploadDate}">작성 날짜</span>
                     </div>
                     <div class="part-btn-container">
-                        <button id="buy-btn" type="button">구매</button>
-                        <button id="cart-btn" type="button">담기</button>
-                        <button id="view-btn" type="button" class="view">보기</button>
+                        <span class="part-date" th:text="|${chapter.chapterPrice}캐시|">가격</span>
+                        <button class="buy-btn" type="button" th:onclick="|buy_chapter(${chapter.no});|">구매</button>
+                        <button class="cart-btn" type="button">담기</button>
+                        <button class="view-btn view" type="button" hidden="hidden">보기</button>
                     </div>
                 </li>
             </ul>

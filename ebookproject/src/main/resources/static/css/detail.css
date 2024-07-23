@@ -154,10 +154,10 @@ main{
     display: none;
 }
 
-#view-btn{
+#view-btn view{
     display: none;
 }
-#view-btn[active]{
+#view-btn view[active]{
     display: flex;
 }
 

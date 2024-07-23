@@ -64,9 +64,17 @@
         );
 
     </insert>
+    <insert id="insertUserByBook">
+        insert into `ebook_project`.`book_order` (`book_no`, `user_id`, `cash_amount`) values (#{no}, #{user.userId}, #{chaptersPrice});
+    </insert>
 
     <update id="updateUserCash">
         UPDATE `user` SET user_cash = user_cash + #{cashAmount}
+        WHERE user_id = #{userId}
+    </update>
+
+    <update id="updateBuyResult">
+        UPDATE `user` SET user_cash = user_cash - #{chaptersPrice}
         WHERE user_id = #{userId}
     </update>
 
@@ -74,5 +82,9 @@
         SELECT *
         FROM `user`
         WHERE `user_id` = #{userId}
+    </select>
+
+    <select id="selectChapterPrice" parameterType="integer" resultType="integer">
+        Select `chapter_price` from `book_chapter` where `no` = #{chapterNo}
     </select>
 </mapper>

@@ -12,7 +12,7 @@ import lombok.*;
 public class BookChapterDTO {
     private Integer no;
     private Integer bookNo;
-    private String bookChapter;
-    private String bookUploadDate;
-
+    private String chapterName;
+    private String chapterUploadDate;
+    private Integer chapterPrice;
 }

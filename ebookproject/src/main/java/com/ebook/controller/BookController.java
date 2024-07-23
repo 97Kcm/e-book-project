@@ -62,12 +62,10 @@ public class BookController {
     ) {
         System.out.println(bookNo);
         BookDTO book = bookService.get_book(bookNo);
-        System.out.println(book);
+//        System.out.println(book);
         model.addAttribute("book", book);
         return "detail";
     }
-
-
 
 
     // 책을 랜덤으로 뽑아오기 위한 함수 생성

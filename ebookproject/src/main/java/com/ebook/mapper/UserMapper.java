@@ -1,5 +1,6 @@
 package com.ebook.mapper;
 
+import com.ebook.dto.BookChapterDTO;
 import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.CustomUserDTO;
 import com.ebook.dto.user.UserDTO;
@@ -55,4 +56,16 @@ public interface UserMapper {
             @Param("userId") String userId,
             @Param("cashAmount") Integer cashAmount
     );
+
+    //    챕터당 가격 조회
+    Integer selectChapterPrice(@Param("chapterNo") Integer chapterNo);
+
+    // 유저 캐시 차감
+    void updateBuyResult(@Param("userId") String userId, @Param("chaptersPrice") Integer chaptersPrice);
+
+    /******************** 유저가 구매한 책 정보 저장 *******************/
+    void insertUserByBook(@Param("no") Integer bookNo,
+                          @Param("user") UserDTO user,
+                          @Param("chaptersPrice") Integer chapterPrice);
+
 }

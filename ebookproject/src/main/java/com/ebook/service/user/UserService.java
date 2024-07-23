@@ -1,10 +1,12 @@
 package com.ebook.service.user;
 
+import com.ebook.dto.BookChapterDTO;
 import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.UserMapper;
 import lombok.extern.log4j.Log4j2;
 import net.minidev.json.JSONObject;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 
+import java.awt.print.Book;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
@@ -135,11 +138,43 @@ public class UserService {
     }
 
 
-    /*******************************************************************/
+    /************************캐시 충전 *******************************************/
     public void charge_cash(UserDTO user, CashChargeDTO cashCharge){
         userMapper.insertCashCharge(user.getUserId(), cashCharge);
         userMapper.updateUserCash(user.getUserId(), cashCharge.getCashAmount());
     }
+
+    /************************챕터 구매 *******************************************/
+
+    // 해당 챕터의 가격을 가지고 온다.
+    public Integer select_chapters_price(Integer chapterNo){
+        userMapper.selectChapterPrice(chapterNo);
+        return userMapper.selectChapterPrice(chapterNo);
+    }
+
+    // 유저가 구매에 성공했으면 캐시를 챕터의 가격만큼 차감시킨다.
+    public void buyResultCash(UserDTO user, @Param("chaptersPrice") Integer chaptersPrice){
+        userMapper.updateBuyResult(user.getUserId(), chaptersPrice);
+    }
+
+    // 유저가 산 책의 정보를 db에 저장
+    public void user_buy_book(Integer no, UserDTO userId, Integer chapterPrice){
+        userMapper.insertUserByBook(no, userId, chapterPrice);
+
+        //
+//        UserDTO user = userMapper.selectUserById(userId);
+//        if (user == null) {
+//            return null;
+//        }
+//        int userCash = user.getCash();
+//        if (userCash < bookPrice) {
+//            return null;
+//        }
+//        userMapper.updateUserCash(userId, userCash - bookPrice);
+//        return user.getUserId();
+    }
+
+
 
 
 }
