@@ -14,17 +14,6 @@ public class FileDTO {
     private String fileName;
     private String fileUrl;
 
-//    public void setFile(MultipartFile file) {
-//        this.file = file;
-//        this.fileName = file.getOriginalFilename();
-//        try {
-//            this.data = file.getBytes();
-//        } catch (Exception e) {
-//            // 로깅 추가
-//            e.printStackTrace();
-//        }
-//    }
-
     public void setData(byte[] data) {
         this.data = data;
         if (this.data != null) {

@@ -27,22 +27,57 @@ document.addEventListener('click', (event) => {
     }
 });
 
+/////////////////////////////////////////////////////////////////
+// 검색 입력 필드 및 검색 결과 영역 선택
+const searchResults = document.querySelector('.search-view-list');
 
-// 검색할 때 아무런 값도 집어넣지 않으면 에러 메세지 대신, 상태 그대로 값.
-SearchTextForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // 폼 제출 기본 동작 막기
+// 검색 입력 필드에 이벤트 리스너 추가
+searchInputValue.addEventListener('input', function() {
+    const searchTerm = this.value.trim();
 
-    // 필수 입력 필드 확인
-    if (searchInputValue.value.trim() === '') {
-        // 필수 입력 필드가 비어있는 경우
-        // 아무런 변화도 일어나지 않도록 함
-        console.log("입력 필드에 아무런 것 값도 집어넣지 않음. 에러 대신")
+    // 검색어가 비어있는 경우 검색 결과 초기화
+    if (searchTerm === '') {
+        searchResults.innerHTML = '';
         return;
     }
+    // 서버에 검색 요청 보내기
+    fetch(`/searchbook?bookTitle=${searchTerm}`)
+        .then(response => response.json())
+        .then(data => {
+            // 검색 결과 업데이트
+            searchResults.innerHTML = '';
+            data.forEach(books => {
+                const bookLink = document.createElement('a');
+                bookLink.href = `/detail/${books.bookNo}`;
+                bookLink.textContent = books.bookTitle;
 
-    // 폼 제출 진행
-    SearchTextForm.submit();
+                const bookItem = document.createElement('li');
+                bookItem.appendChild(bookLink);
+                searchResults.appendChild(bookItem);
+            });
+        })
+        .catch(error => {
+            console.error('에러다요', error);
+        });
 });
+
+
+////////////////////////////////////////////////////////////////////
+// // 검색할 때 아무런 값도 집어넣지 않으면 에러 메세지 대신, 상태 그대로 값.
+// SearchTextForm.addEventListener('submit', function(e) {
+//     e.preventDefault(); // 폼 제출 기본 동작 막기
+//
+//     // 필수 입력 필드 확인
+//     if (searchInputValue.value.trim() === '') {
+//         // 필수 입력 필드가 비어있는 경우
+//         // 아무런 변화도 일어나지 않도록 함
+//         console.log("입력 필드에 아무런 것 값도 집어넣지 않음. 에러 대신")
+//         return;
+//     }
+//
+//     // 폼 제출 진행
+//     SearchTextForm.submit();
+// });
 
 
 // 내 정보창 토글 함수
@@ -58,7 +93,6 @@ if(logoutBtn !== null) {
         form.submit();
     };
 }
-
 
 
 // 로그인 페이지 클릭시 토글

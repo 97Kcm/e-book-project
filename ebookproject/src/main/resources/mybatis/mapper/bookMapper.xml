@@ -33,10 +33,10 @@
         WHERE B.book_no = #{bookNo}
     </select>
 
-    <select id="findAllBooksByTitle" resultType="BookDTO">
+    <select id="findAllBooksByTitle" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
         SELECT *
         FROM books
-        WHERE book_title LIKE CONCAT('%', '#{search}' ,'%');
+        WHERE book_title LIKE CONCAT('%', #{search} ,'%');
     </select>
 
 </mapper>

@@ -8,14 +8,14 @@
 <head>
     <meta charset="UTF-8">
     <title>search</title>
-    <link rel="stylesheet" href="../static/css/public/public.css">
-    <link rel="stylesheet" href="../static/css/searchbook.css">
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <link rel="stylesheet" href="../static/css/public/public.css" th:href="@{/css/public/public.css}">
+    <link rel="stylesheet" href="../static/css/searchbook.css" th:href="@{/css/searchbook.css}">
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js" ></script>
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
-    <script src="../static/js/embla-carousel.js" defer></script>
+    <script src="../static/js/embla-carousel.js" th:src="@{/js/embla-carousel.js}" defer></script>
 </head>
 <body>
-    <main>
+    <main layout:fragment="main">
         <article class="view-container">
             <div class="view">
                 <section class="embla">
@@ -53,34 +53,13 @@
             </div>
         </article>
         <section id="search-result">
-            <h1>검색 결과</h1>
-            <ul th:each="books : ${book}" id="search-info-section">
-                <li th:text="${books.bookTitle}" class="search-info-image">
-                    <a th:src="${books.bookImage.fileUrl}" href="">
-                        <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
+            <h1 th:text="|${searchResult}을(를) 검색한 결과|">검색 결과</h1>
+            <ul id="search-info-section">
+                <li th:each="books : ${book}" class="search-info-image">
+                    <a th:href="@{|/detail/${books.bookNo}|}">
+                        <img th:src="${books.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
                     </a>
                 </li>
-                <li class="search-info-image">
-                    <a href="">
-                        <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
-                    </a>
-                </li>
-                <li class="search-info-image">
-                    <a href="">
-                        <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
-                    </a>
-                </li>
-                <li class="search-info-image">
-                    <a href="">
-                        <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
-                    </a>
-                </li>
-                <li class="search-info-image">
-                    <a href="">
-                        <img src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
-                    </a>
-                </li>
-
             </ul>
         </section>
 

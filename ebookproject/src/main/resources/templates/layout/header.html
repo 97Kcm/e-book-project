@@ -29,16 +29,16 @@
         <div id="header-user-div">
             <form th:action="@{/searchbook}" method="get" class="search-form">
                 <label for="search-text" class="search-label">
-                    <input id="search-text" type="text" name="bookTitle" required />
-                    <button id="search" type="submit">
+                    <input id="search-text" type="text" name="bookTitle" required/>
+                    <button id="search-button" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </label>
                 <section class="search-section">
-                    <ol th:each="books : ${book}" class="search-view">
-                        <li><a th:href="${books.bookTitle}">책 제목 1번 예시</a></li>
-                        <li><span>책 제목 2번 예시</span></li>
-                        <li><span>책 제목 3번 예시</span></li>
+                    <ol class="search-view">
+                        <li class="search-view-list" th:each="books : ${book}">
+                            <a th:href="@{|/detail/${books.bookNo}|}">책 제목 1번 예시</a>
+                        </li>
                     </ol>
                 </section>
             </form>

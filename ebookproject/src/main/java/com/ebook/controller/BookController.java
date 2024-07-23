@@ -6,7 +6,10 @@ import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.BookMapper;
 import com.ebook.service.BookService;
 import com.ebook.service.user.MyPageService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -83,12 +86,14 @@ public class BookController {
     // 책 검색
     @GetMapping("/searchbook")
     public String searchBooks(
-            @RequestParam("search") String search,
+            @RequestParam("bookTitle") String search,
             Model model
     ){
+        String searchResult = search.toString();
+        model.addAttribute("searchResult", searchResult);
+
         List<BookDTO> allSearchBooks = bookService.searchBooksByTitle(search);
         model.addAttribute("book", allSearchBooks);
-
         return "searchbook";
     }
 
