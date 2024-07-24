@@ -86,6 +86,7 @@ public class UserController {
             RedirectAttributes redirectAttributes
     ){
         String id = userService.findUserId(name, email);
+        System.out.println(id);
         redirectAttributes.addFlashAttribute("id", id);
         return "redirect:/user/findId";
     }

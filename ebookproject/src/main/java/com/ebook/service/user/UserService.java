@@ -8,6 +8,7 @@ import lombok.extern.log4j.Log4j2;
 import net.minidev.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
@@ -36,8 +37,8 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     // 테스트시 본인의 url 사용하기
-    private final String PORT_ONE_IMP_KEY = "5407205547762202";
-    private final String PORT_ONE_IMP_SECRET = "UQY03Qj6sOH0XW39xztdzKVI6RcGjSspww39xrNDY22L1CSApDrTnFGpeniE6yqSBVzkE2gKeYmWkAro";
+    private final String PORT_ONE_IMP_KEY = "3706357072443643";
+    private final String PORT_ONE_IMP_SECRET = "MGMGBgVfkjogobPd9VxX9ZrsGP3mBQtMrTteUtFvTw922Ya8zp6pAULzGW9LkIMuAY7LGOSb9cvWQUxT";
     private final String PORT_ONE_ACCESS_TOKEN_URL = "https://api.iamport.kr/users/getToken";
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";
 
