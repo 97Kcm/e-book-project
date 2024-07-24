@@ -55,7 +55,7 @@ public class BookController {
                 return "viewerpage";
             }
         }
-        return null;
+        return "redirect:/detail/" + bookNo + "/ASC";
     }
 
 //    @GetMapping("/main")
