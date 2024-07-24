@@ -149,7 +149,6 @@ public class UserService {
 
     // 해당 챕터의 가격을 가지고 온다.
     public Integer select_chapters_price(Integer chapterNo){
-        userMapper.selectChapterPrice(chapterNo);
         return userMapper.selectChapterPrice(chapterNo);
     }
 
@@ -169,8 +168,8 @@ public class UserService {
     }
 
     // 유저가 산 책의 정보를 db에 저장
-    public void user_buy_book(Integer no, UserDTO userId, Integer chapterPrice){
-        userMapper.insertUserByBook(no, userId, chapterPrice);
+    public void user_buy_book(Integer no, UserDTO userId, Integer bookChaptersPrice){
+        userMapper.insertUserByBook(no, userId, bookChaptersPrice);
 
         //
 //        UserDTO user = userMapper.selectUserById(userId);

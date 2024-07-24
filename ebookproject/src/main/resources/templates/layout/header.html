@@ -30,7 +30,7 @@
         <div id="header-user-div">
             <section class="search-form">
                 <label class="search-label">
-                    <input id="search-text" type="text" name="bookTitle" required/>
+                    <input id="search-text" type="text" name="bookTitle"/>
                     <button id="search-button" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -54,7 +54,7 @@
                     <h4 sec:authorize="isAuthenticated()" class="my-cash">현재 보유 캐시</h4>
                     <div sec:authorize="isAuthenticated()" class="my-page-point">
                         <h4  th:text="${#authentication.principal.userCash}">100P</h4>
-                        <button sec:authorize="isAuthenticated()" id="cash-charge" th:onclick="openCashChargePage()">충전</button>
+                        <button sec:authorize="isAuthenticated()" type="button" id="cash-charge" th:onclick="openCashChargePage()">충전</button>
                     </div>
                     <div class="logout-div">
                         <a href="/user/login">

@@ -23,14 +23,14 @@
             </section>
 
             <section class="title-section">
-                <span class="title" th:text="${books.bookChapters[0].bookChapter}">제목</span>
+                <span class="title" th:text="${books.bookChapters[0].bookChapterName}">제목</span>
             </section>
 
             <section>
                 <button class="view-page-bar-btn"><span>뷰어페이지 전환</span></button>
                 <label>
                     <select class="next-chapter-class-select" style="max-width: 100px">
-                        <option th:each="chapter : ${chapters}" th:text="${chapter.bookChapter}">1</option>
+                        <option th:each="chapter : ${chapters}" th:text="${chapter.bookChapterName}">1</option>
                     </select>
                 </label>
                 <button th:if="${chapterCount > chapters.get(0).getNo()}"  class="page-button"><a th:href="@{|/viewerpage/${bookNo}/${chapterCount-1}|}">다음 화</a></button>

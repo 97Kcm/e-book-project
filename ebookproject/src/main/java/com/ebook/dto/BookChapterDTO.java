@@ -12,11 +12,8 @@ import lombok.*;
 public class BookChapterDTO {
     private Integer no;
     private Integer bookNo;
-    private String chapterName;
-    private String chapterUploadDate;
-    private Integer chapterPrice;
-    private Boolean isBought; // 유저의 구매 여부
-    private String bookChapter;
+    private String bookChapterName;
     private String bookUploadDate;
-
+    private Integer bookChapterPrice;
+    private Boolean isBought; // 유저의 구매 여부
 }

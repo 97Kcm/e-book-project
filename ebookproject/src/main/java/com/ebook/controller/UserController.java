@@ -18,7 +18,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.net.URI;
@@ -142,18 +141,16 @@ public class UserController {
         } else {
             // 유저 정보가 조회가 되었을 시.
             // 1. chapterNo에 해당하는 chapter의 가격을 조회한다
-            Integer chaptersPrice = userService.select_chapters_price(chapterNo);
-
-            System.out.println("chapter:" + chapterNo);
+            Integer bookChaptersPrice = userService.select_chapters_price(chapterNo);
+            System.out.println(bookChaptersPrice);
             // 2. user의 cash가 챕터 가격보다 큰 지 검사한다
             Integer usersCash = user.getUserCash();
-            System.out.println("userCash: " + usersCash);
-            if (usersCash >= chaptersPrice) {
+            if (usersCash >= bookChaptersPrice) {
                 System.out.println("INSERT 시도중..");
                 // 3. 1번과 2번이 전부 ok라면 insert (구매) 시킨다
-                userService.user_buy_book(chapterNo, user, chaptersPrice);
+                userService.user_buy_book(chapterNo, user, bookChaptersPrice);
                 // 구매에 성공을 했다면 현재 유저가 가지고 있는 캐시에 챕터 가격만큼 차감한다.
-                userService.buyResultCash(user, chaptersPrice);
+                userService.buyResultCash(user, bookChaptersPrice);
                 return ResponseEntity.status(HttpStatus.CREATED).body("구매에 성공하였습니다.");
 
             } else {

@@ -83,7 +83,7 @@ main{
     border-radius: 10px 10px 0 0;
     background-color: rgba(170,170,170,0.2);
 }
-#select-section button{
+#select-section a{
     margin: 0 3px;
     cursor: pointer;
     border: none;
@@ -135,7 +135,7 @@ main{
     font-size: var(--font-size-midium);
     margin-right: 10px;
 }
-.part-btn-container > button{
+.part-btn-container > button, .part-btn-container > a{
     border: none;
     border-radius: 5px;
     margin: 0 5px;

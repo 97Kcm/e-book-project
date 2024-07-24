@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
     <script src="../../static/js/mypage.js" th:src="@{/js/mypage.js}" defer></script>
     <script src="../../static/js/user/like.js" th:src="@{/js/user/like.js}" defer></script>
+    <script src="../../static/js/public/header.js" th:src="@{/js/public/header.js}" defer></script>
 </head>
 <body>
     <main layout:fragment="main">
@@ -58,7 +59,7 @@
                     <span th:text="*{userCash}"></span>
                 </div>
                 <div>
-                    <button>충전</button>
+                    <button id="charge-btn" type="button">충전</button>
                 </div>
             </section>
 

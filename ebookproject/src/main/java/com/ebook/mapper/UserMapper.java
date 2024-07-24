@@ -82,6 +82,6 @@ public interface UserMapper {
     /******************** 유저가 구매한 책 정보 저장 *******************/
     void insertUserByBook(@Param("no") Integer bookNo,
                           @Param("user") UserDTO user,
-                          @Param("chaptersPrice") Integer chapterPrice);
+                          @Param("bookChaptersPrice") Integer bookChaptersPrice);
 
 }

@@ -9,7 +9,6 @@ const searchButton = document.querySelector('#search');
 
 // 실행하자마자 검색창과 내정보 스위치는 off
 let myPageBtnOnOFF = false;
-searchSection.style.display = 'none'; // display=none, 안 보이게 함
 
 /////////////////////////////////////////////////////////////////
 // 검색 input 필드 선택
@@ -66,11 +65,12 @@ document.querySelector('main').onclick = (e) => {
     myPageBtnOnOFF = false;
 }
 
-// 캐시창 팝업 띄우기
-function openCashChargePage() {
-    const options = 'width=600, height=700, top=50, left=50, scrollbars=yes'
-    window.open('cashcharge','_blank',options);
-    console.log("캐시충전페이지 열려라")
+const cashCharge = document.getElementById('cash-charge');
+
+cashCharge.onclick= () => {
+    const options = 'width=600, height=700, top=50, left=50, scrollbars=yes';
+    window.open('/user/cashcharge','_blank',options);
+    console.log("캐시충전페이지 열려라");
 }
 
 

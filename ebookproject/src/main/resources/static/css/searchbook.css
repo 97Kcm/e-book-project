@@ -19,34 +19,40 @@ a{
     --slide-spacing: 1rem;
     --slide-size: 100%;
 }
-.embla__viewport {
-    overflow: hidden;
+.view .embla {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
+.embla__viewport {
+    height: 100%;
+    overflow: hidden;
+}
 .embla__container {
     backface-visibility: hidden;
     display: flex;
-    touch-action: pan-y pinch-zoom;
-    margin-left: calc(var(--slide-spacing) * -1);
+    height: 100%;
 }
 .embla__slide {
-    flex: 0 0 var(--slide-size);
-    min-width: 0;
-    padding-left: var(--slide-spacing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 100%;
+    border-radius: 10px;
 }
 .embla__slide a{
+    display: inline-block;
     width: 100%;
     height: 100%;
-    display: inline-block;
+    background-color: rgba(170,170,170,0.5);
 }
-.embla__slide__number {
-    border-radius: 1.8rem;
-    font-size: 4rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--slide-height);
+.embla__slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
@@ -188,6 +194,7 @@ a{
     background-size: cover;
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .embla__controls {

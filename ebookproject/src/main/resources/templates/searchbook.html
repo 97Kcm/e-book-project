@@ -22,7 +22,7 @@
                     <div class="embla__viewport">
                         <div class="embla__container">
                             <div class="embla__slide" th:each="randomBook: ${randomBookByGenre}">
-                                <a th:href="@{|/detail/${randomBook.bookNo}|}">
+                                <a th:href="@{|/detail/${randomBook.bookNo}/ASC|}">
                                     <img th:src="${randomBook.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
                                 </a>
                             </div>
@@ -59,7 +59,7 @@
             <h1 id="h1-result" th:text="|${searchResult}을(를) 검색한 결과|">검색 결과</h1>
             <ul id="search-info-section">
                 <li th:each="books : ${book}" class="search-info-image">
-                    <a th:href="@{|/detail/${books.bookNo}|}">
+                    <a th:href="@{|/detail/${books.bookNo}/ASC|}">
                         <img th:src="${books.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
                     </a>
                 </li>

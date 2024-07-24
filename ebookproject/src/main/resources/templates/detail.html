@@ -9,8 +9,8 @@
     <meta charset="UTF-8">
     <title>상세페이지</title>
     <meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}">
-    <link href="../static/css/detail.css" rel="stylesheet" th:src="@{/css/detail.css}">
-    <link href="../static/css/public/public.css" rel="stylesheet" th:src="@{/css/public/public.css}">
+    <link href="../static/css/detail.css" rel="stylesheet" th:href="@{/css/detail.css}">
+    <link href="../static/css/public/public.css" rel="stylesheet" th:href="@{/css/public/public.css}">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
     <script src="../static/js/detail.js" th:src="@{/js/detail.js}" defer></script>
 </head>
@@ -56,13 +56,13 @@
             <li class="part" th:each="chapter, stat:${book.bookChapters}">
                 <div class="part-chapter-container">
                     <b th:text="${stat.count}" class="part-chapter">PART01</b>
-                    <span class="part-name" th:text="${chapter.chapterName}">파트제목</span>
-                    <span class="part-date" th:text="${chapter.chapterUploadDate}">작성 날짜</span>
+                    <span class="part-name" th:text="${chapter.bookChapterName}">파트제목</span>
+                    <span class="part-date" th:text="${chapter.bookUploadDate}">작성 날짜</span>
                 </div>
                 <div class="part-btn-container">
-                    <span class="part-date" th:text="|${chapter.chapterPrice}캐시|">가격</span>
+                    <span class="part-date" th:text="|${chapter.bookChapterPrice}캐시|">가격</span>
                     <button class="buy-btn" type="button" th:unless="${chapter.isBought}" th:onclick="|buy_chapter(${chapter.no});|">구매</button>
-                    <button class="view-btn view" th:href="@{|/viewerpage/${book.bookNo}/${chapter.no}|}"  th:if="${chapter.isBought}" type="button">보기</button>
+                    <a class="view-btn view" th:href="@{|/viewerpage/${book.bookNo}/${chapter.no}|}"  th:if="${chapter.isBought}" type="button">보기</a>
                 </div>
             </li>
         </ul>
