@@ -21,7 +21,6 @@ import org.springframework.web.client.RestTemplate;
 public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
         http.oauth2Login(config -> {
             config.loginPage("/user/login")
                     .successHandler(new CustomOAuth2SuccessHandler())

@@ -51,5 +51,20 @@ public class BookService {
 //        return bookMapper.findBooksTitle(search);
 //    }
 
+    // 책의 구매 여부 판단
+    // 특정 유저가 특정 챕터를 구매했는지 여부를 반환
+    public Boolean isChapterBought(String userId, Integer no) {
+        // 책의 구매 여부를 확인
+        List<BookChapterDTO> boughtChapters = bookMapper.findUserIdWithBoughtBook(userId, no);
+
+        // 구매한 챕터 번호와 요청된 챕터 번호를 비교
+        for (BookChapterDTO chapter : boughtChapters) {
+            if (Objects.equals(chapter.getNo(), no)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

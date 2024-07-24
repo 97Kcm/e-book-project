@@ -192,3 +192,9 @@ button:hover {
 #cash-charge{
     cursor: pointer;
 }
+
+#search-button{
+    border: none;
+    background-color: unset;
+    padding: 3px;
+}

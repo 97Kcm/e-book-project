@@ -2,16 +2,10 @@ package com.ebook.controller;
 
 import com.ebook.dto.BookDTO;
 import com.ebook.service.BookService;
-import com.ebook.dto.user.UserDTO;
-import com.ebook.service.BookService;
-import com.ebook.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -23,6 +17,7 @@ import java.util.stream.Collectors;
 public class MainController {
     @Autowired
     private BookService bookService;
+
 
     @GetMapping("/main")
     public String mainPageImage(
@@ -42,7 +37,6 @@ public class MainController {
         model.addAttribute("booksByCategory", booksByCategory);
         return "main";
     }
-
     // 책을 랜덤으로 뽑아오기 위한 함수 생성
     private List<BookDTO> getRandomBooks(List<BookDTO> books, int i) {
         Random random = new Random();

@@ -1,6 +1,8 @@
 package com.ebook.dto;
 
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonAlias;
+import lombok.*;
 
 import java.util.List;
 
@@ -22,4 +24,6 @@ public class BookDTO {
     private int bookLikeCount; // 책 좋아요 수 // like_count
     private Boolean isLiked; // 유저의 책 좋아요 여부
     private List<BookChapterDTO> bookChapters;
+    @JsonAlias("cash_amount")
+    private Integer bookPrice;
 }

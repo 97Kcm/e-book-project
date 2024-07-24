@@ -26,16 +26,16 @@ public interface UserMapper {
     /******************* 아이디 찾기 *********************/
 
     UserDTO selectUserByNameAndEmail(
-            @Param("name") String name,
-            @Param("email") String email
+            @Param("userName") String name,
+            @Param("userName") String email
     );
 
     /******************* 비밀번호 재설정 *******************/
 
     UserDTO selectUserByIdAndNameAndEmail(
-            @Param("id") String id,
-            @Param("name") String name,
-            @Param("email") String email
+            @Param("userId") String id,
+            @Param("userName") String name,
+            @Param("userEmail") String email
     );
 
     void resetUserPassword(
@@ -44,6 +44,10 @@ public interface UserMapper {
             @Param("email") String email,
             @Param("password") String EncodingPassword
     );
+
+    void updateCashByUser(
+            @Param("user") UserDTO user,
+            @Param("amount") int amount);
 
     /******************* 마이 페이지 정보 조회 ********************/
     UserDTO SelectUserInfo(UserDTO userDTO);
@@ -68,4 +72,16 @@ public interface UserMapper {
             @Param("userId") String userId,
             @Param("bookNo") Integer bookNo
     );
+    /************************** 챕터구매 ***************************/
+    //    챕터당 가격 조회
+    Integer selectChapterPrice(@Param("chapterNo") Integer chapterNo);
+
+    // 유저 캐시 차감
+    void updateBuyResult(@Param("userId") String userId, @Param("chaptersPrice") Integer chaptersPrice);
+
+    /******************** 유저가 구매한 책 정보 저장 *******************/
+    void insertUserByBook(@Param("no") Integer bookNo,
+                          @Param("user") UserDTO user,
+                          @Param("chaptersPrice") Integer chapterPrice);
+
 }

@@ -20,12 +20,6 @@ const fullEmail = document.querySelector('#full-email');
 
 
 
-fullEmail.value = emailHead.value + emailTail.value;
-
-emailSelectSection.onchange = () => {
-    emailTail.value = "";
-    emailTail.value = emailSelectSection.value;
-}
 
 /******************* 본인 인증하기 ***************************/
 const certBtn = document.getElementById('cert-btn');
@@ -119,4 +113,14 @@ pwInput.item(1).addEventListener('focusout', () => {
     }
 })
 
+emailSelectSection.onchange = () => {
+    emailTail.value = "";
+    emailTail.value = emailSelectSection.value;
+}
 
+const registerBtn = document.getElementById('register-btn');
+registerBtn.onclick = () => {
+    fullEmail.value = emailHead.value + "@" + emailTail.value;
+
+
+}
