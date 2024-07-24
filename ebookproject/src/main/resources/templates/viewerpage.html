@@ -16,7 +16,7 @@
     <header id="top-container">
         <div class="top-interaction-class">
             <section>
-                <button th:if="${chapterCount > chapters.get(0).getNo()}" class="page-button"><a th:href="@{|/viewerpage/${bookNo}/${chapterCount-1}|}">이전 화</a></button>
+                <button th:if="${chapterCount < chapters.get(chapters.size()-1).getNo()}" class="page-button"><a th:href="@{|/viewerpage/${bookNo}/${chapterCount+1}|}">이전 화</a></button>
                 <a th:href="@{|/detail/${bookNo}/ASC|}">
                     <i id="home-btn" class="fa-solid fa-house fa-2x"></i>
                 </a>
@@ -33,7 +33,7 @@
                         <option th:each="chapter : ${chapters}" th:text="${chapter.bookChapter}">1</option>
                     </select>
                 </label>
-                <button th:if="${chapterCount < chapters.get(chapters.size()-1).getNo()}" class="page-button"><a th:href="@{|/viewerpage/${bookNo}/${chapterCount+1}|}">다음 화</a></button>
+                <button th:if="${chapterCount > chapters.get(0).getNo()}"  class="page-button"><a th:href="@{|/viewerpage/${bookNo}/${chapterCount-1}|}">다음 화</a></button>
             </section>
 
         </div>
