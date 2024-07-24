@@ -20,6 +20,7 @@ public interface BookMapper {
 
     List<BookDTO> findAllBooks();
 
+    // 책 문자열 검색한 후, search 화면으로 책들을 보여줌.
     List<BookDTO> findAllBooksByTitle(@Param("search") String search);
 
 //    List<String> findBooksTitle(@Param("search") String search);

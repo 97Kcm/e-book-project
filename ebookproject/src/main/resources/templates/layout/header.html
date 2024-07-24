@@ -30,15 +30,15 @@
         <div id="header-user-div">
             <section class="search-form">
                 <label class="search-label">
-                    <input type="text">
-                    <button id="search" type="submit">
+                    <input id="search-text" type="text" name="bookTitle" required/>
+                    <button id="search-button" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </label>
                 <section class="search-section">
                     <ol class="search-view">
-                        <li class="search-view-list">
-                            <a href="#">예시 리스트 1</a>
+                        <li class="search-view-list" th:each="books : ${book}">
+                            <a th:href="@{|/detail/${books.bookNo}|}">책 제목 1번 예시</a>
                         </li>
                     </ol>
                 </section>

@@ -32,8 +32,10 @@ public class SearchBookController {
         String searchResult = search.toString();
         model.addAttribute("searchResult", searchResult);
 
+        // 검색해서 받아오는 변수
         List<BookDTO> allSearchBooks = bookService.searchBooksByTitle(search);
         model.addAttribute("book", allSearchBooks);
+
         // 그 중에서 5개 랜덤 선택
         List<BookDTO> randomBookByGenre = getRandomBooks(allBooks, 5);
         model.addAttribute("randomBookByGenre", randomBookByGenre);
