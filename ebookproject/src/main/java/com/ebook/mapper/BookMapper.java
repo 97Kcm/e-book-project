@@ -10,15 +10,22 @@ import java.util.List;
 @Mapper
 public interface BookMapper {
     // 책의 카테고리를 가져온다.
-//    List<BookDTO> findAllBooksByCategory();
+    List<BookDTO> findAllBooksByCategory();
+
     BookDTO select_book_by_no(
             @Param("bookNo") Integer bookNo,
-            @Param("userId") String userId
+            @Param("userId") String userId,
+            @Param("sort") String sort
     );
+
     List<BookDTO> findAllBooks();
 
     List<BookDTO> findAllBooksByTitle(@Param("search") String search);
 
     List<String> findBooksTitle(@Param("search") String search);
 
+
+    BookDTO selectBookByChapters(Integer bookNo, Integer bookChapterNo);
+
+    List<BookChapterDTO>  selectBookAllChapters(Integer bookNo);
 }

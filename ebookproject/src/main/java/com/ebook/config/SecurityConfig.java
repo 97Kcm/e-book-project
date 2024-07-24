@@ -43,6 +43,14 @@ public class SecurityConfig {
                     .permitAll();
         });
 
+        http.logout(config -> {
+            config.logoutUrl("/user/logout")
+                    .logoutSuccessUrl("/main")
+                    .deleteCookies("JSESSIONID") // Cookie 제거
+                    .invalidateHttpSession(true) // Session 초기화
+                    .clearAuthentication(true)
+                    .permitAll();
+        });
 
         http.authorizeHttpRequests(registry -> {
             registry.requestMatchers("/user/mypage/**").authenticated()

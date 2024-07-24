@@ -23,7 +23,7 @@
                     <div class="embla__viewport">
                         <div class="embla__container">
                             <div class="embla__slide" th:each="randomBook: ${randomBookByGenre}">
-                                <a th:href="@{|/detail/${randomBook.bookNo}|}">
+                                <a th:href="@{|/detail/${randomBook.bookNo}/ASC|}">
                                     <img th:src="${randomBook.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
                                 </a>
                             </div>
@@ -64,7 +64,7 @@
                 <div class="embla__viewport">
                     <div class="embla__container sub-img-section">
                         <div class="embla__slide sub-img-box" th:each="book: ${bookMap.value}">
-                            <a th:href="@{|/detail/${book.bookNo}|}">
+                            <a th:href="@{|/detail/${book.bookNo}/ASC|}">
                                 <img th:src="${book.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
                             </a>
                         </div>

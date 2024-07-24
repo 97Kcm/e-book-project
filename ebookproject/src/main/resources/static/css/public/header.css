@@ -5,7 +5,7 @@ header{
     z-index: 99;
 }
 
-header > section {
+header > form {
     padding: 10px 30px; /* 헤더 내부 여백 */
     display: flex;
     justify-content: space-between;
@@ -187,4 +187,8 @@ button:hover {
     align-items: center;
     padding: 4px 0;
     margin-bottom: 10px;
+}
+
+#cash-charge{
+    cursor: pointer;
 }

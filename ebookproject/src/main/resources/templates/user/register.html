@@ -16,7 +16,7 @@
         <h1>회원가입</h1>
 
         <form method="POST" enctype="multipart/form-data">
-            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <input id="token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 
             <label id="Identity-verification-section">
                 <h3>본인 인증</h3>
@@ -112,6 +112,7 @@
                 <button type="button" id="cancel-btn">취소</button>
             </section>
 
+            <input type="hidden" th:value="${0}" name="userCash">
 
 
 

@@ -133,7 +133,7 @@ public class UserController {
     /********************************* 마이페이지 ********************************/
     @GetMapping("/mypage")
     public String get_mypage_bookLike(
-            @RequestParam(value = "list",defaultValue = "like") String list,
+            @RequestParam(value = "list", defaultValue = "like") String list,
             @AuthenticationPrincipal UserDTO user,
             Model model
     ){
@@ -142,6 +142,7 @@ public class UserController {
             List<BookDTO> books = userService.getAllUserLikeBook(user);
             model.addAttribute("books", books);
         }
+        model.addAttribute("query", list);
         return "user/mypage";
     }
 

@@ -19,13 +19,22 @@ public class BookService {
         return bookMapper.findAllBooks();
     }
 
-    public BookDTO get_book(Integer bookNo, UserDTO user){
+    public BookDTO get_book(Integer bookNo, UserDTO user, String sort){
         if(Objects.isNull(user)){
-            return bookMapper.select_book_by_no(bookNo, null);
+            return bookMapper.select_book_by_no(bookNo, null, sort);
         }else {
-            return bookMapper.select_book_by_no(bookNo, user.getUserId());
+            return bookMapper.select_book_by_no(bookNo, user.getUserId(), sort);
         }
     }
+
+    public BookDTO getBookChapters(Integer bookNo, Integer bookChapterNo){
+        return bookMapper.selectBookByChapters(bookNo, bookChapterNo);
+    }
+
+    public List<BookChapterDTO>  getBookAllChapters(Integer bookNo){
+        return bookMapper.selectBookAllChapters(bookNo);
+    };
+
 
 
 //    public List<BookChapterDTO> get_books_chapters(Integer bookNo){

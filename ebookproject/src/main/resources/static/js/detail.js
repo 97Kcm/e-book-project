@@ -48,3 +48,9 @@ purchaseBtns.forEach(button => {
             });
     });
 });
+
+/********************************************************/
+const latestSortBtn = document.getElementById('latest-sort');
+const firstSortBtn = document.getElementById('first-sort');
+const chapterContainer = document.querySelectorAll('.part-chapter-container');
+

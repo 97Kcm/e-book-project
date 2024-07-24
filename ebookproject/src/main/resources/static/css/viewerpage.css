@@ -4,81 +4,19 @@
 
 /************ 메인 **************/
 
-/*********************************************/
-.view-pagebar-section{
-    display: none;
+a{
+    text-decoration: none;
+    color: black;
 }
-
-.view-pagebar-section[active]{
-    position: absolute;
-    display: flex;
-    background-color: #e0e0e0;
-    justify-content: space-between;
-    align-items: center;
-    bottom: 0;
-    height: 80px;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.view-page-bar-btn > button{
-    border-radius: 10px;
-    padding: 10px;
-}
-.curt-page{
-    border-radius: 5px;
-}
-
-.view-page-bar-number{
-
-}
-.view-page-bar-number > label, .view-page-bar-number .total-page{
-    display: inline-block;
-    width: 60px;
-    text-align: center;
-}
-.view-page-bar-number input{
-    width: 100%;
-    text-align: center;
-    border: none;
-    padding: 10px;
-    outline: unset;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.page-bar-container{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 400px;
-    height: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.page-bar-parent{
-    flex: 1;
-    width: 100%;
-    height: 30%;
-    background-color: black;
-}
-.page-bar-child{
-    position: absolute;
-    height: 150%;
-    transform: translate(-100%, -35%);
-    width: 5px;
-    /*height: 15px;*/
-    background-color: #2d2626;
-}
-
 
 /**************top 컨테이너**************/
 #top-container{
     height: 70px;
     border-bottom: 1px solid black;
     padding: 15px 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 /************홈버튼,회차이동 영역*************/
 .top-interaction-class{
@@ -97,7 +35,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: var(--font-size-XXXlarge);
     cursor: pointer;
 }
-.top-interaction-class button{
+.top-interaction-class a{
     padding: 3px 7px;
     cursor: pointer;
 }
@@ -115,6 +53,15 @@ input[type="number"]::-webkit-inner-spin-button {
     border: 1px solid black;
     border-radius: 5px;
     height: 40px;
+}
+.page-button{
+    padding: 5px;
+    cursor: pointer;
+}
+.title-section{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .title{
     padding: 10px;
@@ -142,120 +89,118 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 10px;
 }
 
-#viewer-section\ slide{
+.viewer-section.slide{
     margin: 0 auto;
     width: 100%;
 }
 
-#viewer-section\ slide img{
+.viewer-section.slide img{
     width: 745px;
 }
 
-#left-arrow-section\ slide{
+.left-arrow-section.slide{
     left: 150px;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
 }
-#right-arrow-section\ slide{
+.right-arrow-section.slide{
     right: 150px;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
 
-button:hover{
+a:hover, button:hover{
     opacity: 50%;
 }
 i:hover{
     opacity: 50%;
 }
 
-
-/*********************************************/
-.view-pagebar-section{
-    display: none;
-}
-
-.view-pagebar-section[active]{
-    position: absolute;
-    display: flex;
-    background-color: #e0e0e0;
-    justify-content: space-between;
-    align-items: center;
-    bottom: 0;
-    height: 80px;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.view-page-bar-btn > button{
-    border-radius: 10px;
-    padding: 10px;
-}
-.curt-page{
-    border-radius: 5px;
-}
-
-.view-page-bar-number{
-
-}
-.view-page-bar-number > label, .view-page-bar-number .total-page{
-    display: inline-block;
-    width: 60px;
-    text-align: center;
-}
-.view-page-bar-number input{
-    width: 100%;
-    text-align: center;
-    border: none;
-    padding: 10px;
-    outline: unset;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.page-bar-container{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 400px;
-    height: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.page-bar-parent{
-    flex: 1;
-    width: 100%;
-    height: 30%;
-    background-color: black;
-}
-.page-bar-child{
-    position: absolute;
-    height: 150%;
-    transform: translate(-100%, -35%);
-    width: 5px;
-    /*height: 15px;*/
-    background-color: #2d2626;
-}
-
-
 /********************************************************************/
 
-#viewer-section\ scroll{
+.viewer-section.scroll{
     margin: 0 auto;
     width: 100%;
 }
 
-#viewer-section\ scroll img{
+.viewer-section.scroll img{
     width: 100%;
 }
 
-#left-arrow-section\ scroll{
+.left-arrow-section.scroll{
     display: none;
 }
 
-#right-arrow-section\ scroll{
+.right-arrow-section.scroll{
     display: none;
 }
+
+/******************************************************************************/
+
+/*#view-pagebar-section{*/
+/*    display: none;*/
+/*    position: sticky;*/
+/*    bottom: 0;*/
+/*    background-color: rgba(1,1,1,0.4);*/
+/*    width: 100%;*/
+/*}*/
+/*#view-pagebar-section[acitve]{*/
+/*    display: none;*/
+/*}*/
+/*#pagebar-section > div{*/
+/*    margin: 0 30px;*/
+/*}*/
+.view-page-bar-btn{
+    border-radius: 10px;
+    border: none;
+}
+.view-page-bar-btn span{
+    display: block;
+    margin: 10px 0;
+}
+
+/*#pagebar-section{*/
+/*    width: 1100px;*/
+/*    height: 150px;*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.page-bar-parent{*/
+/*    width: 700px;*/
+/*    height: 10px;*/
+/*    background-color: black;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.page-bar-child{*/
+/*    width: 13px;*/
+/*    height: 13px;*/
+/*    background-color: white;*/
+/*    border-radius: 50%;*/
+/*    border: 1px solid black;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+
+/*.view-page-bar-number{*/
+
+/*}*/
+
+/*.curt-page{*/
+/*    outline: none;*/
+/*    border: none;*/
+/*    background-color: unset;*/
+/*    text-align: center;*/
+/*    width: 30px;*/
+/*}*/
+/*input[type="number"]::-webkit-outer-spin-button,*/
+/*input[type="number"]::-webkit-inner-spin-button {*/
+/*    -webkit-appearance: none;*/
+/*    margin: 0;*/
+/*}*/

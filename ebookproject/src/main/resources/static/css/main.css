@@ -53,13 +53,12 @@ main{
     display: inline-block;
     width: 100%;
     height: 100%;
+    background-color: rgba(170,170,170,0.5);
 }
 .embla__slide img{
-    background-position: center;
-    background-size: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .embla__controls {

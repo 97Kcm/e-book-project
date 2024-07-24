@@ -52,8 +52,9 @@ main > section{
     background-position: center;
 }
 #my-info-span-section{
+    width: 580px;
     height: 300px;
-    padding: 70px;
+    padding: 50px;
     /*background-color: rgba(170,170,170,0.3);*/
     border: 1px solid rgba(170,170,170,0.8);
     border-radius: 20px;
@@ -143,6 +144,9 @@ main > section{
     border-top: none;
     box-shadow: 2px 3px 2px 0 rgba(170,170,170,0.5);
 }
+#none-like{
+    margin: 80px 0;
+}
 .scroll::-webkit-scrollbar {
     display: none;
 }
@@ -180,6 +184,10 @@ main > section{
 .like-list > div:nth-child(2) > div:first-child{
     display: flex;
     justify-content: space-between;
+}
+#like-btn{
+    border: none;
+    background-color: white;
 }
 /***********************************************/
 
