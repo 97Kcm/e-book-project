@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('오류 발생:', error.message);
                 alert(error.message); // 오류 메시지 출력
                 // 실패 시 캐시 충전 페이지로 리다이렉션
-                if (error.message.includes("캐시가 부족")) {
+                if (error.message.includes("캐시가 부족합니다 충전 페이지로 이동합니다!")) {
                     window.location.href = "/user/cashcharge";
                 }
             });

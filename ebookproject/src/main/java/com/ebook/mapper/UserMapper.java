@@ -57,6 +57,7 @@ public interface UserMapper {
             @Param("cashAmount") Integer cashAmount
     );
 
+    /************************** 챕터구매 ***************************/
     //    챕터당 가격 조회
     Integer selectChapterPrice(@Param("chapterNo") Integer chapterNo);
 
