@@ -23,10 +23,36 @@
         SELECT
             B.book_no AS 'bookNo',
             BC.no AS 'bookChapterNo',
+            IF(BO.no IS NULL, FALSE, TRUE) AS 'isBought',
             B.*, BC.*
         FROM `book_chapter` BC
             INNER JOIN `books` B
             on B.book_no = BC.book_no
+            LEFT OUTER JOIN `book_order` BO
+            on BO.chapter_no = BC.no AND BO.user_id = #{userId}
         WHERE B.book_no = #{bookNo}
+    </select>
+
+
+    <select id="findUserIdWithBoughtBook" resultType="BookChapterDTO">
+        SELECT
+        bo.chapter_no,
+        bo.user_id
+        FROM
+        ebook_project.book_order bo
+        LEFT OUTER JOIN
+        ebook_project.book_chapter bc
+        ON
+        bo.no = bc.no
+
+        UNION
+
+        SELECT
+        bc.book_no,
+        NULL AS user_id
+        FROM
+        ebook_project.book_chapter bc
+        WHERE
+        bc.no NOT IN (SELECT no FROM ebook_project.book_order);
     </select>
 </mapper>

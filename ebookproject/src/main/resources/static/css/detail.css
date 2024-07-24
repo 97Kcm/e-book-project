@@ -157,9 +157,8 @@ main{
 #view-btn view{
     display: none;
 }
-#view-btn view[active]{
-    display: flex;
-}
+
+
 
 /******************************************/
 

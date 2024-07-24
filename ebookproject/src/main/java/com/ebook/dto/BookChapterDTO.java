@@ -1,6 +1,5 @@
 package com.ebook.dto;
 
-
 import lombok.*;
 
 @Getter
@@ -15,4 +14,5 @@ public class BookChapterDTO {
     private String chapterName;
     private String chapterUploadDate;
     private Integer chapterPrice;
+    private Boolean isBought; // 유저의 구매 여부
 }

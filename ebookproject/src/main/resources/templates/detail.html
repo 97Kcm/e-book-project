@@ -8,6 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}">
+    <meta name="chapterNo" content="${book.chapter}">
+    <meta name="userId" content="${user.userId}">
     <title>상세페이지</title>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/d19fdaba43.js"></script>
     <link rel="stylesheet" href="../static/css/pub/public.css" th:href="@{/css/pub/public.css}">
@@ -55,9 +57,9 @@
                     </div>
                     <div class="part-btn-container">
                         <span class="part-date" th:text="|${chapter.chapterPrice}캐시|">가격</span>
-                        <button class="buy-btn" type="button" th:onclick="|buy_chapter(${chapter.no});|">구매</button>
+                        <button class="buy-btn" type="button" th:unless="${chapter.isBought}" th:onclick="|buy_chapter(${chapter.no});|">구매</button>
+                        <button class="view-btn view"  th:if="${chapter.isBought}" type="button">보기</button>
                         <button class="cart-btn" type="button">담기</button>
-                        <button class="view-btn view" type="button" hidden="hidden">보기</button>
                     </div>
                 </li>
             </ul>
