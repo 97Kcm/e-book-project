@@ -2,6 +2,7 @@ package com.ebook.service;
 
 import com.ebook.dto.BookChapterDTO;
 import com.ebook.dto.BookDTO;
+import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,14 +12,22 @@ import java.util.Objects;
 
 @Service
 public class BookService {
-
-    @Autowired
-    private BookMapper bookMapper;
+    @Autowired private BookMapper bookMapper;
 
     // 책의 모든 정보를 가져옵니다.
     public List<BookDTO> findingAllBooks(){
         return bookMapper.findAllBooks();
     }
+
+//    public BookDTO get_book(Integer bookNo, UserDTO user, String sort){
+//        if(Objects.isNull(user)){
+//            return bookMapper.select_book_by_no(bookNo, null, sort);
+//        }else {
+//            return bookMapper.select_book_by_no(bookNo, user.getUserId(), sort);
+//        }
+//
+//
+//    }
 
     public BookDTO get_book(Integer bookNo,String userId){
         return bookMapper.select_book_by_no(bookNo, userId);

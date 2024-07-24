@@ -5,7 +5,7 @@ const myPageSectionSection = document.getElementById('my-page-section-section')
 const myPageBtn = document.getElementById('user');
 const logoutBtn = document.getElementById('logout-btn');
 const cashChargeButton = document.getElementById('cash-charge');
-
+const token = document.getElementById('token');
 
 // 실행하자마자 스위치는 off
 let myPageBtnOnOFF = false;
@@ -73,7 +73,7 @@ document.querySelector('main').onclick = (e) => {
 // 캐시창 팝업 띄우기
 function openCashChargePage() {
     const options = 'width=600, height=700, top=50, left=50, scrollbars=yes'
-    window.open('/user/cashcharge','_blank',options);
+    window.open('/user/chargeCash','_blank',options);
     console.log("캐시충전페이지 열려라")
 }
 

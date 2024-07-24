@@ -1,12 +1,14 @@
 package com.ebook.mapper;
 
-import com.ebook.dto.BookChapterDTO;
+import com.ebook.dto.BookDTO;
 import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.CustomUserDTO;
 import com.ebook.dto.user.UserDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.security.core.userdetails.User;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {
@@ -56,9 +58,17 @@ public interface UserMapper {
             @Param("userId") String userId,
             @Param("cashAmount") Integer cashAmount
     );
-
+    /******************** 좋아요 하기 *****************************/
+    List<BookDTO> selectBookByUserLike(String userId);
+    void insertBookLike(
+            @Param("userId") String userId,
+            @Param("bookNo") Integer bookNo
+    );
+    void deleteBookLike(
+            @Param("userId") String userId,
+            @Param("bookNo") Integer bookNo
+    );
     /************************** 챕터구매 ***************************/
-    //    챕터당 가격 조회
     Integer selectChapterPrice(@Param("chapterNo") Integer chapterNo);
 
     // 유저 캐시 차감
@@ -68,5 +78,6 @@ public interface UserMapper {
     void insertUserByBook(@Param("no") Integer bookNo,
                           @Param("user") UserDTO user,
                           @Param("chaptersPrice") Integer chapterPrice);
+
 
 }

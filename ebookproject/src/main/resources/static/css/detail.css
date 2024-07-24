@@ -62,7 +62,7 @@ main{
     margin-bottom: 10px;
 }
 
-#save-btn-div > #save{
+#save-btn-div > .save{
     background-color: transparent;
     border: none;
     color: #ff6b6b;
@@ -154,34 +154,9 @@ main{
     display: none;
 }
 
-#view-btn view{
+#view-btn{
     display: none;
 }
-
-
-
-/******************************************/
-
-nav.pagination-nav{
-    text-align: center;
-    padding: 50px 0;
-}
-nav.pagination-nav li{
-    display: inline-flex;
-    margin: 0 2px;
-    width: 35px;
-    height: 35px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-nav.pagination-nav li[active]{
-    border-bottom: 1px solid rgba(125,125,125,0.8);
-}
-nav.pagination-nav a{
-    font-size: var(--font-size-large);
-}
-a{
-    color: black;
-    text-decoration: none;
+#view-btn[active]{
+    display: flex;
 }

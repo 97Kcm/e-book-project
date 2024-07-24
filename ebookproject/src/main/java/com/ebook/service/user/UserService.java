@@ -1,6 +1,6 @@
 package com.ebook.service.user;
 
-import com.ebook.dto.BookChapterDTO;
+import com.ebook.dto.BookDTO;
 import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.UserMapper;
@@ -16,9 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 
-import java.awt.print.Book;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -41,7 +41,7 @@ public class UserService {
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";
 
     // 포트원의 ACCESS_TOKEN 값을 얻는 메서드
-    private String get_portone_access_token(){
+    private String get_portone_access_token() {
         RequestEntity<String> getAccessTokenRequest = RequestEntity
                 .post(PORT_ONE_ACCESS_TOKEN_URL)
                 .contentType(MediaType.APPLICATION_JSON)
@@ -51,8 +51,8 @@ public class UserService {
                 )));
         ResponseEntity<Map> getAccessTokenResponse = restOperations.exchange(getAccessTokenRequest, Map.class);
         // 요청이 성공적으로 완료되었음
-        if(getAccessTokenResponse.getStatusCode().equals(HttpStatus.OK)){
-            Map<String, Map> body = (Map<String, Map>)getAccessTokenResponse.getBody();
+        if (getAccessTokenResponse.getStatusCode().equals(HttpStatus.OK)) {
+            Map<String, Map> body = (Map<String, Map>) getAccessTokenResponse.getBody();
             Map<String, String> response = body.get("response");
             String accessToken = response.get("access_token");
             log.info("액세스토큰 발급 완료");
@@ -64,7 +64,7 @@ public class UserService {
     }
 
     // 포트원의 본인인증 정보를 얻는 메서드
-    private String get_portone_user_cert_info(String impUid, String accessToken){
+    private String get_portone_user_cert_info(String impUid, String accessToken) {
         RequestEntity<Void> userCertRequest = RequestEntity.get(PORT_ONE_USER_CERT_INFO_URL, impUid)
                 .header("Authorization", "Bearer " + accessToken)
                 .build();
@@ -72,14 +72,14 @@ public class UserService {
         ResponseEntity<Map> userCertResponse = restOperations.exchange(userCertRequest, Map.class);
         log.info(userCertResponse);
         // 200. OK. 요청이 성공하였음
-        if(userCertResponse.getStatusCode().equals(HttpStatus.OK)){
+        if (userCertResponse.getStatusCode().equals(HttpStatus.OK)) {
             Map<String, Object> body = userCertResponse.getBody();
             log.info("body : " + body);
-            Map<String, Object> response = (Map<String, Object>)body.get("response");
-            Boolean certified = (Boolean)response.get("certified");
-            if(certified){
+            Map<String, Object> response = (Map<String, Object>) body.get("response");
+            Boolean certified = (Boolean) response.get("certified");
+            if (certified) {
                 log.info("인증성공");
-                String uniqueKey = (String)response.get("unique_key");
+                String uniqueKey = (String) response.get("unique_key");
                 return uniqueKey;
             }
             log.warn("인증실패");
@@ -92,19 +92,19 @@ public class UserService {
     public boolean create_user(
             String impUid,
             UserDTO userDTO
-    ){
+    ) {
 
-        if(impUid.isBlank()){
+        if (impUid.isBlank()) {
             return false;
         }
         String accessToken = get_portone_access_token();
-        log.info("accessToken : "+accessToken);
-        if(accessToken == null){
+        log.info("accessToken : " + accessToken);
+        if (accessToken == null) {
             return false;
         }
         String userCi = get_portone_user_cert_info(impUid, accessToken);
-        log.info("userCi : " +userCi);
-        if(userCi == null){
+        log.info("userCi : " + userCi);
+        if (userCi == null) {
             return false;
         }
 
@@ -117,29 +117,29 @@ public class UserService {
 
     }
 
-    public boolean findUser(String id){
+    public boolean findUser(String id) {
         UserDTO findUser = userMapper.selectUserById(id);// 해당 id를 가진 유저를 db에서 조회
         return Objects.isNull(findUser);
     }
 
-    public String findUserId(String name, String email){
+    public String findUserId(String name, String email) {
         UserDTO findUserId = userMapper.selectUserByNameAndEmail(name, email);
         System.out.println(findUserId);
-        if(Objects.isNull(findUserId)){
+        if (Objects.isNull(findUserId)) {
             return null;
         }
         return findUserId.getUserId();
     }
 
 
-    public void resetPassword(String id, String name, String email, String EncodingPassword){
+    public void resetPassword(String id, String name, String email, String EncodingPassword) {
         log.info("userservice : " + id + name + email + EncodingPassword);
         userMapper.resetUserPassword(id, name, email, EncodingPassword);
     }
 
 
-    /************************캐시 충전 *******************************************/
-    public void charge_cash(UserDTO user, CashChargeDTO cashCharge){
+    /************************* 캐시 충전 *******************************/
+    public void charge_cash(UserDTO user, CashChargeDTO cashCharge) {
         userMapper.insertCashCharge(user.getUserId(), cashCharge);
         userMapper.updateUserCash(user.getUserId(), cashCharge.getCashAmount());
     }
@@ -147,21 +147,21 @@ public class UserService {
     /************************챕터 구매 *******************************************/
 
     // 해당 챕터의 가격을 가지고 온다.
-    public Integer select_chapters_price(Integer chapterNo){
+    public Integer select_chapters_price(Integer chapterNo) {
         userMapper.selectChapterPrice(chapterNo);
         return userMapper.selectChapterPrice(chapterNo);
     }
 
     // 유저가 구매에 성공했으면 캐시를 챕터의 가격만큼 차감시킨다.
-    public void buyResultCash(UserDTO user, @Param("chaptersPrice") Integer chaptersPrice){
+    public void buyResultCash(UserDTO user, @Param("chaptersPrice") Integer chaptersPrice) {
         userMapper.updateBuyResult(user.getUserId(), chaptersPrice);
     }
 
     // 유저가 산 책의 정보를 db에 저장
-    public void user_buy_book(Integer no, UserDTO userId, Integer chapterPrice){
+    public void user_buy_book(Integer no, UserDTO userId, Integer chapterPrice) {
         userMapper.insertUserByBook(no, userId, chapterPrice);
-
-        //
+    }
+    //
 //        UserDTO user = userMapper.selectUserById(userId);
 //        if (user == null) {
 //            return null;
@@ -172,9 +172,15 @@ public class UserService {
 //        }
 //        userMapper.updateUserCash(userId, userCash - bookPrice);
 //        return user.getUserId();
+// }
+    /************************* 책 좋아요 하기 *******************************/
+    public List<BookDTO> getAllUserLikeBook(UserDTO user){
+        return userMapper.selectBookByUserLike(user.getUserId());
     }
-
-
-
-
+    public void saveBookLike(UserDTO user, Integer bookNo){
+        userMapper.insertBookLike(user.getUserId(), bookNo);
+    }
+    public void removeBookLike(UserDTO user, Integer bookNo){
+        userMapper.deleteBookLike(user.getUserId(), bookNo);
+    }
 }

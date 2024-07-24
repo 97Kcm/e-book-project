@@ -5,7 +5,7 @@
 <mapper namespace="com.ebook.mapper.BookMapper">
 
     <resultMap id="selectBookWithBookChaptersByBookNo" type="BookDTO" autoMapping="true">
-        <id property="bookNo" column="bookNo"/>
+        <id property="bookNo" column="book_no"/>
         <association property="bookImage" javaType="FileDTO">
             <id property="data" column="book_image" />
         </association>
@@ -18,21 +18,19 @@
         SELECT *, book_no AS 'bookNo' FROM books
     </select>
 
-
     <select id="select_book_by_no" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
         SELECT
-            B.book_no AS 'bookNo',
-            BC.no AS 'bookChapterNo',
-            IF(BO.no IS NULL, FALSE, TRUE) AS 'isBought',
-            B.*, BC.*
+        B.book_no AS 'bookNo',
+        BC.no AS 'bookChapterNo',
+        IF(BO.no IS NULL, FALSE, TRUE) AS 'isBought',
+        B.*, BC.*
         FROM `book_chapter` BC
-            INNER JOIN `books` B
-            on B.book_no = BC.book_no
-            LEFT OUTER JOIN `book_order` BO
-            on BO.chapter_no = BC.no AND BO.user_id = #{userId}
+        INNER JOIN `books` B
+        on B.book_no = BC.book_no
+        LEFT OUTER JOIN `book_order` BO
+        on BO.chapter_no = BC.no AND BO.user_id = #{userId}
         WHERE B.book_no = #{bookNo}
     </select>
-
 
     <select id="findUserIdWithBoughtBook" resultType="BookChapterDTO">
         SELECT
@@ -55,4 +53,5 @@
         WHERE
         bc.no NOT IN (SELECT no FROM ebook_project.book_order);
     </select>
+
 </mapper>

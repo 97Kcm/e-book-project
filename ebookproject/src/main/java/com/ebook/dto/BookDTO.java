@@ -21,6 +21,7 @@ public class BookDTO {
     private String bookDescription; // 설정  // text
     private FileDTO bookImage; // 책 이미지 // longblob
     private int bookLikeCount; // 책 좋아요 수 // like_count
+    private Boolean isLiked; // 유저의 책 좋아요 여부
     private List<BookChapterDTO> bookChapters;
     @JsonAlias("cash_amount")
     private Integer bookPrice;

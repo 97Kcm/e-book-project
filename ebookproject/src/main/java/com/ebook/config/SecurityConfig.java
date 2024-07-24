@@ -35,9 +35,18 @@ public class SecurityConfig {
                     .defaultSuccessUrl("/main");
         });
 
+        http.logout(config -> {
+            config.logoutUrl("/user/logout")
+                    .logoutSuccessUrl("/main")
+                    .deleteCookies("JSESSIONID") // Cookie 제거
+                    .invalidateHttpSession(true) // Session 초기화
+                    .clearAuthentication(true)
+                    .permitAll();
+        });
 
         http.authorizeHttpRequests(registry -> {
-            registry.anyRequest().permitAll(); // 모든 경로는 인증 없이 가능
+            registry.requestMatchers("/user/mypage/**").authenticated()
+                    .anyRequest().permitAll(); // 모든 경로는 인증 없이 가능
         });
 
         return http.build();

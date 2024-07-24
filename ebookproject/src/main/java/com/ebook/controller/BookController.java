@@ -53,6 +53,18 @@ public class BookController {
 //        return "main";
 //    }
 
+//    @GetMapping("/detail/{bookNo}/{sort}")
+//    public String get_book(
+//            @AuthenticationPrincipal UserDTO user,
+//            @PathVariable("bookNo") Integer bookNo,
+//            @PathVariable("sort") String sort,
+//            Model model
+//    ) {
+//        BookDTO book = bookService.get_book(bookNo, user, sort);
+//        model.addAttribute("book", book);
+//        return "detail";
+//    }
+
     @GetMapping("/detail/{bookNo}")
     public String get_book(
             @AuthenticationPrincipal UserDTO user,
@@ -91,7 +103,7 @@ public class BookController {
         // 유저 아이디를 가져옵니다.
         // 유저 아이디를 조회하지 못했다면 (= null이라면)
         if(user == null){
-             return false;// isBought는 펄스
+            return false;// isBought는 펄스
         }
         else{
             String getUserId = user.getUserId();

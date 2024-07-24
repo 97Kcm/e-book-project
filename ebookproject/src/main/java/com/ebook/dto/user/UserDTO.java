@@ -1,5 +1,6 @@
 package com.ebook.dto.user;
 
+import com.ebook.dto.BookDTO;
 import com.ebook.dto.FileDTO;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
@@ -31,6 +32,7 @@ public class UserDTO implements UserDetails, OAuth2User {
     private String userNickname;
     private FileDTO userProfileImage;
     private Integer userCash;
+    private List<BookDTO> books; // 유저가 구매/좋아요 한 책 리스트
     private Map<String, Object> attributes;
 
     @Override

@@ -17,7 +17,8 @@
 <body>
 <!--헤더 부분-->
 <header th:fragment="header">
-    <section>
+    <form>
+        <input id="token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
         <div id="e-book-category-div">
             <a th:href="@{/main}">
                 <img class="img" src="../../static/icons/bookimage.png" th:src="@{/icons/bookimage.png}"/>
@@ -27,7 +28,7 @@
         </div>
 
         <div id="header-user-div">
-            <form class="search-form">
+            <section class="search-form">
                 <label class="search-label">
                     <input type="text">
                     <button id="search" type="submit">
@@ -48,14 +49,14 @@
                         </li>
                     </ol>
                 </section>
-            </form>
+            </section>
             <section  id="my-page-section">
                 <div id="my-page-section-div">
                     <button id="user"><i class="fa-solid fa-user"></i></button>
                 </div>
                 <section id="my-page-section-section">
                     <div sec:authorize="isAuthenticated()" class="my-page-div">
-                        <a href="/mypage"><h4 th:text="${#authentication.principal.userId}">내 정보</h4></a>
+                        <a href="/user/mypage"><h4 th:text="${#authentication.principal.userId}">내 정보</h4></a>
                     </div>
                     <h4 sec:authorize="isAuthenticated()" class="my-cash">현재 보유 캐시</h4>
                     <div sec:authorize="isAuthenticated()" class="my-page-point">
@@ -66,14 +67,14 @@
                         <a href="/user/login">
                             <div sec:authorize="!isAuthenticated()" id="login-btn">로그인</div>
                         </a>
-                        <a sec:authorize="isAuthenticated()" id="logout-btn">
+                        <a href="/user/logout" sec:authorize="isAuthenticated()" id="logout-btn">
                             <div>로그아웃</div>
                         </a>
                     </div>
                 </section>
             </section>
         </div>
-    </section>
+    </form>
 </header>
 </body>
 </html>
