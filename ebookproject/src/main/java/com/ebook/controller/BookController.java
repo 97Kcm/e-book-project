@@ -7,14 +7,19 @@ import com.ebook.mapper.BookMapper;
 import com.ebook.service.BookService;
 import com.ebook.service.user.MyPageService;
 import org.apache.coyote.Response;
+import com.ebook.service.user.MyPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -27,17 +32,11 @@ public class BookController {
     @Autowired private BookService bookService;
     @Autowired private MyPageService myPageService;
 
-    @GetMapping("/header")
-    public String get_header() {
-        return "pub/header";
-    }
 
     @GetMapping("/viewerpage/{bookNo}/{chapterNo}")
     public String get_viewerpage(
             @PathVariable("bookNo") Integer bookNo,
             @PathVariable("chapterNo") Integer chapterNo,
-            Model model
-    ) {
         BookDTO books = bookService.getBookChapters(bookNo, chapterNo);
         List<BookChapterDTO> chapters = bookService.getBookAllChapters(bookNo);
         Integer chapterCount = 0;
@@ -56,27 +55,9 @@ public class BookController {
             }
         }
         return "redirect:/detail/" + bookNo + "/ASC";
-    }
 
-//    @GetMapping("/main")
-//    public String mainPageImage(
-//            @RequestParam(required = false) UserDTO userDTO,
-//            @RequestParam(value = "genre",required = false) String bookGenre,
-//            Model model
-//    ) {
-//        // 책 목록을 전체 가져오기
-//        List<BookDTO> allBooks = bookService.findingAllBooks();
-//        // 장르별로 필터링
-//        allBooks = allBooks.parallelStream().filter(book  -> bookGenre == null || book.getBookGenre().equals(bookGenre)).toList();
-//        // 카테고리 별 그룹화 진행
-//        Map<String, List<BookDTO>> booksByCategory = allBooks.stream()
-//                .collect(Collectors.groupingBy(BookDTO::getBookCategory));
-//        // 그 중에서 5개 랜덤 선택
-//        List<BookDTO> randomBookByGenre = getRandomBooks(allBooks, 5);
-//        model.addAttribute("booksByCategory", booksByCategory);
-//        model.addAttribute("randomBookByGenre", randomBookByGenre);
-//        return "main";
-//    }
+
+
 
     @GetMapping("/detail/{bookNo}/{sort}")
     public String get_book(
@@ -90,7 +71,23 @@ public class BookController {
         return "detail";
     }
 
-
+    // 유저의 아이디 유무 여부를 가져와 책의 구매 여부를 확인.
+    @ResponseBody
+    @GetMapping("/chapter/{chapterNo}")
+    public Boolean get_isBought(
+            @AuthenticationPrincipal UserDTO user,
+            @PathVariable("chapterNo") Integer no
+    ){
+        // 유저 아이디를 가져옵니다.
+        // 유저 아이디를 조회하지 못했다면 (= null이라면)
+        if(user == null){
+            return false;// isBought는 펄스
+        }
+        else{
+            String getUserId = user.getUserId();
+            return bookService.isChapterBought(getUserId, no);
+        }
+    }
 
 
     // 책을 랜덤으로 뽑아오기 위한 함수 생성

@@ -36,7 +36,7 @@ chargeBtn.onclick = () => {
         if (response.success) {
             const token = document.querySelector("meta[name=_csrf]").getAttribute("content");
             // 결제 성공 시 서버에 결제 금액 전송
-            fetch('/user/chargeCash', {
+            fetch('/user/cashcharge', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

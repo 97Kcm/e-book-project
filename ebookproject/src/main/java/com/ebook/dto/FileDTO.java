@@ -11,7 +11,6 @@ import java.util.Base64;
 public class FileDTO {
     private MultipartFile file;
     private byte[] data;
-    private String fileName;
     private String fileUrl;
 
     public void setFile(MultipartFile file) {

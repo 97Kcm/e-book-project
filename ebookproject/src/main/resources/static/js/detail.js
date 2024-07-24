@@ -1,56 +1,45 @@
-// 구매 버튼 클릭
-const purchaseBtns = document.querySelectorAll('.purchase');
+document.addEventListener('DOMContentLoaded', () => {
+    const token = document.querySelector("meta[name=_csrf]").getAttribute('content');
 
-purchaseBtns.forEach(button => {
-    button.addEventListener('click', function() {
-        var price = 200; // 임시 금액
+    // 구매 버튼 클릭 시 호출될 함수
+    function buy_chapter(chapterNo) {
+        console.log("버튼 잘 되는지 확인용: ");
 
-        // CSRF 토큰 가져오기
-        const token = document.querySelector("meta[name=_csrf]").getAttribute("content");
-
-        // // URL에 필요한 쿼리 파라미터 추가
-        // const url = new URL('/user/getUserCash', window.location.origin);
-        // // 필요한 경우 쿼리 파라미터 추가 가능
-        // // url.searchParams.append('paramName', paramValue);
-        //
-        // // GET 요청 보내기
-        fetch('/user/getUserCash', {
-            method: 'GET',
+        fetch(`/user/chapter/${chapterNo}`, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                "X-CSRF-TOKEN": token // 일반적으로 GET 요청에선 필요하지 않음
+                'X-CSRF-TOKEN': token
             }
         })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`구매에 실패하였습니다: ${response.status}`);
-                }
-                return response.json();
+                console.log('Response status:', response.status); // 응답 상태 코드 출력
+                return response.text().then(text => {
+                    if (response.status === 201) {
+                        location.reload();
+                        // 성공 응답을 반환
+                    } else {
+                        throw new Error(text); // 실패 응답을 오류로 처리
+                    }
+                });
             })
             .then(data => {
-                if (data.error) {
-                    alert('로그인이 필요합니다.');
-                    window.location.href = '/user/login';
-                    return;
-                }
+                alert("구매에 성공하였습니다!") // 성공 메시지 출력
 
-                var userCash = data.userCash;
-                // 불러온 userCash가 가격보다 적으면, 캐시충전 페이지로 이동
-                if (userCash < price) {
-                    alert("금액이 부족합니다. 충전 페이지로 이동합니다.");
-                    window.location.href = '/cashcharge';
-                } else {
-                    window.location.href = '/purchase';
-                }
             })
-            .catch(e => {
-                console.log('응답 오류!: ' + e.message);
+            .catch(error => {
+                console.error('오류 발생:', error.message);
+                alert(error.message); // 오류 메시지 출력
+                // 실패 시 캐시 충전 페이지로 리다이렉션
+                if (error.message.includes("캐시가 부족합니다 충전 페이지로 이동합니다!")) {
+                    window.location.href = "/user/cashcharge";
+                }
             });
+    }
+    document.querySelectorAll('.buy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const chapterNo = button.getAttribute('onclick').match(/\d+/)[0];
+            buy_chapter(chapterNo);
+        });
     });
 });
-
-/********************************************************/
-const latestSortBtn = document.getElementById('latest-sort');
-const firstSortBtn = document.getElementById('first-sort');
-const chapterContainer = document.querySelectorAll('.part-chapter-container');
-

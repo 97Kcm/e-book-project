@@ -28,4 +28,8 @@ public interface BookMapper {
     BookDTO selectBookByChapters(Integer bookNo, Integer bookChapterNo);
 
     List<BookChapterDTO>  selectBookAllChapters(Integer bookNo);
+
+    // 사용자의 챕터 구매 여부를 확인하기 위해 유저의 아이디를 가져옴 (null = 구매x / 있음 = 구매)
+    List<BookChapterDTO> findUserIdWithBoughtBook(String userId, Integer no);
+
 }

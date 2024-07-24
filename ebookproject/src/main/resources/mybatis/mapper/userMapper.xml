@@ -3,33 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ebook.mapper.UserMapper">
-    <resultMap id="selectUserWithImageMap" type="UserDTO" autoMapping="true">
-        <id property="userId" column="user_id" />
-        <association property="userProfileImage" javaType="FileDTO">
-            <id property="data" column="user_profileImage" />
-        </association>
-    </resultMap>
-
     <update id="updateCashByUser">
         UPDATE `user`
         SET `user_cash` = `user_cash` + #{amount}
         WHERE `user_id` = #{user.userId}
     </update>
 
-
-    <select id="selectUserById" resultType="UserDTO" resultMap="selectUserWithImageMap">
+    <select id="selectUserById" resultType="UserDTO">
         SELECT * FROM `user` WHERE user_id = #{userId}
     </select>
-    <select id="selectUserByCi" resultType="UserDTO" resultMap="selectUserWithImageMap">
+    <select id="selectUserByCi" resultType="UserDTO">
         SELECT * FROM `user` WHERE user_ci = #{userCi}
     </select>
-    <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO" resultMap="selectUserWithImageMap">
+    <select id="selectCustomUserById" resultType="com.ebook.dto.user.CustomUserDTO">
         SELECT * FROM `custom_user` WHERE id = #{id}
     </select>
-    <select id="selectUserByNameAndEmail" resultType="UserDTO" resultMap="selectUserWithImageMap">
-        SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userName}
+    <select id="selectUserByNameAndEmail" resultType="UserDTO">
+        SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userEmail}
     </select>
-    <select id="selectUserByIdAndNameAndEmail" resultType="UserDTO" resultMap="selectUserWithImageMap">
+    <select id="selectUserByIdAndNameAndEmail" resultType="UserDTO">
         SELECT `user`.user_password FROM `user`
         WHERE user_id = #{userId} AND user_name = #{userName} AND user_email = #{userEmail}
     </select>
@@ -73,10 +65,23 @@
 
     </insert>
 
+    <insert id="insertUserByBook">
+        insert into `ebook_project`.`book_order` (`chapter_no`, `user_id`, `cash_amount`) values (#{no}, #{user.userId}, #{chaptersPrice});
+    </insert>
+
     <update id="updateUserCash">
         UPDATE `user` SET user_cash = user_cash + #{cashAmount}
         WHERE user_id = #{userId}
     </update>
+
+    <update id="updateBuyResult">
+        UPDATE `user` SET user_cash = user_cash - #{chaptersPrice}
+        WHERE user_id = #{userId}
+    </update>
+
+    <select id="selectChapterPrice" parameterType="integer" resultType="integer">
+        Select `chapter_price` from `book_chapter` where `no` = #{chapterNo}
+    </select>
 
     <!-- ===========유저 좋아요 관련=========== -->
     <!-- ===========마이페이지에서 좋아요 목록 가져오기 ===========   -->

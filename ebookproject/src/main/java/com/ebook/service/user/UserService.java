@@ -6,6 +6,7 @@ import com.ebook.dto.user.UserDTO;
 import com.ebook.mapper.UserMapper;
 import lombok.extern.log4j.Log4j2;
 import net.minidev.json.JSONObject;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 
+import java.awt.print.Book;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -34,8 +36,8 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     // 테스트시 본인의 url 사용하기
-    private final String PORT_ONE_IMP_KEY = "3706357072443643";
-    private final String PORT_ONE_IMP_SECRET = "MGMGBgVfkjogobPd9VxX9ZrsGP3mBQtMrTteUtFvTw922Ya8zp6pAULzGW9LkIMuAY7LGOSb9cvWQUxT";
+    private final String PORT_ONE_IMP_KEY = "5407205547762202";
+    private final String PORT_ONE_IMP_SECRET = "UQY03Qj6sOH0XW39xztdzKVI6RcGjSspww39xrNDY22L1CSApDrTnFGpeniE6yqSBVzkE2gKeYmWkAro";
     private final String PORT_ONE_ACCESS_TOKEN_URL = "https://api.iamport.kr/users/getToken";
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";
 
@@ -143,9 +145,20 @@ public class UserService {
         userMapper.updateUserCash(user.getUserId(), cashCharge.getCashAmount());
     }
 
+    /************************챕터 구매 *******************************************/
+
+    // 해당 챕터의 가격을 가지고 온다.
+    public Integer select_chapters_price(Integer chapterNo){
+        userMapper.selectChapterPrice(chapterNo);
+        return userMapper.selectChapterPrice(chapterNo);
+    }
+
     /************************* 책 좋아요 하기 *******************************/
     public List<BookDTO> getAllUserLikeBook(UserDTO user){
         return userMapper.selectBookByUserLike(user.getUserId());
+    // 유저가 구매에 성공했으면 캐시를 챕터의 가격만큼 차감시킨다.
+    public void buyResultCash(UserDTO user, @Param("chaptersPrice") Integer chaptersPrice){
+        userMapper.updateBuyResult(user.getUserId(), chaptersPrice);
     }
     public void saveBookLike(UserDTO user, Integer bookNo){
         userMapper.insertBookLike(user.getUserId(), bookNo);
@@ -153,4 +166,25 @@ public class UserService {
     public void removeBookLike(UserDTO user, Integer bookNo){
         userMapper.deleteBookLike(user.getUserId(), bookNo);
     }
+
+    // 유저가 산 책의 정보를 db에 저장
+    public void user_buy_book(Integer no, UserDTO userId, Integer chapterPrice){
+        userMapper.insertUserByBook(no, userId, chapterPrice);
+
+        //
+//        UserDTO user = userMapper.selectUserById(userId);
+//        if (user == null) {
+//            return null;
+//        }
+//        int userCash = user.getCash();
+//        if (userCash < bookPrice) {
+//            return null;
+//        }
+//        userMapper.updateUserCash(userId, userCash - bookPrice);
+//        return user.getUserId();
+    }
+
+
+
+
 }
