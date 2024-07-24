@@ -46,10 +46,10 @@ public class BookService {
         return bookMapper.findAllBooksByTitle(search);
     }
 
-    // 검색창의 책 보여주기.
-    public List<String> searchBooksTitle(String search){
-        return bookMapper.findBooksTitle(search);
-    }
+//    // 검색창의 책 보여주기.
+//    public List<String> searchBooksTitle(String search){
+//        return bookMapper.findBooksTitle(search);
+//    }
 
 
 }
