@@ -16,7 +16,7 @@ import java.util.Map;
 
 @Getter
 @Setter
-@ToString(exclude = {"profileImage", "url"})
+@ToString(exclude = {"userProfileImage"})
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

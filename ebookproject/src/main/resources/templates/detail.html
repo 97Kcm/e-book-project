@@ -62,8 +62,7 @@
                     </div>
                     <div class="part-btn-container">
                         <button id="buy-btn" type="button">구매</button>
-                        <button id="cart-btn" type="button">담기</button>
-                        <button id="view-btn" type="button" class="view">보기</button>
+                        <a th:href="@{|/viewerpage/${book.bookNo}/${chapter.no}|}" id="view-btn" class="view">보기</a>
                     </div>
                 </li>
             </ul>

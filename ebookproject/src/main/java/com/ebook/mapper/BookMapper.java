@@ -19,4 +19,8 @@ public interface BookMapper {
     );
 
     List<BookDTO> findAllBooks();
+
+    BookDTO selectBookByChapters(Integer bookNo, Integer bookChapterNo);
+
+    List<BookChapterDTO>  selectBookAllChapters(Integer bookNo);
 }

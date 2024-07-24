@@ -36,4 +36,17 @@
         </if>
 
     </select>
+    <select id="selectBookByChapters" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
+        SELECT
+        B.book_no AS 'bookNo',
+        BC.no AS 'bookChapterNo',
+        B.*, BC.*
+        FROM books B
+            INNER JOIN book_chapter BC
+            ON B.book_no = BC.book_no
+        WHERE BC.book_no = #{bookNo} AND BC.no = #{bookChapterNo};
+    </select>
+    <select id="selectBookAllChapters" resultType="BookChapterDTO">
+        SELECT * FROM book_chapter WHERE book_no = #{bookNo};
+    </select>
 </mapper>

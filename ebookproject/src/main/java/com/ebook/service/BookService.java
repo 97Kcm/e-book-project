@@ -25,9 +25,17 @@ public class BookService {
         }else {
             return bookMapper.select_book_by_no(bookNo, user.getUserId(), sort);
         }
-
-
     }
+
+    public BookDTO getBookChapters(Integer bookNo, Integer bookChapterNo){
+        return bookMapper.selectBookByChapters(bookNo, bookChapterNo);
+    }
+
+    public List<BookChapterDTO>  getBookAllChapters(Integer bookNo){
+        return bookMapper.selectBookAllChapters(bookNo);
+    };
+
+
 
 //    public List<BookChapterDTO> get_books_chapters(Integer bookNo){
 //

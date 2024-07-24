@@ -6,6 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BookRestController {
 
-    @GetMapping("/detail")
-    public void get_detail(){}
 }
