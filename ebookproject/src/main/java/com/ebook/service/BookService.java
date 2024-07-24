@@ -42,5 +42,14 @@ public class BookService {
 //        return bookMapper.select_book_chapters_by_book_no(bookNo);
 //    }
 
+    public List<BookDTO> searchBooksByTitle(String search){
+        return bookMapper.findAllBooksByTitle(search);
+    }
+
+    // 검색창의 책 보여주기.
+    public List<String> searchBooksTitle(String search){
+        return bookMapper.findBooksTitle(search);
+    }
+
 
 }

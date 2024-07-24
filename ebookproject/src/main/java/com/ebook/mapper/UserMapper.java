@@ -26,16 +26,16 @@ public interface UserMapper {
     /******************* 아이디 찾기 *********************/
 
     UserDTO selectUserByNameAndEmail(
-            @Param("name") String name,
-            @Param("email") String email
+            @Param("userName") String name,
+            @Param("userName") String email
     );
 
     /******************* 비밀번호 재설정 *******************/
 
     UserDTO selectUserByIdAndNameAndEmail(
-            @Param("id") String id,
-            @Param("name") String name,
-            @Param("email") String email
+            @Param("userId") String id,
+            @Param("userName") String name,
+            @Param("userEmail") String email
     );
 
     void resetUserPassword(

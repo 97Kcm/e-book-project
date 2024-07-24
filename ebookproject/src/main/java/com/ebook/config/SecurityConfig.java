@@ -21,7 +21,6 @@ import org.springframework.web.client.RestTemplate;
 public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
         http.oauth2Login(config -> {
             config.loginPage("/user/login")
                     .successHandler(new CustomOAuth2SuccessHandler())
@@ -33,6 +32,14 @@ public class SecurityConfig {
         http.formLogin(config -> {
             config.loginPage("/user/login").usernameParameter("id")
                     .defaultSuccessUrl("/main");
+        });
+        http.logout(conf -> {
+            conf.logoutUrl("/user/logout")
+                    .logoutSuccessUrl("/main")
+                    .clearAuthentication(true)
+                    .invalidateHttpSession(true)
+                    .deleteCookies("JSESSIONID")
+                    .permitAll();
         });
 
         http.logout(config -> {

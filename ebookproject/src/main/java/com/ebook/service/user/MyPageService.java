@@ -13,14 +13,9 @@ public class MyPageService {
 
     // 헤더의 내 정보 가져오기
 
-    public UserDTO getHeaderUser(UserDTO userDTO){
-       return userMapper.SelectUserInfo(userDTO);
+    public UserDTO getMyPageUser(UserDTO userDTO){
+        return userMapper.SelectUserInfo(userDTO);
     }
-
-
-
-
-
 
 
 

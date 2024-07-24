@@ -20,6 +20,11 @@ public interface BookMapper {
 
     List<BookDTO> findAllBooks();
 
+    List<BookDTO> findAllBooksByTitle(@Param("search") String search);
+
+    List<String> findBooksTitle(@Param("search") String search);
+
+
     BookDTO selectBookByChapters(Integer bookNo, Integer bookChapterNo);
 
     List<BookChapterDTO>  selectBookAllChapters(Integer bookNo);

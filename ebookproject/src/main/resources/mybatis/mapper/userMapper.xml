@@ -27,7 +27,7 @@
         SELECT * FROM `custom_user` WHERE id = #{id}
     </select>
     <select id="selectUserByNameAndEmail" resultType="UserDTO" resultMap="selectUserWithImageMap">
-        SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userEmail}
+        SELECT * FROM `user` WHERE user_name = #{userName} OR user_email = #{userName}
     </select>
     <select id="selectUserByIdAndNameAndEmail" resultType="UserDTO" resultMap="selectUserWithImageMap">
         SELECT `user`.user_password FROM `user`
@@ -50,7 +50,6 @@
     </update>
 
 
-<!-- 유저 캐시 관련 -->
     <insert id="insertCashCharge">
         INSERT INTO `ebook_project`.`cash_charge`
         (`merchant_uid`,
@@ -71,8 +70,8 @@
         #{cashCharge.pgProvider},
         #{cashCharge.paidAt}
         );
-    </insert>
 
+    </insert>
 
     <update id="updateUserCash">
         UPDATE `user` SET user_cash = user_cash + #{cashAmount}

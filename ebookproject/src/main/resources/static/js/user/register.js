@@ -120,7 +120,7 @@ emailSelectSection.onchange = () => {
 
 const registerBtn = document.getElementById('register-btn');
 registerBtn.onclick = () => {
-    fullEmail.value = emailHead.value + emailTail.value;
+    fullEmail.value = emailHead.value + "@" + emailTail.value;
 
 
 }

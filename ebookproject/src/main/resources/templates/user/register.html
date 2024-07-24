@@ -31,7 +31,7 @@
             <section class="form-section">
                 <label>
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" name="userId" th:value="${id}" id="id" placeholder="아이디 (4-16글자)" maxlength="16">
+                    <input type="text" name="userId" id="id" placeholder="아이디 (4-16글자)" maxlength="16">
                     <button id="id-duplication-btn" type="button">중복확인</button>
                 </label>
             </section>
@@ -43,7 +43,7 @@
             <section class="form-section">
                 <label>
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" name="userPassword" th:value="${password}" class="pw-input" placeholder="비밀번호 (영문자 및 숫자, 특수문자 포함)">
+                    <input type="password" name="userPassword" class="pw-input" placeholder="비밀번호 (영문자 및 숫자, 특수문자 포함)">
                     <button class="pw-view-btn" type="button"><i class="fa-solid fa-eye"></i></button>
                 </label>
             </section>
@@ -66,7 +66,7 @@
                 <label>
                     <i class="fa-solid fa-envelope"></i>
                     <input type="text" id="email-head" placeholder="이메일 주소">
-                    <input type="hidden" id="full-email" name="userEmail" th:value="${email}">
+                    <input type="hidden" id="full-email" name="userEmail">
                 </label>
                 <span>@</span>
                 <label>
@@ -87,7 +87,7 @@
             <section class="form-section">
                 <label>
                     <i class="fa-regular fa-user"></i>
-                    <input type="text" placeholder="이름" name="userName" th:value="${name}">
+                    <input type="text" placeholder="이름" name="userName">
                 </label>
             </section>
 
@@ -96,14 +96,14 @@
             <section class="form-section">
                 <label>
                     <i class="fa-solid fa-signature"></i>
-                    <input type="text" placeholder="닉네임" name="userNickname" th:value="${nickname}">
+                    <input type="text" placeholder="닉네임" name="userNickname">
                 </label>
             </section>
 
             <section class="form-section">
                 <label>
                     <span>프로필 사진</span>
-                    <input type="file" name="userProfileImage" accept="image/jpeg,image/png">
+                    <input type="file" name="userProfileImage.file" accept="image/jpeg,image/png">
                 </label>
             </section>
             

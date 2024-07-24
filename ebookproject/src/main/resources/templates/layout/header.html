@@ -17,7 +17,7 @@
 <body>
 <!--헤더 부분-->
 <header th:fragment="header">
-    <form>
+    <form th:action="@{/searchbook}">
         <input id="token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
         <div id="e-book-category-div">
             <a th:href="@{/main}">
@@ -31,21 +31,14 @@
             <section class="search-form">
                 <label class="search-label">
                     <input type="text">
-                    <button id="search" type="submit">
+                    <button id="search-button"  type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </label>
                 <section class="search-section">
-                    <h4>인기 도서 목록</h4>
                     <ol class="search-view">
-                        <li>
-                            <span th:href="@{#}">ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
-                        </li>
-                        <li>
-                            <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
-                        </li>
-                        <li>
-                            <span>ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+                        <li class="search-view-list">
+                            <a href="#">예시 리스트 1</a>
                         </li>
                     </ol>
                 </section>

@@ -49,4 +49,16 @@
     <select id="selectBookAllChapters" resultType="BookChapterDTO">
         SELECT * FROM book_chapter WHERE book_no = #{bookNo};
     </select>
+
+    <select id="findAllBooksByTitle" resultType="BookDTO" resultMap="selectBookWithBookChaptersByBookNo">
+        SELECT *
+        FROM books
+        WHERE book_title LIKE CONCAT('%', #{search} ,'%');
+    </select>
+    <select id="findBooksTitle" resultType="list" parameterType="map">
+        SELECT bookTitle
+        FROM books
+        WHERE book_title LIKE CONCAT('%', #{search} ,'%');
+    </select>
+
 </mapper>
