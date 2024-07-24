@@ -18,19 +18,6 @@ const searchInputValue = document.getElementById('search-text');
 const searchResultList = document.querySelector('.search-view');
 
 
-// 검색창 토글 함수
-searchLabel.addEventListener('mouseover', showHideSearchSection);
-searchLabel.addEventListener('mouseleave', showHideSearchSection);
-function showHideSearchSection() {
-    if (this.classList.contains('show')) {
-        this.classList.remove('show');
-        searchSection.style.display = 'none';
-    } else {
-        this.classList.add('show');
-        searchSection.style.display = 'block';
-    }
-}
-
 
 // 내 정보창 토글 함수
 myPageBtn.addEventListener('click', showHideMyPage, false);
