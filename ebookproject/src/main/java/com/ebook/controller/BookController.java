@@ -37,11 +37,13 @@ public class BookController {
     public String get_viewerpage(
             @PathVariable("bookNo") Integer bookNo,
             @PathVariable("chapterNo") Integer chapterNo,
+            Model model
+    ) {
         BookDTO books = bookService.getBookChapters(bookNo, chapterNo);
         List<BookChapterDTO> chapters = bookService.getBookAllChapters(bookNo);
         Integer chapterCount = 0;
         for (BookChapterDTO chapter : chapters) {
-            if(Objects.equals(chapter.getNo(), chapterNo)){
+            if (Objects.equals(chapter.getNo(), chapterNo)) {
                 chapterCount = chapter.getNo();
             }
 //            System.out.println(chapter.getNo());
@@ -49,13 +51,13 @@ public class BookController {
         model.addAttribute("chapterCount", chapterCount);
         model.addAttribute("chapters", chapters);
         model.addAttribute("books", books);
-        for(BookChapterDTO chapter : chapters){
-            if(Objects.equals(chapter.getNo(), chapterNo)){
+        for (BookChapterDTO chapter : chapters) {
+            if (Objects.equals(chapter.getNo(), chapterNo)) {
                 return "viewerpage";
             }
         }
         return "redirect:/detail/" + bookNo + "/ASC";
-
+    }
 
 
 

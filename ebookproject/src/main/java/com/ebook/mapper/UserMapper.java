@@ -1,10 +1,14 @@
 package com.ebook.mapper;
 
+import com.ebook.dto.BookDTO;
+import com.ebook.dto.user.CashChargeDTO;
 import com.ebook.dto.user.CustomUserDTO;
 import com.ebook.dto.user.UserDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.security.core.userdetails.User;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {

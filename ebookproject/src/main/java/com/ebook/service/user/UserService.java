@@ -156,6 +156,7 @@ public class UserService {
     /************************* 책 좋아요 하기 *******************************/
     public List<BookDTO> getAllUserLikeBook(UserDTO user){
         return userMapper.selectBookByUserLike(user.getUserId());
+    }
     // 유저가 구매에 성공했으면 캐시를 챕터의 가격만큼 차감시킨다.
     public void buyResultCash(UserDTO user, @Param("chaptersPrice") Integer chaptersPrice){
         userMapper.updateBuyResult(user.getUserId(), chaptersPrice);
@@ -188,3 +189,5 @@ public class UserService {
 
 
 }
+
+
