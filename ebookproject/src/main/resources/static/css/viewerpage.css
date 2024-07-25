@@ -71,11 +71,13 @@ a{
 /******************뷰어 영역 *******************/
 #main-section{
     width: var(--main-width);
+    height: calc(100vh - 80px);
     margin: 1px auto;
 }
 
 #view-side-container{
     width: 100%;
+    height: 100%;
     text-align: center;
 }
 #view-side-container button{
@@ -91,11 +93,13 @@ a{
 
 .viewer-section.slide{
     margin: 0 auto;
+    height: 100%;
     width: 100%;
 }
 
 .viewer-section.slide img{
-    width: 745px;
+    height: 100%;
+    width: 700px;
 }
 
 .left-arrow-section.slide{
@@ -107,14 +111,6 @@ a{
     right: 150px;
     top: 50%;
     transform: translateY(-50%);
-}
-
-
-a:hover, button:hover{
-    opacity: 50%;
-}
-i:hover{
-    opacity: 50%;
 }
 
 /********************************************************************/
@@ -154,6 +150,8 @@ i:hover{
 .view-page-bar-btn{
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+    padding: 2px 8px;
 }
 .view-page-bar-btn span{
     display: block;

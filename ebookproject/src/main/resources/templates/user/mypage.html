@@ -74,42 +74,45 @@
                 </div>
                 <div>
                     <section id="like-list-section" class="scroll" th:if="${query == 'like'}">
-                        <div id="none-like" th:if="${books.size() == 0}">
+                        <div id="none-like" th:if="${likeBooks.size() == 0}">
                             <b>좋아요 내역이 없습니다</b>
                         </div>
-                        <a th:href="@{|/detail/${book.bookNo}/ASC|}" class="like-list" th:each="book: ${books}">
+                        <a th:href="@{|/detail/${likeBook.bookNo}/ASC|}" class="like-list" th:each="likeBook: ${likeBooks}">
                             <div>
-                                <img th:src="${book.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
+                                <img th:src="${likeBook.bookImage.fileUrl}" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg"  alt=""/>
                             </div>
                             <div>
                                 <div class="like-btn">
-                                    <span th:text="${book.bookTitle}">1. 이것이 자바다</span>
-                                    <button id="like-btn" type="button" th:data="${book.bookNo}" class="save" active>
+                                    <span th:text="${likeBook.bookTitle}">1. 이것이 자바다</span>
+                                    <button id="like-btn" type="button" th:data="${likeBook.bookNo}" class="save" active>
                                         <i class="fa-solid fa-heart"></i>
                                     </button>
                                 </div>
                                 <div>
-                                    <span th:text="${book.bookAuthor}">저자 : 신용권, 임경균</span>
-                                    <span th:text="${book.bookPublisher}">출판 미디어 2024.04.01</span>
+                                    <span th:text="${likeBook.bookAuthor}">저자 : 신용권, 임경균</span>
+                                    <span th:text="${likeBook.bookPublisher}">출판 미디어 2024.04.01</span>
                                 </div>
                             </div>
                         </a>
                     </section>
                     <section id="buy-list-section" class="scroll" th:if="${query == 'buy'}">
-                        <a href="" class="buy-list">
-                            <div>
+                        <div id="none-bought" th:if="${buyBooks.size() == 0}">
+                            <b>좋아요 내역이 없습니다</b>
+                        </div>
+                        <a th:href="@{|/detail/${buyBook.bookNo}/ASC|}" th:each="buyBook, stat: ${buyBooks}" class="buy-list">
+                            <div id="text-area">
                                 <div>
-                                    <span class="buy-list-title">1. 이것이 자바다</span>
+                                    <span id="count" th:text="${stat.count + ' . '}"></span>
+                                    <span class="buy-list-title" th:text="${buyBook.bookTitle}">1. 이것이 자바다</span>
+                                    <span class="buy-list-author" th:text="${buyBook.bookAuthor}">저자 : 신용권, 임경균</span>
+                                    <span class="buy-list-publisher" th:text="${buyBook.bookPublisher}">출판 미디어 2024.04.01</span>
                                 </div>
                                 <div>
-                                    <span class="buy-list-author">저자 : 신용권, 임경균</span>
-                                    <span class="buy-list-publisher">출판 미디어 2024.04.01</span>
+                                    <span class="buy-list-category" th:text="${buyBook.bookChapters[0].bookChapterName}">책 제목</span>
+                                    <span class="buy-list-date" th:text="${buyBook.bookChapters[0].bookUploadDate}">작성 날짜</span>
                                 </div>
                             </div>
-                            <div>
-                                <span class="buy-list-category">책 제목</span>
-                                <span class="buy-list-date">작성 날짜</span>
-                            </div>
+
                         </a>
                     </section>
                 </div>

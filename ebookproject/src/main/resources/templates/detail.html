@@ -38,10 +38,9 @@
                     <button th:unless="${book.isLiked}" th:data="${book.bookNo}" class="save">
                         <i class="fa-regular fa-heart"></i>
                     </button>
-
                 </div>
                 <span th:text="${book.bookPublisher.replace('출판사','출판사 : ')}">출판 한빛미디어 2024.04.01</span>
-                <span id="book-description-section" th:text="${book.bookDescription.replace('접기','')}">최신 JAVA 21 버전 반영! 9년 동안 꾸준히 사랑받은 자바 베스트셀러, 『이것이 자바다』 3판!</span>
+                <span id="book-description-section" class="scroll" th:text="${book.bookDescription.replace('접기','')}">최신 JAVA 21 버전 반영! 9년 동안 꾸준히 사랑받은 자바 베스트셀러, 『이것이 자바다』 3판!</span>
             </div>
         </div>
     </section>
@@ -61,7 +60,7 @@
                     <span class="part-date" th:text="${chapter.bookUploadDate}">작성 날짜</span>
                 </div>
                 <div class="part-btn-container">
-                    <span class="part-date" th:text="|${chapter.bookChapterPrice}캐시|">가격</span>
+                    <span class="cash-date" th:text="|${chapter.bookChapterPrice}캐시|">가격</span>
                     <button class="buy-btn" type="button" th:unless="${chapter.isBought}" th:onclick="|buy_chapter(${chapter.no});|">구매</button>
                     <a class="view-btn view" th:href="@{|/viewerpage/${book.bookNo}/${chapter.no}|}"  th:if="${chapter.isBought}" type="button">보기</a>
                 </div>

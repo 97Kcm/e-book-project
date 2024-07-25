@@ -102,6 +102,26 @@
             ON BL.book_no = B.book_no
         WHERE U.user_id = #{userId}
     </select>
+
+    <resultMap id="selectBookByUserBoughtMap" type="BookDTO" autoMapping="true">
+        <association property="bookImage" javaType="FileDTO">
+            <id property="data" column="book_image" />
+        </association>
+        <collection property="bookChapters" ofType="BookChapterDTO" javaType="list" autoMapping="true">
+            <id property="no" column="bookChapterNo" />
+        </collection>
+    </resultMap>
+
+    <select id="selectBookByUserBought" resultMap="selectBookByUserBoughtMap">
+        SELECT B.*,BC.*
+        FROM `book_chapter_order` BO
+            INNER JOIN `book_chapter` BC
+            ON BO.chapter_no = BC.no
+            LEFT OUTER JOIN `books` B
+            ON BC.book_no = B.book_no
+        WHERE BO.user_id = #{userId};
+    </select>
+
     <select id="SelectUserInfo" resultType="UserDTO" resultMap="selectUserWithImageMap">
         SELECT * FROM user
     </select>

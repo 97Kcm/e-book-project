@@ -201,17 +201,23 @@ main > section{
     box-shadow: 2px 3px 2px 0 rgba(170,170,170,0.5);
 }
 .buy-list{
-    margin-bottom: 20px;
-    padding: 20px 5px;
-    display: flex;
-    justify-content: space-between;
+    padding: 30px 5px;
+    display: block;
     border-bottom: 1px solid rgba(170,170,170,0.7);
 }
-.buy-list > div > div{
-    margin-bottom: 5px;
+.buy-list:first-child{
+    border-top: 1px solid rgba(170,170,170,0.7);
+}
+#count{
+    margin-right: 20px;
+}
+#text-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .buy-list-title{
-    font-size: var(--font-size-midium);
+    font-size: var(--font-size-large);
 }
 .buy-list-author{
     font-size: var(--font-size-Xsmall);
@@ -225,8 +231,4 @@ main > section{
 }
 .buy-list-date{
     font-size: var(--font-size-Xsmall);
-}
-.buy-list > div:nth-child(2){
-    display: flex;
-    align-items: center;
 }

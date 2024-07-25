@@ -27,7 +27,7 @@ public interface UserMapper {
 
     UserDTO selectUserByNameAndEmail(
             @Param("userName") String name,
-            @Param("userName") String email
+            @Param("userEmail") String email
     );
 
     /******************* 비밀번호 재설정 *******************/
@@ -64,6 +64,9 @@ public interface UserMapper {
     );
     /******************** 좋아요 하기 *****************************/
     List<BookDTO> selectBookByUserLike(String userId);
+
+    List<BookDTO> selectBookByUserBought(String userId);
+
     void insertBookLike(
             @Param("userId") String userId,
             @Param("bookNo") Integer bookNo

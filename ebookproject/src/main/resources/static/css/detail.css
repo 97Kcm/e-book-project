@@ -3,6 +3,7 @@ main{
     width: 1000px;
     margin: 0 auto;
 }
+
 /* 바디 부분 */
 #book-detail-section {
     display: flex;
@@ -50,12 +51,19 @@ main{
 }
 
 #detail-content span {
+    display: block;
     padding: 5px 0;
 }
+#detail-content span:last-child{
+    line-height: 25px;
+}
+
 #book-description-section{
     overflow: scroll;
 }
-
+.scroll::-webkit-scrollbar{
+    display: none;
+}
 #save-btn-div{
     display: flex;
     justify-content: space-between;
@@ -84,7 +92,9 @@ main{
     background-color: rgba(170,170,170,0.2);
 }
 #select-section a{
-    margin: 0 3px;
+    font-size: var(--font-size-Xsmall);
+    font-weight: bold;
+    margin: 3px;
     cursor: pointer;
     border: none;
     background-color: unset;
@@ -109,7 +119,10 @@ main{
 }
 
 .part-chapter-container{
-    flex: 1;
+    align-items: center;
+}
+.part-btn-container{
+    align-items: center;
 }
 .part-chapter-container span{
     display: inline-block;
@@ -124,15 +137,8 @@ main{
 .part-date{
     font-size: var(--font-size-XXsmall);
 }
-
-
-
-.part > .part-btn-container{
-    display: flex;
-}
-
 .part-btn-container > span{
-    font-size: var(--font-size-midium);
+    font-size: var(--font-size-small);
     margin-right: 10px;
 }
 .part-btn-container > button, .part-btn-container > a{

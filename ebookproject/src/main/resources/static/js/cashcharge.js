@@ -47,13 +47,19 @@ chargeBtn.onclick = () => {
                 .then(response => {
                     if(response.status === 201){
                         alert("결제가 성공하였습니다!");
-                        window.close();
                         // 결제 성공 시 이전 페이지로 리다이렉트
                     }
+                    else if(response.status === 401){ // unauthorize
+                        alert('로그인을 진행해주세요');
+                    }
+                    else{
+                        alert('서버에 문제가 발생했습니다. 이후에 다시 시도해주세요');
+                    }
+                    window.close();
                 })
         } else {
             // 결제 실패 시 에러 처리
-            alert("결제가 실패하였습니다!");
+            alert("결제 모듈 로딩에 실패하였습니다!");
         }
     });
 }

@@ -142,8 +142,13 @@ public class UserService {
 
     /************************* 캐시 충전 *******************************/
     public void charge_cash(UserDTO user, CashChargeDTO cashCharge){
+        Integer cashAmount = cashCharge.getCashAmount(); // 충전할 금액
+        // 캐시 충전 내역을 생성한다
         userMapper.insertCashCharge(user.getUserId(), cashCharge);
-        userMapper.updateUserCash(user.getUserId(), cashCharge.getCashAmount());
+        // 유저의 캐시를 충전금액 만큼 올린다
+        userMapper.updateUserCash(user.getUserId(), cashAmount);
+        // 위 두개가 성공했으면 현재 로그인되어있는 유저의 cash도 올려준다
+        user.setUserCash(user.getUserCash() + cashAmount);
     }
 
     /************************챕터 구매 *******************************************/
@@ -157,6 +162,11 @@ public class UserService {
     public List<BookDTO> getAllUserLikeBook(UserDTO user){
         return userMapper.selectBookByUserLike(user.getUserId());
     }
+
+    public List<BookDTO> getAllUserBoughtBook(UserDTO user){
+        return userMapper.selectBookByUserBought(user.getUserId());
+    }
+
     // 유저가 구매에 성공했으면 캐시를 챕터의 가격만큼 차감시킨다.
     public void buyResultCash(UserDTO user, @Param("chaptersPrice") Integer chaptersPrice){
         userMapper.updateBuyResult(user.getUserId(), chaptersPrice);

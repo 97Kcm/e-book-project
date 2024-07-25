@@ -14,23 +14,20 @@ function buy_chapter(chapterNo) {
             console.log('Response status:', response.status); // 응답 상태 코드 출력
             return response.text().then(text => {
                 if (response.status === 201) {
+                    alert("구매에 성공하였습니다!") // 성공 메시지 출력
                     location.reload();
-                    // 성공 응답을 반환
-                } else {
-                    throw new Error(text); // 실패 응답을 오류로 처리
+                }
+                else if(response.status === 401){
+                    alert("로그인 후 이용 가능합니다.");
+                }
+                else if(response.ok){
+                    alert("캐시가 부족합니다. 캐시를 충전해주세요.") // 성공 메시지 출력
+                    const options = 'width=600, height=700, top=50, left=50, scrollbars=yes';
+                    window.open('/user/cashcharge','_blank',options);
+                }
+                else{
+                    console.error('오류 발생:', error.message);
                 }
             });
-        })
-        .then(data => {
-            alert("구매에 성공하였습니다!") // 성공 메시지 출력
-
-        })
-        .catch(error => {
-            console.error('오류 발생:', error.message);
-            alert(error.message); // 오류 메시지 출력
-            // 실패 시 캐시 충전 페이지로 리다이렉션
-            if (error.message.includes("캐시가 부족합니다 충전 페이지로 이동합니다!")) {
-                window.location.href = "/user/cashcharge";
-            }
         });
 }
