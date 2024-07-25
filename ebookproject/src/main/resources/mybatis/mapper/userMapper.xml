@@ -113,6 +113,6 @@
     </update>
 
     <insert id="insertUserByBook">
-        insert into `ebook_project`.`book_order` (`chapter_no`, `user_id`, `cash_amount`) values (#{no}, #{user.userId}, #{chaptersPrice});
+        insert into `ebook_project`.`book_chapter_order` (`chapter_no`, `user_id`, `cash_amount`) values (#{no}, #{user.userId}, #{chaptersPrice});
     </insert>
 </mapper>

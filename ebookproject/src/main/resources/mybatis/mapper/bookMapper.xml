@@ -27,7 +27,7 @@
         FROM `book_chapter` BC
         INNER JOIN `books` B
         on B.book_no = BC.book_no
-        LEFT OUTER JOIN `book_order` BO
+        LEFT OUTER JOIN `book_chapter_order` BO
         on BO.chapter_no = BC.no AND BO.user_id = #{userId}
         WHERE B.book_no = #{bookNo}
     </select>
@@ -37,7 +37,7 @@
         bo.chapter_no,
         bo.user_id
         FROM
-        ebook_project.book_order bo
+        ebook_project.book_chapter_order bo
         LEFT OUTER JOIN
         ebook_project.book_chapter bc
         ON
@@ -51,7 +51,7 @@
         FROM
         ebook_project.book_chapter bc
         WHERE
-        bc.no NOT IN (SELECT no FROM ebook_project.book_order);
+        bc.no NOT IN (SELECT no FROM ebook_project.book_chapter_order);
     </select>
 
 </mapper>
