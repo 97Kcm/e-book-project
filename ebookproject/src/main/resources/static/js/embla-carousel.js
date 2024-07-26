@@ -12,7 +12,7 @@ function embla_init(emblaNode){
     const dotsNode = emblaNode.querySelector('.embla__dots');
     let OPTIONS = {dragFree : true}
     if(emblaNode.querySelector('.sub-img-section') == null){
-        OPTIONS = {};
+        OPTIONS = {loop : true};
     }
     const emblaApi = EmblaCarousel(viewportNode, OPTIONS);
     if(prevBtnNode != null && nextBtnNode != null){
@@ -24,11 +24,14 @@ function embla_init(emblaNode){
 
         emblaApi.on('destroy', removePrevNextBtnsClickHandlers)
     }
+    if(dotsNode != null){
         const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
             emblaApi,
             dotsNode
         )
         emblaApi.on('destroy', removeDotBtnsAndClickHandlers)
+    }
+
 }
 
 

@@ -6,6 +6,8 @@ header{
 }
 
 header > form {
+    width: var(--main-width);
+    margin: 0 auto;
     padding: 10px 30px; /* 헤더 내부 여백 */
     display: flex;
     justify-content: space-between;

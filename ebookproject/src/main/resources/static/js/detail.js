@@ -31,3 +31,23 @@ function buy_chapter(chapterNo) {
             });
         });
 }
+
+const seeMoreBtn = document.getElementById('see-more');
+const partHeight = document.getElementsByClassName('part');
+var allHeight = 0;
+
+for (let i = 0; i < partHeight.length; i++) {
+    allHeight += partHeight[i].offsetHeight;
+}
+
+
+seeMoreBtn.onclick = () => {
+    const partSection = document.getElementById('part-section');
+    if (partSection.offsetHeight <= allHeight){
+        const partSectionHeight = partSection.offsetHeight;
+        partSection.style.height = `${partSectionHeight+200}px`
+    }else{
+        seeMoreBtn.style.display = "none";
+    }
+
+}

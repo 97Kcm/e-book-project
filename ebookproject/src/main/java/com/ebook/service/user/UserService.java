@@ -9,6 +9,8 @@ import net.minidev.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
@@ -26,6 +28,8 @@ import java.util.Objects;
 
 @Log4j2
 @Service
+@PropertySource("classpath:portone.properties")
+//@ConfigurationProperties(prefix = "portone")
 public class UserService {
     @Autowired
     private UserMapper userMapper;
@@ -37,7 +41,8 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     // 테스트시 본인의 url 사용하기
-    private final String PORT_ONE_IMP_KEY = "3706357072443643";
+    @Value("${portone.PORT_ONE_IMP_KEY}")
+    private final String PORT_ONE_IMP_KEY = "";
     private final String PORT_ONE_IMP_SECRET = "MGMGBgVfkjogobPd9VxX9ZrsGP3mBQtMrTteUtFvTw922Ya8zp6pAULzGW9LkIMuAY7LGOSb9cvWQUxT";
     private final String PORT_ONE_ACCESS_TOKEN_URL = "https://api.iamport.kr/users/getToken";
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";

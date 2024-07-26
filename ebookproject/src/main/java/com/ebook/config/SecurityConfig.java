@@ -53,6 +53,7 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(registry -> {
             registry.requestMatchers("/user/mypage/**").authenticated()
+                    .requestMatchers("/veiwerpage/**").authenticated()
                     .anyRequest().permitAll(); // 모든 경로는 인증 없이 가능
         });
 

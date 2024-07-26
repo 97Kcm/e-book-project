@@ -173,10 +173,6 @@ public class UserController {
         }else if(list.equals("buy")){
             System.out.println("구매목록 조회");
             List<BookDTO> books = userService.getAllUserBoughtBook(user);
-            System.out.println(books);
-            for(int i = 0; i < books.size(); i++) {
-                System.out.println(books.get(i).getBookChapters());
-            }
             model.addAttribute("buyBooks", books);
         }
         model.addAttribute("query", list);

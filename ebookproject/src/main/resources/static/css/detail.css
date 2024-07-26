@@ -7,7 +7,7 @@ main{
 /* 바디 부분 */
 #book-detail-section {
     display: flex;
-    border-bottom: 1px solid rgba(170,170,170,0.7);
+    border-bottom: 1px solid rgba(200,200,200,0.2);
     padding-bottom: 100px;
 }
 
@@ -15,34 +15,62 @@ main{
     display: flex;
     align-items: flex-start;
     /*position: relative;*/
+    background-color: rgba(200,200,200,0.2);
+    border-radius: 30px;
+
 }
 
 #book-detail-img-div {
     width: 300px;
     height: 400px;
-    padding: 20px;
+    border-radius: 30px;
+    object-fit: cover;
     /*border-right: 1px solid black;*/
+    overflow: hidden;
+    position: relative;
 }
 #detail-img {
     width: 100%;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    filter: blur(14px);
+
+}
+#detail-img2{
+    position: absolute;
+    width: 220px;
+    height: 270px;
+    z-index: 50;
+    border-radius: 30px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #book-detail-info-div {
     flex: 1;
-    background-color: white;
     font-weight: normal;
 }
 
 #book-detail-info-div > div{
+    margin: 0 3px;
     padding: 20px;
+    background-color: rgba(200,200,200,0.2);
+    border-radius: 30px;
+}
+#book-detail-info-div > section{
+    background-color: rgba(200,200,200,0.2);
 }
 #detail-title{
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     border-bottom: 1px solid black;
+    padding: 7px 0;
+    margin-bottom: 3px;
 }
 
 #detail-content {
@@ -53,6 +81,7 @@ main{
 #detail-content span {
     display: block;
     padding: 5px 0;
+    font-size: var(--font-size-small);
 }
 #detail-content span:last-child{
     line-height: 25px;
@@ -60,6 +89,8 @@ main{
 
 #book-description-section{
     overflow: scroll;
+    height: 260px;
+    font-size: var(--font-size-XXsmall);
 }
 .scroll::-webkit-scrollbar{
     display: none;
@@ -79,7 +110,7 @@ main{
 }
 
 #save-btn-div i {
-    font-size: var(--font-size-midium);
+    font-size: var(--font-size-small);
 }
 
 /* 파트 선택 부분 */
@@ -87,9 +118,10 @@ main{
 #select-section{
     display: flex;
     justify-content: right;
+    margin: 5px;
     padding: 4px;
     border-radius: 10px 10px 0 0;
-    background-color: rgba(170,170,170,0.2);
+    /*background-color: rgba(170,170,170,0.2);*/
 }
 #select-section a{
     font-size: var(--font-size-Xsmall);
@@ -107,15 +139,25 @@ main{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border-bottom:1px solid black
+    /*border-bottom:1px solid black*/
 }
 .part:last-child{
     border:none;
 }
 #part-section{
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid black;*/
+    border-radius: 30px;
+    margin: 3px;
+    height: 505px;
+    /*overflow: hidden;*/
+    /*position: relative;*/
+}
+
+#part-selection{
+    flex: 1;
+    overflow: hidden;
 }
 
 .part-chapter-container{
@@ -129,16 +171,16 @@ main{
     margin-right: 10px;
 }
 .part-chapter{
-    font-size: var(--font-size-midium);
+    font-size: var(--font-size-small);
 }
 .part-name{
-    font-size: var(--font-size-midium);
+    font-size: var(--font-size-small);
 }
 .part-date{
     font-size: var(--font-size-XXsmall);
 }
 .part-btn-container > span{
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-Xsmall);
     margin-right: 10px;
 }
 .part-btn-container > button, .part-btn-container > a{
@@ -148,11 +190,25 @@ main{
     padding: 5px 10px;
     font-size: var(--font-size-Xsmall);
     cursor: pointer;
-    background-color: rgba(170,170,170,0.3);
+    background-color: rgba(170,170,170,0.2);
     &:hover{
         opacity: 0.8;
     }
 }
+
+#see-more{
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    margin: 3px;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*background-color: rgb(170, 170, 170,0.2);*/
+}
+
+
+
 #buy-btn, #cart-btn{
     display: flex;
 }
