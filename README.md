@@ -24,6 +24,11 @@
 <a href="https://www.erdcloud.com/d/cjyA5HGuP34o5wfip">ERD Cloud에서 직접 보기</a><br>
 <img src="https://private-user-images.githubusercontent.com/148042427/359342715-5cd0a182-f461-4a8d-a53a-031cf78ce770.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjQxMzA1MzcsIm5iZiI6MTcyNDEzMDIzNywicGF0aCI6Ii8xNDgwNDI0MjcvMzU5MzQyNzE1LTVjZDBhMTgyLWY0NjEtNGE4ZC1hNTNhLTAzMWNmNzhjZTc3MC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgyMFQwNTAzNTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kM2I4YmU3OTAxYjE5NTRhNzY4NDM3MTZiOGFiY2M0YTk5MDYwMDRkYzU1MDVmMGMwMzI1NjUzOTFlMjEwYmJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.S9Yh652TNH7Rt77MezKEuYH0sTDu4X2LqFVbG_LKNOE"/>
 
+<h1>기술 스택</h1>
+<br>
+<img src="https://skillicons.dev/icons?i=html,css,javascript,java,spring,mysql,theme=light">
+<br>
+
 <h1>주요기능</h1>
     <h3>요약</h3>
     <table>
