@@ -12,9 +12,9 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href=""><img src="width="100px;" alt=""/><br /><sub><b>김창민</b></sub></a><br/></td>
-      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>김찬서</b></sub></a><br/></td>
-      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>임정훈</b></sub></a><br/></td>
+      <td align="center"><a href="https://github.com/97Kcm"><b>김창민</b></a></td>
+      <td align="center"><a href=""><b>김찬서</b></a></td>
+      <td align="center"><a href="https://github.com/MisoMarie"><b>임정훈</b></a></td>
      <tr/>
   </tbody>
 </table>
