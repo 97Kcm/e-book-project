@@ -39,6 +39,8 @@ public class BookController {
             @PathVariable("chapterNo") Integer chapterNo,
             Model model
     ) {
+        System.out.println(bookNo);
+        System.out.println(chapterNo);
         BookDTO books = bookService.getBookChapters(bookNo, chapterNo);
         List<BookChapterDTO> chapters = bookService.getBookAllChapters(bookNo);
         Integer chapterCount = 0;

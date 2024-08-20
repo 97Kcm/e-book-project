@@ -33,7 +33,7 @@ public class BookService {
 
     public List<BookChapterDTO>  getBookAllChapters(Integer bookNo){
         return bookMapper.selectBookAllChapters(bookNo);
-    };
+    }
 
 
 
