@@ -126,7 +126,8 @@ header > form {
     display: none;
     padding-left:  5px;
     padding-right: 5px;
-    right: 200px;
+    right: 100px;
+    top: 75px;
     background-color: #eeeded;
     width: 180px;
     height: auto;
