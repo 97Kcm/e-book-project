@@ -58,6 +58,7 @@
     <li>사용자는 이메일,비밀번호,이름,휴대폰번호 등을 이용해 회원가입 할 수 있다.</li>
     <li>회원가입 시 사용한 아이디와 비밀번호를 통해 로그인 할 수 있다.</li>
     <li>외부 링크로 로그인 시, 회원가입한 개인정보와 일치 시 로그인 할 수 있다.</li>
+    <li>PortOne연동을 통해 본인인증 후, 본인정보 일치 시 회원가입 가능</li>
 </ul>
 <img src="https://github.com/user-attachments/assets/cd8fc6be-1e76-43a8-b17b-2f52e7364a32" width="600px" height="600px" style="display: inline">
 <img src="https://github.com/user-attachments/assets/8edd006d-ca76-406f-b7f5-16dda8e78822" width="600px" height="600px" style="display: inline"><br>
