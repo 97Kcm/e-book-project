@@ -5,7 +5,7 @@ const chargeBtn = document.querySelector('button.charge-button');
 const amountChoose = document.querySelectorAll('input[name="amount"]');
 
 
-IMP.init("imp24800281");
+IMP.init("imp14271731");
 // 결제 버튼 클릭 이벤트 리스너
 chargeBtn.onclick = () => {
     let selectedAmount;

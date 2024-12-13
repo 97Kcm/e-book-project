@@ -42,8 +42,8 @@ public class UserService {
 
     // 테스트시 본인의 url 사용하기
     @Value("${portone.PORT_ONE_IMP_KEY}")
-    private final String PORT_ONE_IMP_KEY = "";
-    private final String PORT_ONE_IMP_SECRET = "MGMGBgVfkjogobPd9VxX9ZrsGP3mBQtMrTteUtFvTw922Ya8zp6pAULzGW9LkIMuAY7LGOSb9cvWQUxT";
+    private final String PORT_ONE_IMP_KEY = "6626485841251685";
+    private final String PORT_ONE_IMP_SECRET = "E1zglzwjWpjLFUQnAyIjGhRBxwQu9tRwjhkgz7yhAPMEWsoIZyk0SFo5XZi2htLVj4sTM6nP7Q9mnZvB";
     private final String PORT_ONE_ACCESS_TOKEN_URL = "https://api.iamport.kr/users/getToken";
     private final String PORT_ONE_USER_CERT_INFO_URL = "https://api.iamport.kr/certifications/{impUid}";
 

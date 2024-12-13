@@ -25,7 +25,7 @@ const fullEmail = document.querySelector('#full-email');
 const certBtn = document.getElementById('cert-btn');
 const impUidInput = document.getElementById('imp-uid');
 const certValidCheck = document.querySelector('.valid-check.certification');
-IMP.init("imp26750511");
+IMP.init("imp14271731");
 
 certBtn.onclick = () => {
     // IMP.certification(param, callback) 호출
@@ -120,7 +120,6 @@ emailSelectSection.onchange = () => {
 
 const registerBtn = document.getElementById('register-btn');
 registerBtn.onclick = () => {
-    fullEmail.value = emailHead.value + "@" + emailTail.value;
-
+    fullEmail.value = emailHead.value + "@" + emailTail.value
 
 }
